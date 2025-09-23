@@ -1,13 +1,14 @@
-import { ThemeProvider } from './components/theme-provider';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import ProblemSection from './components/ProblemSection';
-import StatsSection from './components/StatsSection';
-import MobileAppSection from './components/MobileAppSection';
-import FeaturesSection from './components/FeaturesSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import { ThemeProvider } from './components/theme-provider'
+import Navigation from './components/Navigation'
+import Hero from './components/Hero'
+import StatsSectionNew from './components/StatsSectionNew'
+import ProblemSection from './components/ProblemSection'
+import StatsSection from './components/StatsSection'
+import MobileAppSection from './components/MobileAppSection'
+import FeaturesSection from './components/FeaturesSection'
+import TestimonialsSection from './components/TestimonialsSection'
+import CTASection from './components/CTASection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Navigation />
         <main className="scroll-snap-section">
           <Hero />
+          <StatsSectionNew delay={2} />
           <ProblemSection />
           <StatsSection />
           <MobileAppSection />
@@ -26,7 +28,7 @@ function App() {
         <Footer />
       </div>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

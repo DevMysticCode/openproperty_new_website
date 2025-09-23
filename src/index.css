@@ -78,7 +78,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
 
@@ -122,11 +122,12 @@ html {
 
 /* Enhanced Gradient Animations */
 @keyframes gradient-shift {
-  0%, 100% { 
-    background-position: 0% 50%; 
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-  50% { 
-    background-position: 100% 50%; 
+  50% {
+    background-position: 100% 50%;
   }
 }
 
@@ -162,28 +163,31 @@ html {
 
 /* Premium Floating Animations */
 @keyframes float-premium {
-  0%, 100% { 
-    transform: translateY(0px); 
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  50% { 
-    transform: translateY(-15px); 
+  50% {
+    transform: translateY(-15px);
   }
 }
 
 @keyframes float-gentle {
-  0%, 100% { 
-    transform: translateY(0px); 
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  33% { 
-    transform: translateY(-8px); 
+  33% {
+    transform: translateY(-8px);
   }
-  66% { 
-    transform: translateY(-12px); 
+  66% {
+    transform: translateY(-12px);
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 30px rgba(0, 161, 154, 0.4);
   }
   50% {
@@ -205,12 +209,18 @@ html {
 
 /* Typewriter Effect */
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .typewriter {
@@ -228,8 +238,7 @@ html {
 
 .premium-card:hover {
   transform: translateY(-16px) scale(1.03) rotateX(8deg);
-  box-shadow: 
-    0 50px 100px -20px rgba(0, 161, 154, 0.4),
+  box-shadow: 0 50px 100px -20px rgba(0, 161, 154, 0.4),
     0 0 0 1px rgba(0, 161, 154, 0.3);
 }
 
@@ -250,7 +259,12 @@ html {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.8s;
 }
 
@@ -307,10 +321,21 @@ html {
 
 /* Enhanced Gradient Mesh */
 .gradient-mesh-premium {
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 161, 154, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 201, 191, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 161, 154, 0.1) 0%, transparent 50%),
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 161, 154, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 201, 191, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(0, 161, 154, 0.1) 0%,
+      transparent 50%
+    ),
     radial-gradient(circle at 60% 80%, rgba(0, 99, 95, 0.1) 0%, transparent 50%);
   animation: gradient-shift 15s ease infinite;
 }
@@ -343,8 +368,11 @@ html {
 
 .dark-section-with-texture {
   background: #0f0f0f;
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 0
+  );
   background-size: 20px 20px;
 }
 
@@ -358,15 +386,24 @@ html {
 
 /* Noise Texture */
 .noise-texture {
-  background-image: 
-    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 0
+  );
   background-size: 20px 20px;
 }
 
 /* Counter Animation */
 @keyframes counter {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .counter-animate {
@@ -396,11 +433,11 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   .parallax-element {
     transform: none !important;
   }
-  
+
   .video-background {
     display: none !important;
   }
@@ -451,4 +488,57 @@ html {
   flex: none;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+}
+
+.hero-subtext {
+  background-size: 200%;
+  background-position-x: 100%;
+  opacity: 0.794597;
+  font-size: clamp(1.88rem, 3.87vw + 0.02rem, 3.5rem);
+  line-height: 1.1;
+}
+
+.bg-gradient-paragraph-light {
+  background-image: radial-gradient(
+    50% 220% at 50% 100%,
+    #ed7dff 0,
+    #6c54ff 25%,
+    #fff 60%,
+    #fff 100%
+  );
+}
+
+/* Add to your globals.css */
+.text-fluid-200-500 {
+  font-size: clamp(12.5rem, 44.64vw + -8.93rem, 31.25rem);
+}
+
+.text-fluid-88-200 {
+  font-size: clamp(5.5rem, 16.67vw + -2.5rem, 12.5rem);
+}
+
+.text-fluid-20-56 {
+  font-size: clamp(1.25rem, 5.36vw + -1.32rem, 3.5rem);
+}
+
+.-tracking-8 {
+  letter-spacing: -0.08em;
+}
+
+.-tracking-4 {
+  letter-spacing: -0.04em;
+}
+
+html * {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-gradient-text-white {
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 16.95%,
+    #fff 50%
+  );
 }

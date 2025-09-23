@@ -1,13 +1,21 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   darkMode: ['class'],
-  content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['ui-sans-serif', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        hero: [
+          'ui-sans-serif',
+          'Helvetica Neue',
+          'Avenir Next',
+          'Inter',
+          'system-ui',
+          'sans-serif',
+        ],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -85,5 +93,5 @@ const config: Config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-};
-export default config;
+}
+export default config
