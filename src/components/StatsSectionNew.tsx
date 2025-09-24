@@ -34,8 +34,8 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
         transition={{ duration: 1, delay, ease: [0.23, 1, 0.32, 1] }}
         className="container relative z-20 flex flex-col items-center pb-20 pt-32 md:pb-52 md:pt-80 mx-auto"
       >
+        {/* First item - kept as is with original sizes */}
         <div className="flex flex-col items-center first:pb-30 md:first:pb-36">
-          {/* Main number with gradient */}
           <p
             className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
             style={{
@@ -46,112 +46,95 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
           >
             1000
           </p>
-
-          {/* "million" text */}
           <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
             million
           </p>
-
-          {/* Subtitle */}
           <p className="text-fluid-20-56 -tracking-4 text-black">
             lost every year
           </p>
         </div>
 
-        <div className="flex flex-col items-center first:pb-30 md:first:pb-36">
-          {/* Main number with gradient */}
-          <p
-            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
-            style={{
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            24.3
-          </p>
+        {/* Container for the four items in a single row */}
+        <div className="flex flex-row flex-wrap justify-center gap-8 md:gap-16 mt-8">
+          {/* 24.3% item */}
+          <div className="flex flex-col items-center">
+            <p
+              className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-sm-100-300 font-medium leading-none -tracking-8 text-transparent"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              24.3
+            </p>
+            <p className="-mt-[15%] mb-2 font-sharp text-fluid-sm-44-100 font-normal leading-none -tracking-8 text-white">
+              %
+            </p>
+            <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
+              fall through rate
+            </p>
+          </div>
 
-          {/* "million" text */}
-          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            %
-          </p>
+          {/* 590 million item */}
+          <div className="flex flex-col items-center">
+            <p
+              className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-sm-100-300 font-medium leading-none -tracking-8 text-transparent"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              590
+            </p>
+            <p className="-mt-[15%] mb-2 font-sharp text-fluid-sm-44-100 font-normal leading-none -tracking-8 text-white">
+              million
+            </p>
+            <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
+              costs consumers per year
+            </p>
+          </div>
 
-          {/* Subtitle */}
-          <p className="text-fluid-20-56 -tracking-4 text-black">
-            fall through rate
-          </p>
-        </div>
+          {/* 1240 pounds item */}
+          <div className="flex flex-col items-center">
+            <p
+              className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-sm-100-300 font-medium leading-none -tracking-8 text-transparent"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              1240
+            </p>
+            <p className="-mt-[15%] mb-2 font-sharp text-fluid-sm-44-100 font-normal leading-none -tracking-8 text-white">
+              pounds
+            </p>
+            <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
+              average loss per failed transaction
+            </p>
+          </div>
 
-        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
-          {/* Main number with gradient */}
-          <p
-            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
-            style={{
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            590
-          </p>
-
-          {/* "million" text */}
-          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            million
-          </p>
-
-          {/* Subtitle */}
-          <p className="text-fluid-20-56 -tracking-4 text-black">
-            costs consumers per year
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
-          {/* Main number with gradient */}
-          <p
-            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
-            style={{
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            1240
-          </p>
-
-          {/* "million" text */}
-          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            pounds
-          </p>
-
-          {/* Subtitle */}
-          <p className="text-fluid-20-56 -tracking-4 text-black">
-            average loss per failed recent transaction
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
-          {/* Main number with gradient */}
-          <p
-            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
-            style={{
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            76.7
-          </p>
-
-          {/* "million" text */}
-          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            %
-          </p>
-
-          {/* Subtitle */}
-          <p className="text-fluid-20-56 -tracking-4 text-black">
-            people prefer to use a digital solution
-          </p>
+          {/* 76.7% item */}
+          <div className="flex flex-col items-center">
+            <p
+              className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-sm-100-300 font-medium leading-none -tracking-8 text-transparent"
+              style={{
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              76.7
+            </p>
+            <p className="-mt-[15%] mb-2 font-sharp text-fluid-sm-44-100 font-normal leading-none -tracking-8 text-white">
+              %
+            </p>
+            <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
+              people prefer digital solution
+            </p>
+          </div>
         </div>
       </motion.div>
     </section>
