@@ -121,7 +121,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
 
           {/* "million" text */}
           <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            £
+            pounds
           </p>
 
           {/* Subtitle */}
