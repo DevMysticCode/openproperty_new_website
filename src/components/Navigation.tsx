@@ -54,7 +54,7 @@ export default function Navigation() {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-12 text-18">
             <motion.a
               href="#about"
               whileHover={{ y: -2 }}
