@@ -545,6 +545,30 @@ html {
   font-size: clamp(0.875rem, 1.07vw + 0.33rem, 1.25rem);
 }
 
+.text-fluid-xs-40-100 {
+  font-size: clamp(2.5rem, 10.71vw + -1.79rem, 6.25rem);
+}
+
+.text-fluid-xs-18-40 {
+  font-size: clamp(1.125rem, 3.57vw + -0.48rem, 2.5rem);
+}
+
+.text-fluid-xs-12-16 {
+  font-size: clamp(0.75rem, 0.71vw + 0.46rem, 1rem);
+}
+
+.text-fluid-xs-30-75 {
+  font-size: clamp(1.875rem, 8.04vw + -1.34rem, 4.6875rem);
+}
+
+.text-fluid-xs-14-30 {
+  font-size: clamp(0.875rem, 2.68vw + -0.36rem, 1.875rem);
+}
+
+.text-fluid-xs-10-12 {
+  font-size: clamp(0.625rem, 0.54vw + 0.42rem, 0.75rem);
+}
+
 .-tracking-8 {
   letter-spacing: -0.08em;
 }
