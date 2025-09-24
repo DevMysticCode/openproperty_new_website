@@ -60,6 +60,13 @@ export default function Navigation() {
               whileHover={{ y: -2 }}
               className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
             >
+              Home
+            </motion.a>
+            <motion.a
+              href="#about"
+              whileHover={{ y: -2 }}
+              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+            >
               About Us
             </motion.a>
             <motion.a
@@ -67,7 +74,21 @@ export default function Navigation() {
               whileHover={{ y: -2 }}
               className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
             >
+              Product
+            </motion.a>
+            <motion.a
+              href="#services"
+              whileHover={{ y: -2 }}
+              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+            >
               Services
+            </motion.a>
+            <motion.a
+              href="#services"
+              whileHover={{ y: -2 }}
+              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+            >
+              Contact Us
             </motion.a>
             <Button
               variant="ghost"
@@ -81,11 +102,11 @@ export default function Navigation() {
                 <Moon className="h-5 w-5" />
               )}
             </Button>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                CONTACT
+                CONTACT US
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Mobile Menu Button */}
