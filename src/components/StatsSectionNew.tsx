@@ -44,17 +44,113 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               backgroundClip: 'text',
             }}
           >
-            1
+            1000
           </p>
 
           {/* "million" text */}
           <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
-            billion
+            million
           </p>
 
           {/* Subtitle */}
           <p className="text-fluid-20-56 -tracking-4 text-black">
             lost every year
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center first:pb-30 md:first:pb-36">
+          {/* Main number with gradient */}
+          <p
+            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
+            style={{
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            24.3
+          </p>
+
+          {/* "million" text */}
+          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
+            %
+          </p>
+
+          {/* Subtitle */}
+          <p className="text-fluid-20-56 -tracking-4 text-black">
+            fall through rate
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
+          {/* Main number with gradient */}
+          <p
+            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
+            style={{
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            590
+          </p>
+
+          {/* "million" text */}
+          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
+            million
+          </p>
+
+          {/* Subtitle */}
+          <p className="text-fluid-20-56 -tracking-4 text-black">
+            costs consumers per year
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
+          {/* Main number with gradient */}
+          <p
+            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
+            style={{
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            1240
+          </p>
+
+          {/* "million" text */}
+          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
+            £
+          </p>
+
+          {/* Subtitle */}
+          <p className="text-fluid-20-56 -tracking-4 text-black">
+            average loss per failed recent transaction
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center first:pb-30 md:first:pb-36 mt-36">
+          {/* Main number with gradient */}
+          <p
+            className="inline-block bg-gradient-text-white bg-clip-text pr-6 text-fluid-200-500 font-medium leading-none -tracking-8 text-transparent"
+            style={{
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
+            76.7
+          </p>
+
+          {/* "million" text */}
+          <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
+            %
+          </p>
+
+          {/* Subtitle */}
+          <p className="text-fluid-20-56 -tracking-4 text-black">
+            people prefer to use a digital solution
           </p>
         </div>
       </motion.div>

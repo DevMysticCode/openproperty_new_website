@@ -501,9 +501,9 @@ html {
 .bg-gradient-paragraph-light {
   background-image: radial-gradient(
     50% 220% at 50% 100%,
-    #ed7dff 0,
-    #6c54ff 25%,
-    #fff 60%,
+    #4dc4bd 0%,
+    #00a19a 25%,
+    #e0f2f1 60%,
     #fff 100%
   );
 }
@@ -542,3 +542,7 @@ html * {
     #fff 50%
   );
 }
+
+/* .hero-section-container {
+  background-color: #231d45;
+} */
