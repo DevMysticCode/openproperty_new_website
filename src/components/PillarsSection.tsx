@@ -180,7 +180,7 @@ export default function PillarsSection() {
                       rotate: 0,
                       zIndex: 50,
                     }}
-                    className="w-72 h-80 premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
+                    className="w-72 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
                   >
                     {/* Media Container */}
                     <div className="relative h-44 overflow-hidden rounded-t-3xl">
