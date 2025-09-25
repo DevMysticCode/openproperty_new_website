@@ -81,12 +81,12 @@ export default function PillarsSection() {
   })
 
   // **FADE IN/OUT ANIMATION CODE - Apply this pattern throughout the app**
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    [0.8, 1, 1, 0.8]
-  )
+  // const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
+  // const scale = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.2, 0.8, 1],
+  //   [0.8, 1, 1, 0.8]
+  // )
 
   // Horizontal scroll transform
   const x = useTransform(scrollYProgress, [0, 1], ['0%', '-70%'])
@@ -94,8 +94,8 @@ export default function PillarsSection() {
   return (
     <motion.section
       ref={containerRef}
-      style={{ opacity, scale }} // **FADE ANIMATION APPLIED HERE**
-      className="relative py-24 bg-gradient-to-b from-black via-gray-50 to-white overflow-hidden"
+      // style={{ opacity, scale }} // **FADE ANIMATION APPLIED HERE**
+      className="relative py-24 bg-gradient-to-b from-[#c2e9f7] via-gray-50 to-white overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -115,27 +115,13 @@ export default function PillarsSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-center mb-20"
+          className="text-start mb-20 w-full max-w-4xl mx-auto"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="inline-flex items-center px-6 py-3 rounded-full bg-[#00a19a]/10 border border-[#00a19a]/20 mb-8 glassmorphism"
-          >
-            <span className="text-[#00a19a] font-semibold text-sm tracking-wide uppercase">
-              Our Foundation
-            </span>
-          </motion.div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight text-foreground">
-            Our{' '}
-            <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
-              Pillars
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
+            OUR PILLARS
           </h2>
 
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-black text-18 mx-auto leading-relaxed font-light">
             The core principles that drive our mission to revolutionize property
             intelligence and empower smarter decision-making.
           </p>
