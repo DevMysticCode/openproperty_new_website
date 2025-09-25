@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 import ChipsScene from './ChipsScene'
+import AnimatedSection from './AnimatedSection'
+import StaggeredAnimatedSection from './StaggeredAnimatedSection'
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)

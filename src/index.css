@@ -598,3 +598,7 @@ html * {
 .text-18 {
   font-size: 18px;
 }
+
+.text-heading {
+  font-size: clamp(1.88rem, 3.87vw + 0.02rem, 3.5rem);
+}
