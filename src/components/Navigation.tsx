@@ -50,7 +50,7 @@ export default function Navigation() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-2xl font-bold tracking-tight">UmovingU</span>
+            <span className="text-3xl font-bold tracking-tight">umovingu</span>
           </motion.div>
 
           {/* Desktop Menu */}
