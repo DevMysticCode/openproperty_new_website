@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import StatsSectionNew from './components/StatsSectionNew'
 import ProblemSection from './components/ProblemSection'
 import StatsSection from './components/StatsSection'
+import PillarsSection from './components/PillarsSection'
 import MobileAppSection from './components/MobileAppSection'
 import FeaturesSection from './components/FeaturesSection'
 import TestimonialsSection from './components/TestimonialsSection'
@@ -18,6 +19,7 @@ function App() {
         <main className="scroll-snap-section">
           <Hero />
           <StatsSectionNew delay={2} />
+          <PillarsSection />
           <ProblemSection />
           <StatsSection />
           <MobileAppSection />
