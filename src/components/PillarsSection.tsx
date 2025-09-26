@@ -95,7 +95,7 @@ export default function PillarsSection() {
     <motion.section
       ref={containerRef}
       // style={{ opacity, scale }} // **FADE ANIMATION APPLIED HERE**
-      className="relative py-24 bg-gradient-to-b from-[#c2e9f7] via-gray-50 to-white overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -103,7 +103,7 @@ export default function PillarsSection() {
           className="absolute inset-0"
           style={{
             backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
-                           linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+                           linear-gradient(-45deg,  #00c9bf 1px, transparent 1px)`,
             backgroundSize: '60px 60px',
           }}
         ></div>
@@ -117,7 +117,7 @@ export default function PillarsSection() {
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
           className="text-start mb-20 w-full max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#000000] via-[#68f1ebff] to-[#ffffff] bg-clip-text text-transparent">
             OUR PILLARS
           </h2>
 
