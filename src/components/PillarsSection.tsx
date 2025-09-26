@@ -1,5 +1,11 @@
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import {
+  motion,
+  useInView,
+  useScroll,
+  useTransform,
+  useMotionValue,
+} from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
 import {
   Play,
   Building2,
@@ -8,63 +14,68 @@ import {
   Zap,
   Users,
   BarChart3,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react'
 
 const pillars = [
   {
     id: 1,
-    title: 'Radical Transparency',
-    subtitle: 'Data sharing between stakeholders promotes full transparency',
-    type: 'image',
-    image:
-      'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-    icon: Shield,
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  {
-    id: 2,
-    title: 'Faster Moves',
-    subtitle: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+    title: 'Consumer Power',
+    subtitle: 'Shifting control from industry to you.',
     type: 'video',
+    video: '/public/pillars/video_1.mp4',
     videoPlaceholder: true,
     icon: Zap,
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    id: 3,
-    title: 'Consumer Power',
-    subtitle: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+    id: 2,
+    title: 'Radical Transparency',
+    subtitle:
+      'No hidden steps, no surprises. Real time updates from offer to completion.',
     type: 'image',
-    image:
-      'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/public/pillars/image_3.jpg',
+    icon: Shield,
+    gradient: 'from-blue-500 to-cyan-500',
+  },
+
+  {
+    id: 3,
+    title: 'Faster Moves',
+    subtitle: 'Because moving faster means living sooner.',
+    type: 'video',
+    video: '/public/pillars/video_2.mp4',
+    videoPlaceholder: true,
     icon: Users,
     gradient: 'from-orange-500 to-red-500',
   },
   {
     id: 4,
-    title: 'Smart Savings',
-    subtitle: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-    type: 'video',
-    videoPlaceholder: true,
+    title: 'True Control',
+    subtitle: 'Earn rewards when you learn with our AI powered education hub',
+    type: 'image',
+    image: '/public/pillars/image_1.jpg',
     icon: TrendingUp,
     gradient: 'from-green-500 to-emerald-500',
   },
   {
     id: 5,
-    title: 'Learn & Earn',
-    subtitle: 'Earn rewards when you learn with our AI powered education hub',
-    type: 'image',
-    image:
-      'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Smart Savings',
+    subtitle:
+      'Out tech helps you save on what matters most - time, money and peace of mind.',
+    type: 'video',
+    video: '/public/pillars/video_3.mp4',
+    videoPlaceholder: true,
     icon: BarChart3,
     gradient: 'from-indigo-500 to-purple-500',
   },
   {
     id: 6,
-    title: 'Property Intelligence',
-    subtitle: 'Advanced analytics and market insights for smarter decisions',
-    type: 'video',
-    videoPlaceholder: true,
+    title: 'Learn & Earn',
+    subtitle: 'Earn rewards when you learn with our AI powered education hub',
+    type: 'image',
+    image: '/public/pillars/image_2.jpg',
     icon: Building2,
     gradient: 'from-teal-500 to-blue-500',
   },
@@ -72,29 +83,43 @@ const pillars = [
 
 export default function PillarsSection() {
   const containerRef = useRef<HTMLElement>(null)
-  const scrollRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(containerRef, { once: true, margin: '-100px' })
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const [currentPosition, setCurrentPosition] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
 
-  // **FADE IN/OUT ANIMATION CODE - Apply this pattern throughout the app**
-  // const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  // const scale = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.2, 0.8, 1],
-  //   [0.8, 1, 1, 0.8]
-  // )
+  // Calculate how many pages we have (3 cards per page)
+  const cardsPerPage = 3
+  const totalPages = Math.ceil(pillars.length / cardsPerPage)
 
-  // Horizontal scroll transform
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-70%'])
+  const handleCardClick = (direction: 'left' | 'right') => {
+    if (isDragging) return
+
+    setIsDragging(true)
+    const newPosition =
+      direction === 'right'
+        ? (currentPosition + 1) % totalPages
+        : (currentPosition - 1 + totalPages) % totalPages
+
+    setCurrentPosition(newPosition)
+
+    setTimeout(() => setIsDragging(false), 500)
+  }
+
+  const handleDotClick = (position: number) => {
+    setCurrentPosition(position)
+  }
+
+  const nextCard = () => handleCardClick('right')
+  const prevCard = () => handleCardClick('left')
+
+  // Get current page cards
+  const startIndex = currentPosition * cardsPerPage
+  const currentPageCards = pillars.slice(startIndex, startIndex + cardsPerPage)
 
   return (
     <motion.section
       ref={containerRef}
-      // style={{ opacity, scale }} // **FADE ANIMATION APPLIED HERE**
       className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -127,23 +152,51 @@ export default function PillarsSection() {
           </p>
         </motion.div>
 
-        {/* Horizontal Scrolling Container */}
-        <div className="relative h-[800px] overflow-hidden">
-          {/* Scattered Cards Layout */}
-          <motion.div
-            ref={scrollRef}
-            style={{ x }}
-            className="absolute inset-0 w-[200%]"
+        {/* Navigation Controls */}
+        <div className="flex justify-center items-center space-x-4 mb-8">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={prevCard}
+            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
           >
-            {pillars.map((pillar, index) => {
-              // Define positions for scattered layout
+            <ChevronLeft className="w-6 h-6" />
+          </motion.button>
+
+          {/* Dot Indicators */}
+          <div className="flex space-x-2">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentPosition
+                    ? 'bg-[#00a19a] scale-125'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={nextCard}
+            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </motion.button>
+        </div>
+
+        {/* Cards Container */}
+        <div className="relative h-[800px]">
+          {/* Current Page Cards */}
+          <div className="grid grid-cols-3 gap-8 justify-items-center">
+            {currentPageCards.map((pillar, index) => {
               const positions = [
-                { top: '10%', left: '15%', rotation: 0, zIndex: 10 },
-                { top: '25%', left: '20%', rotation: 0, zIndex: 20 },
-                { top: '5%', left: '35%', rotation: 0, zIndex: 15 },
-                { top: '35%', left: '50%', rotation: 0, zIndex: 25 },
-                { top: '15%', left: '65%', rotation: 0, zIndex: 18 },
-                { top: '45%', left: '80%', rotation: 0, zIndex: 22 },
+                { top: '10%', rotation: -5, zIndex: 10 },
+                { top: '25%', rotation: 3, zIndex: 20 },
+                { top: '5%', rotation: -2, zIndex: 15 },
               ]
 
               const position = positions[index]
@@ -151,7 +204,7 @@ export default function PillarsSection() {
               return (
                 <motion.div
                   key={pillar.id}
-                  initial={{ opacity: 0, y: 100, rotate: 0 }}
+                  initial={{ opacity: 0, y: 100, rotate: position.rotation }}
                   animate={
                     isInView
                       ? {
@@ -166,11 +219,14 @@ export default function PillarsSection() {
                     delay: 0.3 + index * 0.15,
                     ease: [0.23, 1, 0.32, 1],
                   }}
-                  className="absolute group cursor-pointer"
+                  className="relative group cursor-pointer"
                   style={{
                     top: position.top,
-                    left: position.left,
                     zIndex: position.zIndex,
+                  }}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    handleCardClick('right')
                   }}
                 >
                   <motion.div
@@ -180,6 +236,7 @@ export default function PillarsSection() {
                       rotate: 0,
                       zIndex: 50,
                     }}
+                    whileTap={{ scale: 0.95 }}
                     className="w-72 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
                   >
                     {/* Media Container */}
@@ -193,20 +250,18 @@ export default function PillarsSection() {
                         />
                       ) : (
                         <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
-                          {/* Video Placeholder with Animation */}
-                          <motion.div
-                            animate={{
-                              scale: [1, 1.1, 1],
-                              opacity: [0.7, 1, 0.7],
-                            }}
-                            transition={{
-                              duration: 3,
-                              repeat: Infinity,
-                              ease: 'easeInOut',
-                            }}
-                            className={`w-16 h-16 bg-gradient-to-r ${pillar.gradient} rounded-full flex items-center justify-center shadow-2xl`}
-                          >
-                            <Play className="h-6 w-6 text-white ml-1" />
+                          {/* Video Placeholder */}
+                          <motion.div className="relative w-full h-full flex items-center justify-center">
+                            <video
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                              className="w-full h-full object-cover"
+                            >
+                              <source src={pillar.video} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
                           </motion.div>
 
                           {/* Animated Particles */}
@@ -253,45 +308,35 @@ export default function PillarsSection() {
                       </motion.div>
 
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-foreground group-hover:text-[#00a19a] transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-white group-hover:text-[#00a19a] transition-colors duration-300 mt-2">
                         {pillar.title}
                       </h3>
 
                       {/* Subtitle */}
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-gray-200 leading-relaxed mt-2">
                         {pillar.subtitle}
                       </p>
+
+                      {/* Click Hint */}
+                      <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
+                        <span className="text-xs text-white/60">
+                          Click to navigate
+                        </span>
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="text-white/60"
+                        >
+                          →
+                        </motion.div>
+                      </div>
                     </div>
                   </motion.div>
                 </motion.div>
               )
             })}
-          </motion.div>
+          </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="text-center mt-16"
-        >
-          <p className="text-muted-foreground text-sm mb-4">
-            Scroll down to explore our pillars
-          </p>
-          <motion.div
-            animate={{ x: [0, 20, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="inline-flex items-center space-x-2 text-[#00a19a]"
-          >
-            <span className="text-sm font-medium">Scroll to see more</span>
-            <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-[#00a19a] rounded-full"></div>
-              <div className="w-2 h-2 bg-[#00a19a]/60 rounded-full"></div>
-              <div className="w-2 h-2 bg-[#00a19a]/30 rounded-full"></div>
-            </div>
-          </motion.div>
-        </motion.div>
       </div>
     </motion.section>
   )
