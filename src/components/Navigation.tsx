@@ -56,13 +56,15 @@ export default function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-12 text-18">
-            <motion.a
-              href="#about"
-              whileHover={{ y: -2 }}
-              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
-            >
-              Home
-            </motion.a>
+            <Link to="/">
+              <motion.div
+                whileHover={{ y: -2 }}
+                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+              >
+                Home
+              </motion.div>
+            </Link>
+
             <Link to="/about">
               <motion.div
                 whileHover={{ y: -2 }}
