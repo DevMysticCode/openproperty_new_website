@@ -602,3 +602,7 @@ html * {
 .text-heading {
   font-size: clamp(1.88rem, 3.87vw + 0.02rem, 3.5rem);
 }
+
+.text-fluid-48-110 {
+  font-size: clamp(3rem, 9.23vw + -1.43rem, 6.88rem);
+}

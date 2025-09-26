@@ -1,11 +1,16 @@
 import React from 'react'
-import Spline from '@splinetool/react-spline'
 
-const ChipsScene = () => {
+interface ChipsSceneProps {
+  src?: string
+}
+
+const ChipsScene: React.FC<ChipsSceneProps> = ({
+  src = 'https://my.spline.design/chips-lrFvVaTcN5K9FxL9EKWCEHvQ/',
+}) => {
   return (
     <div className="spline-container w-full h-[600px]">
       <iframe
-        src="https://my.spline.design/chips-lrFvVaTcN5K9FxL9EKWCEHvQ/"
+        src={src}
         frameBorder="0"
         width="100%"
         height="600px"

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useTheme } from './theme-provider'
 import { Button } from './ui/button'
 import { Sun, Moon, Menu, X } from 'lucide-react'
@@ -62,13 +63,14 @@ export default function Navigation() {
             >
               Home
             </motion.a>
-            <motion.a
-              href="#about"
-              whileHover={{ y: -2 }}
-              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
-            >
-              About Us
-            </motion.a>
+            <Link to="/about">
+              <motion.div
+                whileHover={{ y: -2 }}
+                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium cursor-pointer"
+              >
+                About Us
+              </motion.div>
+            </Link>
             <motion.a
               href="#services"
               whileHover={{ y: -2 }}
