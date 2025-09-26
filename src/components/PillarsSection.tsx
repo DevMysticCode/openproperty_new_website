@@ -183,7 +183,7 @@ export default function PillarsSection() {
                     className="w-72 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
                   >
                     {/* Media Container */}
-                    <div className="relative h-44 overflow-hidden rounded-t-3xl">
+                    <div className="absolute inset-0 z-0">
                       {pillar.type === 'image' ? (
                         <motion.img
                           src={pillar.image}
@@ -243,7 +243,7 @@ export default function PillarsSection() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-5 space-y-3">
+                    <div className="relative z-10 h-full flex flex-col justify-end p-6">
                       {/* Icon */}
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 8 }}
