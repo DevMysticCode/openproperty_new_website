@@ -183,7 +183,7 @@ export default function AboutUs() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="text-4xl sm:text-4xl lg:text-6xl xl:text-9xl font-light leading-tight tracking-tight mb-8"
+            className="text-4xl sm:text-4xl lg:text-6xl xl:text-7xl font-light leading-tight tracking-tight mb-8"
           >
             <span className="text-white">In The Palm Of</span>{' '}
             <span
