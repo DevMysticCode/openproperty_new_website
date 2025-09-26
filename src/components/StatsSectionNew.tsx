@@ -15,7 +15,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
         decoding="async"
         className="absolute left-0 top-0 z-10 h-full w-full object-fill"
         style={{ color: 'transparent' }}
-        src="/default_glow.webp"
+        src="/Gradient_Background.png"
       />
 
       {/* Gradient overlay */}
