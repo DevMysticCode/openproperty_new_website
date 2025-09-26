@@ -138,12 +138,12 @@ export default function PillarsSection() {
             {pillars.map((pillar, index) => {
               // Define positions for scattered layout
               const positions = [
-                { top: '10%', left: '5%', rotation: -8, zIndex: 10 },
-                { top: '25%', left: '25%', rotation: 12, zIndex: 20 },
-                { top: '5%', left: '45%', rotation: -5, zIndex: 15 },
-                { top: '35%', left: '65%', rotation: 8, zIndex: 25 },
-                { top: '15%', left: '80%', rotation: -12, zIndex: 18 },
-                { top: '45%', left: '90%', rotation: 6, zIndex: 22 },
+                { top: '10%', left: '15%', rotation: 0, zIndex: 10 },
+                { top: '25%', left: '20%', rotation: 0, zIndex: 20 },
+                { top: '5%', left: '35%', rotation: 0, zIndex: 15 },
+                { top: '35%', left: '50%', rotation: 0, zIndex: 25 },
+                { top: '15%', left: '65%', rotation: 0, zIndex: 18 },
+                { top: '45%', left: '80%', rotation: 0, zIndex: 22 },
               ]
 
               const position = positions[index]
