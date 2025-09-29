@@ -237,17 +237,17 @@ export default function PillarsSection() {
                       zIndex: 50,
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-80 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
+                    className="w-80 h-[30rem] premium-card rounded-3xl card-container bg-[#e0dee0] hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
                   >
                     {/* Media Container */}
                     <div className="absolute inset-0 z-0">
                       {pillar.type === 'image' ? (
                         <div className="relative h-full w-full">
-                          <div className="absolute bottom-4 left-4 h-2/3 w-2/3 justify-end">
+                          <div className="absolute bottom-0 left-0 h-2/3 w-4/5 justify-end">
                             <motion.img
                               src={pillar.image}
                               alt={pillar.title}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                              className="w-full h-full object-cover"
                               whileHover={{ scale: 1.1 }}
                             />
                           </div>
@@ -298,7 +298,7 @@ export default function PillarsSection() {
                       )}
 
                       {/* Overlay Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div> */}
                     </div>
 
                     {/* Content */}
@@ -312,12 +312,20 @@ export default function PillarsSection() {
                       </motion.div> */}
 
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-white group-hover:text-[#00a19a] transition-colors duration-300 mt-2">
+                      <h3
+                        className={`text-lg font-bold ${
+                          pillar.type === 'video' ? 'text-white' : 'text-black'
+                        }  transition-colors duration-300 mt-2`}
+                      >
                         {pillar.title}
                       </h3>
 
                       {/* Subtitle */}
-                      <p className="text-sm text-gray-200 leading-relaxed mt-2">
+                      <p
+                        className={`text-sm ${
+                          pillar.type === 'video' ? 'text-white' : 'text-black'
+                        }  font-medium leading-relaxed mt-2`}
+                      >
                         {pillar.subtitle}
                       </p>
 

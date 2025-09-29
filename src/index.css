@@ -606,3 +606,8 @@ html * {
 .text-fluid-48-110 {
   font-size: clamp(3rem, 9.23vw + -1.43rem, 6.88rem);
 }
+
+.bg-gray {
+  --tw-bg-opacity: 1;
+  background-color: #e0dee0;
+}
