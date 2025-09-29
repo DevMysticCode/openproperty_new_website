@@ -94,18 +94,19 @@ export default function MobileAppSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-center mb-20"
+          className="text-start mb-20 max-w-5xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight text-black">
-            Powerful Property Intelligence,{' '}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
+            Powerful Property Intelligence{' '}
             <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
               In Your Pocket
             </span>
           </h2>
 
-          <p className="text-lg text-gray max-w-3xl mx-auto leading-relaxed font-light">
-            Take the full power of OpenProperty with you. Make informed
-            decisions on the go with our beautifully designed mobile experience.
+          <p className="text-lg text-gray mx-auto leading-relaxed font-light">
+            The current process leaves you waiting on updates and working to
+            other people’s schedules. UMU puts the power in your pocket. Always
+            on, always with you, every step of your move.
           </p>
         </motion.div>
 
