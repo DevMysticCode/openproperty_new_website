@@ -173,6 +173,7 @@ export default function AboutUs() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                paddingLeft: '4px',
               }}
             >
               A Move.
