@@ -164,7 +164,7 @@ export default function AboutUs() {
             transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
             className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-light leading-tight tracking-tight mb-8"
           >
-            <span className="text-white">Not Just</span>{' '}
+            <span className="text-white">Not Just A</span>{' '}
             <span
               className="italic font-light"
               style={{
@@ -173,10 +173,10 @@ export default function AboutUs() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                paddingLeft: '4px',
+                paddingLeft: '8px',
               }}
             >
-              A Move.
+              Move.
             </span>
           </motion.h1>
 
