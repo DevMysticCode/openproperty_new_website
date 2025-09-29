@@ -194,9 +194,9 @@ export default function PillarsSection() {
           <div className="grid grid-cols-3 gap-8 justify-items-center">
             {currentPageCards.map((pillar, index) => {
               const positions = [
-                { top: '10%', rotation: -5, zIndex: 10 },
-                { top: '25%', rotation: 3, zIndex: 20 },
-                { top: '5%', rotation: -2, zIndex: 15 },
+                { top: '5%', rotation: -0, zIndex: 10 },
+                { top: '5%', rotation: 0, zIndex: 20 },
+                { top: '5%', rotation: -0, zIndex: 15 },
               ]
 
               const position = positions[index]
@@ -237,17 +237,21 @@ export default function PillarsSection() {
                       zIndex: 50,
                     }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-72 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
+                    className="w-80 h-[30rem] premium-card rounded-3xl glassmorphism hover:bg-card/95 hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
                   >
                     {/* Media Container */}
                     <div className="absolute inset-0 z-0">
                       {pillar.type === 'image' ? (
-                        <motion.img
-                          src={pillar.image}
-                          alt={pillar.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                          whileHover={{ scale: 1.1 }}
-                        />
+                        <div className="relative h-full w-full">
+                          <div className="absolute bottom-4 left-4 h-2/3 w-2/3 justify-end">
+                            <motion.img
+                              src={pillar.image}
+                              alt={pillar.title}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                              whileHover={{ scale: 1.1 }}
+                            />
+                          </div>
+                        </div>
                       ) : (
                         <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
                           {/* Video Placeholder */}
@@ -298,14 +302,14 @@ export default function PillarsSection() {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                    <div className="relative z-10 h-full flex flex-col justify-start p-6">
                       {/* Icon */}
-                      <motion.div
+                      {/* <motion.div
                         whileHover={{ scale: 1.1, rotate: 8 }}
                         className={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-r ${pillar.gradient} shadow-lg group-hover:shadow-xl transition-all duration-500`}
                       >
                         <pillar.icon className="h-5 w-5 text-white" />
-                      </motion.div>
+                      </motion.div> */}
 
                       {/* Title */}
                       <h3 className="text-lg font-bold text-white group-hover:text-[#00a19a] transition-colors duration-300 mt-2">
@@ -318,7 +322,7 @@ export default function PillarsSection() {
                       </p>
 
                       {/* Click Hint */}
-                      <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
+                      {/* <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
                         <span className="text-xs text-white/60">
                           Click to navigate
                         </span>
@@ -329,7 +333,7 @@ export default function PillarsSection() {
                         >
                           →
                         </motion.div>
-                      </div>
+                      </div> */}
                     </div>
                   </motion.div>
                 </motion.div>
