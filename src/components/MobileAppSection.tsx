@@ -15,7 +15,7 @@ const appScreens = [
       'Instant results',
       'Location intelligence',
     ],
-    image: '/public/mobileAppImages/screen1.png',
+    image: '/mobileAppImages/screen1.png',
   },
   {
     id: 'details',
@@ -28,7 +28,7 @@ const appScreens = [
       'Investment metrics',
       'Verified data',
     ],
-    image: '/public/mobileAppImages/screen2.png',
+    image: '/mobileAppImages/screen2.png',
   },
   {
     id: 'passport',
@@ -41,7 +41,7 @@ const appScreens = [
       'Secure sharing',
       'Complete history',
     ],
-    image: '/public/mobileAppImages/screen3.png',
+    image: '/mobileAppImages/screen3.png',
   },
 ]
 
