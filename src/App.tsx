@@ -20,9 +20,10 @@ function App() {
           <Hero />
           <StatsSectionNew delay={2} />
           <PillarsSection />
+          <MobileAppSection />
           <ProblemSection />
           <StatsSection />
-          <MobileAppSection />
+
           <FeaturesSection />
           <TestimonialsSection />
           <CTASection />
