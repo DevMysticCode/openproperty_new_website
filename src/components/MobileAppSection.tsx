@@ -74,7 +74,7 @@ export default function MobileAppSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 bg-gradient-to-b from-white via-gray-900 to-[#00c9bf] overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-white via-[#ffffff] to-[#00c9bf] overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
@@ -94,16 +94,20 @@ export default function MobileAppSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-start mb-20 max-w-5xl mx-auto"
+          className="text-start mb-20 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-24 tracking-tight leading-tight text-black">
+            OUR PRODUCT{' '}
+          </h2>
+
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-black">
             Powerful Property Intelligence{' '}
             <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
               In Your Pocket
             </span>
           </h2>
 
-          <p className="text-lg text-gray mx-auto leading-relaxed font-light">
+          <p className="text-lg text-black/90 mx-auto leading-relaxed font-light">
             The current process leaves you waiting on updates and working to
             other people’s schedules. UMU puts the power in your pocket. Always
             on, always with you, every step of your move.
@@ -184,10 +188,10 @@ export default function MobileAppSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+              <h3 className="text-2xl font-bold text-black mb-4 leading-tight">
                 {appScreens[activeScreen].title}
               </h3>
-              <p className="text-base text-gray-300 mb-6 leading-relaxed font-light">
+              <p className="text-base text-black/90 mb-6 leading-relaxed font-light">
                 {appScreens[activeScreen].description}
               </p>
 
@@ -199,7 +203,7 @@ export default function MobileAppSection() {
                       className="flex items-center space-x-4"
                     >
                       <div className="w-3 h-3 bg-[#00a19a] rounded-full"></div>
-                      <span className="text-gray-300 text-sm font-light">
+                      <span className="text-black/90 text-sm font-light">
                         {feature}
                       </span>
                     </div>
@@ -237,7 +241,7 @@ export default function MobileAppSection() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-sm px-8 py-4 rounded-xl transition-all duration-500 group text-white hover:border-[#00a19a]/50 font-semibold"
+                  className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-sm px-8 py-4 rounded-xl transition-all duration-500 group text-black hover:border-[#00a19a]/50 font-semibold"
                 >
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-[#00a19a]/20 rounded-lg flex items-center justify-center">
