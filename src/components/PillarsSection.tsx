@@ -152,44 +152,8 @@ export default function PillarsSection() {
           </p>
         </motion.div>
 
-        {/* Navigation Controls */}
-        <div className="flex justify-center items-center space-x-4 mb-8">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={prevCard}
-            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </motion.button>
-
-          {/* Dot Indicators */}
-          <div className="flex space-x-2">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentPosition
-                    ? 'bg-[#00a19a] scale-125'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
-
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={nextCard}
-            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </motion.button>
-        </div>
-
         {/* Cards Container */}
-        <div className="relative h-[800px]">
+        <div className="relative h-[600px]">
           {/* Current Page Cards */}
           <div className="grid grid-cols-3 gap-8 justify-items-center">
             {currentPageCards.map((pillar, index) => {
@@ -348,6 +312,42 @@ export default function PillarsSection() {
               )
             })}
           </div>
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex justify-center items-center space-x-4 mb-8">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={prevCard}
+            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </motion.button>
+
+          {/* Dot Indicators */}
+          <div className="flex space-x-2">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentPosition
+                    ? 'bg-[#00a19a] scale-125'
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={nextCard}
+            className="p-3 rounded-full bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </motion.button>
         </div>
       </div>
     </motion.section>
