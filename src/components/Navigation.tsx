@@ -94,7 +94,7 @@ export default function Navigation() {
             >
               Contact Us
             </motion.a>
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -105,7 +105,7 @@ export default function Navigation() {
               ) : (
                 <Moon className="h-5 w-5" />
               )}
-            </Button>
+            </Button> */}
             {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                 CONTACT US
