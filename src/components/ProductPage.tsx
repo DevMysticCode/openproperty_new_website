@@ -94,20 +94,6 @@ const features = [
     ],
     gradient: 'from-[#00c9bf] to-[#00A19A]',
   },
-  {
-    icon: Award,
-    title: 'Premium Education',
-    subtitle: 'Expert-curated professional resources',
-    description:
-      'A collection of expert-curated resources, crafted to a professional standard, empowering users beyond the basics.',
-    highlights: [
-      'Professional standard content',
-      'Expert-curated resources',
-      'Advanced property knowledge',
-      'Elevate your understanding',
-    ],
-    gradient: 'from-[#007a75] to-[#00c4b8]',
-  },
 ]
 
 const differentiators = [
@@ -507,7 +493,7 @@ export default function ProductPage() {
           </motion.div>
 
           {/* Single Feature Carousel */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          <div className="gap-16 items-center max-w-6xl mx-auto">
             {/* Left Side - Interactive Visual Container */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -530,140 +516,147 @@ export default function ProductPage() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <>
-                    {/* Top Navigation Tabs */}
-                    <div className="flex space-x-4 mb-8">
-                      {features.map((feature, tabIndex) => (
-                        <button
-                          key={feature.title}
-                          onClick={() => setActiveFeature(tabIndex)}
-                          className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                            tabIndex === activeFeature
-                              ? 'bg-[#00A19A] text-white'
-                              : 'bg-gray-700 text-gray-300 hover:bg-gray-600 cursor-pointer'
-                          }`}
-                        >
-                          {feature.title}
-                        </button>
-                      ))}
-                    </div>
+                  {/* Top Navigation Tabs - Moved above the row */}
+                  <div className="flex space-x-4 mb-8 justify-center">
+                    {features.map((feature, tabIndex) => (
+                      <button
+                        key={feature.title}
+                        onClick={() => setActiveFeature(tabIndex)}
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                          tabIndex === activeFeature
+                            ? 'bg-[#00A19A] text-white'
+                            : 'bg-gray-700 text-gray-300 hover:bg-gray-600 cursor-pointer'
+                        }`}
+                      >
+                        {feature.title}
+                      </button>
+                    ))}
+                  </div>
 
-                    {/* Dynamic Feature Visual */}
-                    <motion.div
-                      key={`feature-visual-${activeFeature}`}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-                    >
-                      {/* Mock Phone Interface */}
-                      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl p-1 mb-6 max-w-xs">
-                        <div className="bg-black rounded-2xl p-4">
-                          <div className="text-black text-sm mb-4">
-                            <div className="flex items-center justify-between mb-2">
-                              <span>9:41</span>
-                              <div className="flex space-x-1">
-                                <div className="w-4 h-2 bg-white rounded-sm"></div>
-                                <div className="w-1 h-2 bg-white rounded-sm"></div>
+                  {/* Two Column Layout */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Left Column - Content */}
+                    <div>
+                      {/* Dynamic Feature Visual */}
+                      <motion.div
+                        key={`feature-visual-${activeFeature}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                      >
+                        {/* Mock Phone Interface */}
+                        <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl p-1 mb-6 max-w-xs">
+                          <div className="bg-black rounded-2xl p-4">
+                            <div className="text-white text-sm mb-4">
+                              <div className="flex items-center justify-between mb-2">
+                                <span>9:41</span>
+                                <div className="flex space-x-1">
+                                  <div className="w-4 h-2 bg-white rounded-sm"></div>
+                                  <div className="w-1 h-2 bg-white rounded-sm"></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          <div className="space-y-3">
-                            {features[activeFeature].highlights
-                              .slice(0, 3)
-                              .map((highlight, index) => (
-                                <div
-                                  key={index}
-                                  className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3"
-                                >
-                                  <div className="flex items-center space-x-2 mb-2">
-                                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                      {React.createElement(
-                                        features[activeFeature].icon,
-                                        { className: 'h-3 w-3 text-purple-500' }
-                                      )}
+                            <div className="space-y-3">
+                              {features[activeFeature].highlights
+                                .slice(0, 3)
+                                .map((highlight, index) => (
+                                  <div
+                                    key={index}
+                                    className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3"
+                                  >
+                                    <div className="flex items-center space-x-2 mb-2">
+                                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                        {React.createElement(
+                                          features[activeFeature].icon,
+                                          {
+                                            className:
+                                              'h-3 w-3 text-purple-500',
+                                          }
+                                        )}
+                                      </div>
+                                      <span className="text-white text-xs font-medium">
+                                        OpenProperty
+                                      </span>
                                     </div>
-                                    <span className="text-black text-xs font-medium">
-                                      OpenProperty
-                                    </span>
+                                    <p className="text-white text-xs">
+                                      {highlight}
+                                    </p>
                                   </div>
-                                  <p className="text-white text-xs">
-                                    {highlight}
-                                  </p>
-                                </div>
-                              ))}
+                                ))}
+                            </div>
                           </div>
                         </div>
+                      </motion.div>
+
+                      {/* Navigation Arrows */}
+                      <div className="flex justify-end space-x-2">
+                        <button
+                          onClick={prevFeature}
+                          className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
+                        >
+                          <span className="text-white text-sm">←</span>
+                        </button>
+                        <button
+                          onClick={nextFeature}
+                          className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
+                        >
+                          <span className="text-white text-sm">→</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Right Column - Dynamic Feature Content */}
+                    <motion.div
+                      key={`feature-content-${activeFeature}`}
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                      className="space-y-6"
+                    >
+                      <motion.div
+                        whileHover={{ scale: 1.05, rotate: 8 }}
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${features[activeFeature].gradient} shadow-lg`}
+                      >
+                        {React.createElement(features[activeFeature].icon, {
+                          className: 'h-8 w-8 text-white',
+                        })}
+                      </motion.div>
+
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2 leading-tight text-white">
+                          {features[activeFeature].title}
+                        </h3>
+
+                        <p className="text-lg font-semibold text-[#00A19A] mb-4">
+                          {features[activeFeature].subtitle}
+                        </p>
+
+                        <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                          {features[activeFeature].description}
+                        </p>
+
+                        {/* Highlights */}
+                        <ul className="space-y-3">
+                          {features[activeFeature].highlights
+                            .slice(0, 4)
+                            .map((highlight, highlightIndex) => (
+                              <li
+                                key={highlightIndex}
+                                className="flex items-start space-x-3"
+                              >
+                                <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-sm text-gray-300 font-light">
+                                  {highlight}
+                                </span>
+                              </li>
+                            ))}
+                        </ul>
                       </div>
                     </motion.div>
-
-                    {/* Navigation Arrows */}
-                    <div className="flex justify-end space-x-2">
-                      <button
-                        onClick={prevFeature}
-                        className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
-                      >
-                        <span className="text-white text-sm">←</span>
-                      </button>
-                      <button
-                        onClick={nextFeature}
-                        className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
-                      >
-                        <span className="text-white text-sm">→</span>
-                      </button>
-                    </div>
-                  </>
+                  </div>
                 </div>
               </motion.div>
-            </motion.div>
-
-            {/* Right Side - Dynamic Feature Content */}
-            <motion.div
-              key={`feature-content-${activeFeature}`}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-              className="space-y-6"
-            >
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: 8 }}
-                className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${features[activeFeature].gradient} shadow-lg`}
-              >
-                {React.createElement(features[activeFeature].icon, {
-                  className: 'h-8 w-8 text-white',
-                })}
-              </motion.div>
-
-              <div>
-                <h3 className="text-2xl font-bold mb-2 leading-tight text-black">
-                  {features[activeFeature].title}
-                </h3>
-
-                <p className="text-lg font-semibold text-[#00A19A] mb-4">
-                  {features[activeFeature].subtitle}
-                </p>
-
-                <p className="text-black mb-6 leading-relaxed font-light">
-                  {features[activeFeature].description}
-                </p>
-
-                {/* Highlights */}
-                <ul className="space-y-3">
-                  {features[activeFeature].highlights
-                    .slice(0, 4)
-                    .map((highlight, highlightIndex) => (
-                      <li
-                        key={highlightIndex}
-                        className="flex items-start space-x-3"
-                      >
-                        <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-[#00A19A] font-light">
-                          {highlight}
-                        </span>
-                      </li>
-                    ))}
-                </ul>
-              </div>
             </motion.div>
           </div>
 
