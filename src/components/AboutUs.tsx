@@ -206,8 +206,24 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      <section data-theme="Light" className="bg-neutral-100 pt-24">
-        <div className="relative overflow-hidden">
+      <section data-theme="Light" className="relative bg-neutral-100 pt-24 ">
+        <img
+          alt="Background glows"
+          loading="lazy"
+          decoding="async"
+          className="absolute left-0 top-0 z-10 h-full w-full object-fill"
+          style={{ color: 'transparent' }}
+          src="/Gradient_Background.png"
+        />
+        {/* Gradient overlay */}
+        <div
+          className="absolute left-0 top-0 z-10 h-full w-full"
+          style={{
+            backgroundImage:
+              'linear-gradient(180deg, rgba(0, 0, 0) 0%, #FFFFFF00 35.44%)',
+          }}
+        />
+        <div className="relative overflow-hidden mx-auto px-6 sm:px-8 z-20">
           {/* Image Section */}
           <img
             alt="OpenProperty"
@@ -221,125 +237,127 @@ export default function AboutUs() {
           />
 
           {/* Overlay Text */}
-          <div className="relative z-20 flex h-full items-end justify-center -mt-10 lg:-mt-48 bg-gradient-to-t from-neutral-100 via-neutral-100 to-transparent via-[30%]">
+          <div className="relative z-20 flex h-full items-end justify-center -mt-10 lg:-mt-36">
             <h2
               className="bg-clip-text px-6 pb-2 text-fluid-48-110 font-normal leading-tight -tracking-7 text-transparent md:mb-8 md:whitespace-pre md:px-[12%] text-center md:text-left"
               style={{
                 backgroundImage:
-                  'radial-gradient(56.91% 100% at 70.4% 100%, #FFB798 0%, #00A19A 64.63%, #000000 100%)',
+                  'radial-gradient(56.91% 100% at 70.4% 100%, #000000 0%, #00A19A 64.63%, #000000 100%)',
               }}
             >
               Meet Our Founder
             </h2>
           </div>
-        </div>
 
-        {/* Values Grid */}
-        <div className="pt-20 md:pt-0">
-          <div className="px-6 pb-20 md:grid-cols-2 md:gap-x-5 text-2xl md:gap-y-24 md:px-[12%] md:pb-44">
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-            >
-              <p
-                className="italic text-center leading-relaxed"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
+          {/* Values Grid */}
+          <div className="pt-20 md:pt-0 z-20">
+            <div className="px-6 pb-20 md:grid-cols-2 md:gap-x-5 text-2xl md:gap-y-24 md:px-[12%] md:pb-44">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
               >
-                "After more than 30 years in the property sector, I’ve seen
-                first-hand how the system fails — not only consumers, but every
-                party involved in the moving process - I know the frustrations
-                of working within a fragmented, inefficient industry where no
-                universal platform connects stakeholders. Too often, estate
-                agents - whose real role is to sell - are dragged deep into the
-                conveyancing process, simply because the sector lacks
-                connectivity and transparency.
-              </p>
-              <p
-                className="italic text-center leading-relaxed mt-12"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(56.91% 100% at 70.4% 100%, #00A19A  0%,  #007A74 64.63%,  #000000 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                The result is blurred lines, broken communication, and
-                responsibilities falling between the cracks. Agents,
-                conveyancers, and consumers alike find themselves shouldering
-                tasks that were never truly theirs to begin with. And while
-                professionals struggle with inefficiency, it’s the consumer who
-                suffers the most. What should be the happiest milestone in their
-                lives — getting the keys to a new home — far too often unravels
-                into a stressful, confusing, and anxiety-inducing nightmare.
-              </p>
-              <p
-                className="italic text-center leading-relaxed mt-12"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Over the years, I’ve seen it affect everyone: first-time buyers,
-                young parents, long-term partners, even businesses grappling
-                with relocations. Again and again, I watched excitement
-                transform into dread. That experience stayed with me.
-              </p>
-              <p
-                className="italic text-center leading-relaxed mt-12"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(56.91% 100% at 70.4% 100%, #00A19A  0%,  #007A74 64.63%,  #000000 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                After exiting my last business, I asked myself a simple but
-                urgent question: what if it didn’t have to be this way? I poured
-                all my time and energy into reimagining what property
-                transactions could look like. Not just a slight improvement to
-                the old system — but a full scale reappraisal of the journey
-                itself: one where transparency, simplicity and connection
-                replace fragmentation and dysfunction, so that no more consumers
-                are forced to pay the emotional or financial price of a broken
-                process.
-              </p>
-              <p
-                className="italic text-center leading-relaxed mt-12"
-                style={{
-                  backgroundImage:
-                    'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                This mission isn’t just professional for me — it’s deeply
-                personal. I’ve lived the challenges of this industry from every
-                side, and I know it can be better. That belief is what drives me
-                every single day."
-              </p>
-            </motion.div>
+                <p
+                  className="italic text-center leading-relaxed"
+                  // style={{
+                  //   backgroundImage:
+                  //     'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
+                  //   WebkitBackgroundClip: 'text',
+                  //   WebkitTextFillColor: 'transparent',
+                  //   backgroundClip: 'text',
+                  // }}
+                >
+                  "After more than 30 years in the property sector, I’ve seen
+                  first-hand how the system fails — not only consumers, but
+                  every party involved in the moving process - I know the
+                  frustrations of working within a fragmented, inefficient
+                  industry where no universal platform connects stakeholders.
+                  Too often, estate agents - whose real role is to sell - are
+                  dragged deep into the conveyancing process, simply because the
+                  sector lacks connectivity and transparency.
+                </p>
+                <p
+                  className="italic text-center leading-relaxed mt-12"
+                  // style={{
+                  //   backgroundImage:
+                  //     'radial-gradient(56.91% 100% at 70.4% 100%, #00A19A  0%,  #007A74 64.63%,  #000000 100%)',
+                  //   WebkitBackgroundClip: 'text',
+                  //   WebkitTextFillColor: 'transparent',
+                  //   backgroundClip: 'text',
+                  // }}
+                >
+                  The result is blurred lines, broken communication, and
+                  responsibilities falling between the cracks. Agents,
+                  conveyancers, and consumers alike find themselves shouldering
+                  tasks that were never truly theirs to begin with. And while
+                  professionals struggle with inefficiency, it’s the consumer
+                  who suffers the most. What should be the happiest milestone in
+                  their lives — getting the keys to a new home — far too often
+                  unravels into a stressful, confusing, and anxiety-inducing
+                  nightmare.
+                </p>
+                <p
+                  className="italic text-center leading-relaxed mt-12"
+                  // style={{
+                  //   backgroundImage:
+                  //     'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
+                  //   WebkitBackgroundClip: 'text',
+                  //   WebkitTextFillColor: 'transparent',
+                  //   backgroundClip: 'text',
+                  // }}
+                >
+                  Over the years, I’ve seen it affect everyone: first-time
+                  buyers, young parents, long-term partners, even businesses
+                  grappling with relocations. Again and again, I watched
+                  excitement transform into dread. That experience stayed with
+                  me.
+                </p>
+                <p
+                  className="italic text-center leading-relaxed mt-12"
+                  // style={{
+                  //   backgroundImage:
+                  //     'radial-gradient(56.91% 100% at 70.4% 100%, #00A19A  0%,  #007A74 64.63%,  #000000 100%)',
+                  //   WebkitBackgroundClip: 'text',
+                  //   WebkitTextFillColor: 'transparent',
+                  //   backgroundClip: 'text',
+                  // }}
+                >
+                  After exiting my last business, I asked myself a simple but
+                  urgent question: what if it didn’t have to be this way? I
+                  poured all my time and energy into reimagining what property
+                  transactions could look like. Not just a slight improvement to
+                  the old system — but a full scale reappraisal of the journey
+                  itself: one where transparency, simplicity and connection
+                  replace fragmentation and dysfunction, so that no more
+                  consumers are forced to pay the emotional or financial price
+                  of a broken process.
+                </p>
+                <p
+                  className="italic text-center leading-relaxed mt-12"
+                  // style={{
+                  //   backgroundImage:
+                  //     'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
+                  //   WebkitBackgroundClip: 'text',
+                  //   WebkitTextFillColor: 'transparent',
+                  //   backgroundClip: 'text',
+                  // }}
+                >
+                  This mission isn’t just professional for me — it’s deeply
+                  personal. I’ve lived the challenges of this industry from
+                  every side, and I know it can be better. That belief is what
+                  drives me every single day."
+                </p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
-              className="mt-24"
-            >
-              <p className="text-3xl text-end text-black">
-                — Maxine, Founder & CEO
-              </p>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
+                className="mt-24"
+              >
+                <p className="text-3xl text-end text-black">
+                  — Maxine, Founder & CEO
+                </p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
