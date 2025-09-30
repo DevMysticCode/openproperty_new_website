@@ -177,7 +177,10 @@ export default function ProductPage() {
           transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
           className="relative flex items-center justify-center w-full"
         >
-          <ChipsScene />
+          <ChipsScene
+            src="https://my.spline.design/earthdayandnight-su7zroT2N8ApljcTl8Fyf8xb/"
+            height="100vh"
+          />
         </motion.div>
 
         {/* Main Title */}
@@ -225,7 +228,7 @@ export default function ProductPage() {
                 backgroundClip: 'text',
               }}
             >
-              Uour Hand.
+              Your Hand.
             </span>
           </motion.h1>
         </motion.div>

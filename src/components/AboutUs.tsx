@@ -149,7 +149,10 @@ export default function AboutUs() {
           transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
           className="relative flex items-center justify-center w-full"
         >
-          <ChipsScene src="https://my.spline.design/worldplanet-VTZdezlhAm6GPszZkmoFlVK1/" />
+          <ChipsScene
+            src="https://my.spline.design/animatedbackgroundgradientforweb-nHu8T9y4nQ95XqXHtTFlvvau/"
+            height="100vh"
+          />
         </motion.div>
 
         {/* Main Title */}
@@ -208,10 +211,10 @@ export default function AboutUs() {
           {/* Image Section */}
           <img
             alt="OpenProperty"
-            width={1440}
-            height={840}
+            // width={1440}
+            // height={840}
             decoding="async"
-            className="relative z-10 aspect-[16/10] w-full object-cover"
+            className="relative z-10 mx-auto object-cover"
             src="/public/about/founder.png"
             srcSet="/public/about/founder.png"
           />
@@ -219,7 +222,7 @@ export default function AboutUs() {
           {/* Overlay Text */}
           <div className="relative z-20 flex h-full items-end justify-center -mt-10 lg:-mt-48 bg-gradient-to-t from-neutral-100 via-neutral-100 to-transparent via-[30%]">
             <h2
-              className="bg-clip-text px-6 pb-2 text-fluid-48-110 font-normal leading-tight -tracking-7 text-transparent md:mb-12 md:whitespace-pre md:px-[12%] text-center md:text-left"
+              className="bg-clip-text px-6 pb-2 text-fluid-48-110 font-normal leading-tight -tracking-7 text-transparent md:mb-8 md:whitespace-pre md:px-[12%] text-center md:text-left"
               style={{
                 backgroundImage:
                   'radial-gradient(56.91% 100% at 70.4% 100%, #FFB798 0%, #00A19A 64.63%, #000000 100%)',
