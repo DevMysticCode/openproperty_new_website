@@ -57,7 +57,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
             million
           </p>
           <p className="text-fluid-20-56 -tracking-4 text-black">
-            lost every year
+            is what the economy loses per year for failed transactions
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               %
             </p>
             <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
-              fall through rate
+              of property transactions fall through in the UK
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               million
             </p>
             <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
-              costs consumers per year
+              is what failed transactions cost consumers per year
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               pounds
             </p>
             <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
-              average loss per failed transaction
+              the average loss per failed transaction
             </p>
           </div>
 
@@ -139,7 +139,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               %
             </p>
             <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
-              people prefer digital solution
+              are open to the creation/ development of a digital solution
             </p>
           </div>
         </div>

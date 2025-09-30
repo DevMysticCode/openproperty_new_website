@@ -22,7 +22,7 @@ const pillars = [
   {
     id: 1,
     title: 'Consumer Power',
-    subtitle: 'Shifting control from industry to you.',
+    subtitle: 'Shifting control from the industry to you.',
     type: 'video',
     video: '/pillars/video_1.mp4',
     videoPlaceholder: true,
@@ -53,7 +53,8 @@ const pillars = [
   {
     id: 4,
     title: 'True Control',
-    subtitle: 'Earn rewards when you learn with our AI powered education hub',
+    subtitle:
+      'Manage your move your way with tools that put you in the driver’s seat.',
     type: 'image',
     image: '/pillars/image_1.jpg',
     icon: TrendingUp,
@@ -63,7 +64,7 @@ const pillars = [
     id: 5,
     title: 'Smart Savings',
     subtitle:
-      'Out tech helps you save on what matters most - time, money and peace of mind.',
+      'Our tech helps you save on what matters most - time, money and peace of mind.',
     type: 'video',
     video: '/pillars/video_3.mp4',
     videoPlaceholder: true,
