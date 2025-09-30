@@ -251,7 +251,7 @@ export default function AboutUs() {
 
           {/* Values Grid */}
           <div className="pt-20 md:pt-0 z-20">
-            <div className="px-6 pb-20 md:grid-cols-2 md:gap-x-5 text-2xl md:gap-y-24 md:px-[12%] md:pb-44">
+            <div className="px-6 pb-20 md:grid-cols-2 md:gap-x-5 text-2xl text-black md:gap-y-24 md:px-[12%] md:pb-44">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
