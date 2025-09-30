@@ -24,7 +24,7 @@ import React from 'react'
 const features = [
   {
     icon: FileText,
-    title: 'Property Passport',
+    title: 'Property Hub',
     subtitle: 'Your material information command centre',
     description:
       'Get your home transaction-ready upfront, preventing unnecessary fall-throughs and weeks of wasted time and money.',
@@ -40,7 +40,7 @@ const features = [
   },
   {
     icon: MapPin,
-    title: 'Explore Property Insights',
+    title: 'Smarter Moves',
     subtitle: 'Property information that gives you confidence',
     description:
       'In-depth information about crime rates, schools, transport links integrated into our explore setting.',
@@ -54,7 +54,7 @@ const features = [
   },
   {
     icon: Bell,
-    title: 'Real Time Updates',
+    title: 'Transparent Transactions',
     subtitle: 'Share property data across the whole transaction',
     description:
       'Push notifications and chain visibility with open data sharing replaces current hidden process.',
@@ -68,7 +68,7 @@ const features = [
   },
   {
     icon: Brain,
-    title: 'AI Layer',
+    title: 'Personalised Tools',
     subtitle: 'Robust, feature-rich workspaces',
     description:
       "AI anticipates bottlenecks and automates repetitive tasks, accelerating progress in ways traditional platforms can't.",
@@ -82,7 +82,7 @@ const features = [
   },
   {
     icon: BookOpen,
-    title: 'Free Education',
+    title: 'Rewards',
     subtitle: 'Populate TA forms with ease',
     description:
       'Seamlessly built into the process, our free bite-sized videos simplify legal forms and provide clear guidance.',
@@ -661,7 +661,7 @@ export default function ProductPage() {
           </div>
 
           {/* Feature Navigation Indicators */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
@@ -678,7 +678,7 @@ export default function ProductPage() {
                 }`}
               />
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
