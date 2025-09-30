@@ -289,8 +289,8 @@ export default function ProductPage() {
                   height={840}
                   decoding="async"
                   className="relative w-full object-cover"
-                  src="/public/products/product_img.webp"
-                  srcSet="/public/products/product_img.webp"
+                  src="/products/product_img.webp"
+                  srcSet="/products/product_img.webp"
                 />
               </div>
             </motion.div>

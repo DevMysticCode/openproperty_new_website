@@ -215,8 +215,8 @@ export default function AboutUs() {
             // height={840}
             decoding="async"
             className="relative z-10 mx-auto object-cover"
-            src="/public/about/founder.png"
-            srcSet="/public/about/founder.png"
+            src="/about/founder.png"
+            srcSet="s/about/founder.png"
           />
 
           {/* Overlay Text */}
