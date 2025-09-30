@@ -477,7 +477,7 @@ export default function ProductPage() {
         ref={featuresRef}
         className="relative py-24 bg-gradient-to-br from-white to-white overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="max-w-8xl mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
@@ -493,7 +493,7 @@ export default function ProductPage() {
           </motion.div>
 
           {/* Single Feature Carousel */}
-          <div className="gap-16 items-center max-w-6xl mx-auto">
+          <div className="gap-16 items-center max-w-7xl mx-auto">
             {/* Left Side - Interactive Visual Container */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -510,9 +510,9 @@ export default function ProductPage() {
                 className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 shadow-2xl overflow-hidden"
               >
                 {/* Gradient Border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-3xl p-1">
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-3xl p-1">
                   <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl"></div>
-                </div>
+                </div> */}
 
                 {/* Content */}
                 <div className="relative z-10">
