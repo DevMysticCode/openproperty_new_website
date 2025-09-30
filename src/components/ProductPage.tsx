@@ -343,138 +343,133 @@ export default function ProductPage() {
       {/* What Makes Us Different Section */}
       <section
         ref={differentiatorRef}
-        className="relative py-24 bg-gradient-to-b from-[#28B0A9] to-white overflow-hidden"
-      >
-        <div className="max-w-4xl mx-auto px-6 sm:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={isDifferentiatorInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-start mb-16 "
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-foreground">
-              What makes us{' '}
-              <span className="bg-gradient-to-r from-white via-white to-white bg-clip-text text-transparent">
-                different?
-              </span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {differentiators.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 100 }}
-                animate={isDifferentiatorInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.3 + index * 0.1,
-                  ease: [0.23, 1, 0.32, 1],
-                }}
-                className="group"
-              >
-                <motion.div
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="premium-card p-8 rounded-2xl glassmorphism hover:bg-card/90 hover:border-[#00A19A]/30 transition-all duration-700 h-full will-change-transform"
-                >
-                  <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-[#00A19A] transition-colors duration-500">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed font-light">
-                    {item.description}
-                  </p>
-
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#00A19A] to-[#00c9bf] scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section
-        ref={featuresRef}
-        className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+        className="relative py-24 bg-gradient-to-br from-[#00A19A] to-white overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight text-foreground">
-              Powerful{' '}
-              <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
-                Features
-              </span>
-            </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Dashboard Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={isDifferentiatorInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.3,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="relative"
+            >
+              <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+                {/* Browser Header */}
+                <div className="flex items-center space-x-2 mb-6">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="flex-1 bg-gray-100 rounded-lg px-4 py-2 ml-4">
+                    <span className="text-sm text-gray-600">
+                      OpenProperty Dashboard
+                    </span>
+                  </div>
+                </div>
 
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
-              Comprehensive tools designed to revolutionize your property
-              journey from start to finish.
-            </p>
-          </motion.div>
+                {/* Progress Bar */}
+                <div className="mb-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium text-gray-700">
+                      Property Setup Progress
+                    </span>
+                    <span className="text-sm text-[#00A19A] font-bold">
+                      85%
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div
+                      className="bg-gradient-to-r from-[#00A19A] to-[#00c9bf] h-3 rounded-full"
+                      style={{ width: '85%' }}
+                    ></div>
+                  </div>
+                </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 100 }}
-                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.3 + index * 0.15,
-                  ease: [0.23, 1, 0.32, 1],
-                }}
-                className="group"
-              >
-                <motion.div
-                  whileHover={{ y: -12, scale: 1.02 }}
-                  className="premium-card p-8 rounded-2xl glassmorphism hover:bg-card/90 hover:border-[#00A19A]/30 overflow-hidden h-full will-change-transform relative"
-                >
-                  {/* Icon */}
+                {/* Dashboard Cards */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-gradient-to-br from-[#00A19A]/10 to-[#00c9bf]/10 rounded-xl p-4">
+                    <div className="w-8 h-8 bg-[#00A19A] rounded-lg mb-3"></div>
+                    <h4 className="font-bold text-gray-900 text-sm mb-1">
+                      Documents
+                    </h4>
+                    <p className="text-gray-600 text-xs">12/15 Complete</p>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-4">
+                    <div className="w-8 h-8 bg-purple-500 rounded-lg mb-3"></div>
+                    <h4 className="font-bold text-gray-900 text-sm mb-1">
+                      Notifications
+                    </h4>
+                    <p className="text-gray-600 text-xs">3 New Updates</p>
+                  </div>
+                </div>
+
+                {/* Bottom Section */}
+                <div className="bg-gradient-to-r from-[#00A19A]/5 to-[#00c9bf]/5 rounded-xl p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-sm">
+                        Property Passport
+                      </h4>
+                      <p className="text-gray-600 text-xs">Ready for sharing</p>
+                    </div>
+                    <div className="w-12 h-12 bg-[#00A19A] rounded-xl flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={isDifferentiatorInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.5,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
+                  What makes us{' '}
+                  <span className="text-black/90">different?</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                {differentiators.map((item, index) => (
                   <motion.div
-                    whileHover={{ scale: 1.15, rotate: 8 }}
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.gradient} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-700`}
+                    key={item.title}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={isDifferentiatorInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{
+                      duration: 1,
+                      delay: 0.7 + index * 0.1,
+                      ease: [0.23, 1, 0.32, 1],
+                    }}
+                    className="flex items-start space-x-4 group"
                   >
-                    <feature.icon className="h-8 w-8 text-white" />
+                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-3 h-3 bg-[#00A19A] rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-black mb-2 group-hover:text-black/90 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-black/80 leading-relaxed font-light text-sm">
+                        {item.description}
+                      </p>
+                    </div>
                   </motion.div>
-
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold mb-2 leading-tight group-hover:text-[#00A19A] transition-colors duration-500">
-                    {feature.title}
-                  </h3>
-
-                  <p className="text-lg font-semibold text-[#00A19A] mb-4">
-                    {feature.subtitle}
-                  </p>
-
-                  <p className="text-muted-foreground mb-6 leading-relaxed font-light">
-                    {feature.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <ul className="space-y-2">
-                    {feature.highlights.map((highlight, highlightIndex) => (
-                      <li
-                        key={highlightIndex}
-                        className="flex items-start space-x-3"
-                      >
-                        <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-muted-foreground font-light">
-                          {highlight}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Hover Effect */}
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#00A19A] to-[#00c9bf] scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
-                </motion.div>
-              </motion.div>
-            ))}
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
