@@ -272,7 +272,7 @@ export default function ProductPage() {
                 className="space-y-12 h-full"
               >
                 <motion.div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
+                  <h2 className="text-4xl sm:text-5xl lg:text-7xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
                     UMU{' '}
                     <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
                       Platform
