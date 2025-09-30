@@ -98,33 +98,33 @@ const features = [
 
 const differentiators = [
   {
-    title: 'Innovation-Predicated Product',
+    title: 'Seamlessly share property data',
     description:
       'Our product is predicated on innovation, not preserving profitable problems.',
+    subheading1:
+      'We have designed a platform that is interoperable: buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem',
+    subheading2:
+      'All data, documents and communication from all parties can be shared at the click of a button - adding a level of speed that has never been seen before',
+    subheading3:
+      'And all YOUR property data is saved, so you never have to complete it again ',
   },
   {
-    title: 'Interoperable Ecosystem',
+    title: 'Secure communication and document exchange channels ',
     description:
       'Buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem.',
+    subheading1: 'Bank level encryption',
+    subheading2: '24/7 communication with all stakeholders in your sale ',
   },
   {
-    title: 'Reimagining Transactions',
+    title: 'Consumer first, not industry first. ',
     description:
       "We're developing solutions to the market's systemic problems rather than digitalizing them.",
-  },
-  {
-    title: 'Consumer First Approach',
-    description:
-      'Consumer first, not industry first - consumers control their own journey.',
-  },
-  {
-    title: 'Pre-Market Readiness',
-    description:
-      'Focusing on pre-market readiness with upfront document upload.',
-  },
-  {
-    title: 'Educational Excellence',
-    description: 'Our educational resources are next to none in the industry.',
+    subheading1:
+      'Our tech is designed for consumers to take control of their own property transactions. Our smart innovative technology provides you with the tools to complete all things required to be move-ready without agents and lenders blocking the communication loop.',
+    subheading2:
+      'Consumers completes property passport which is then passed onto stakeholders - they are in control of their own journey ',
+    subheading3:
+      'Progress, tracker, education, personalised reminders, real time updates ',
   },
 ]
 
@@ -344,6 +344,12 @@ export default function ProductPage() {
         className="relative py-24 bg-gradient-to-b from-[#28B0A9] to-white overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-center">
+              What makes us{' '}
+              <span className="text-black/90 italic">different?</span>
+            </h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Dashboard Image */}
             <motion.div
@@ -433,13 +439,6 @@ export default function ProductPage() {
               }}
               className="space-y-8"
             >
-              <div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
-                  What makes us{' '}
-                  <span className="text-black/90">different?</span>
-                </h2>
-              </div>
-
               <div className="space-y-6">
                 {differentiators.map((item, index) => (
                   <motion.div
@@ -460,9 +459,14 @@ export default function ProductPage() {
                       <h3 className="text-lg font-bold text-black mb-2 group-hover:text-black/90 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-black/80 leading-relaxed font-light text-sm">
+                      {/* <p className="text-black/80 leading-relaxed font-light text-sm">
                         {item.description}
-                      </p>
+                      </p> */}
+                      <ul className="list-disc list-inside mt-2 space-y-1 text-black/80 leading-relaxed font-light text-sm">
+                        {item.subheading1 && <li>{item.subheading1}</li>}
+                        {item.subheading2 && <li>{item.subheading2}</li>}
+                        {item.subheading3 && <li>{item.subheading3}</li>}
+                      </ul>
                     </div>
                   </motion.div>
                 ))}
