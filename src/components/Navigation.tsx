@@ -73,13 +73,16 @@ export default function Navigation() {
                 About Us
               </motion.div>
             </Link>
-            <motion.a
-              href="#services"
-              whileHover={{ y: -2 }}
-              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
-            >
-              Product
-            </motion.a>
+            <Link to="/products">
+              <motion.a
+                href="#products"
+                whileHover={{ y: -2 }}
+                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+              >
+                Product
+              </motion.a>
+            </Link>
+
             <motion.a
               href="#services"
               whileHover={{ y: -2 }}

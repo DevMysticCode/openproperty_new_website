@@ -212,8 +212,8 @@ export default function AboutUs() {
             height={840}
             decoding="async"
             className="relative z-10 aspect-[16/10] w-full object-cover"
-            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            srcSet="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/public/about/founder.png"
+            srcSet="/public/about/founder.png"
           />
 
           {/* Overlay Text */}
@@ -247,19 +247,14 @@ export default function AboutUs() {
                   backgroundClip: 'text',
                 }}
               >
-                "After more than 30 years in the property sector, I've seen
-                first-hand how the system fails, not only consumers, but all
-                parties involved in the home moving process. Having spent over
-                two decades as an estate agent, I know the frustration of
-                working within a fragmented and inefficient system where no
-                universal platform connecting stakeholders exists. Estate
-                agents, whose job is to sell, are too often dragged into the
-                conveyancing process simply because the industry lacks
-                connectivity and transparency. Ultimately, they aren't the only
-                ones who find themselves doing a job that was never there's to
-                begin with. Lines are blurred and consumers are confused,
-                stressed and tired. What should be the happiest time of their
-                lives, slowly turns into a nightmare.
+                "After more than 30 years in the property sector, I’ve seen
+                first-hand how the system fails — not only consumers, but every
+                party involved in the moving process - I know the frustrations
+                of working within a fragmented, inefficient industry where no
+                universal platform connects stakeholders. Too often, estate
+                agents - whose real role is to sell - are dragged deep into the
+                conveyancing process, simply because the sector lacks
+                connectivity and transparency.
               </p>
               <p
                 className="italic text-center leading-relaxed mt-12"
@@ -271,12 +266,64 @@ export default function AboutUs() {
                   backgroundClip: 'text',
                 }}
               >
-                Technology should already be enabling seamless communication and
-                coordination, but instead, it’s people, primarily consumers,
-                holding everything together. That’s why I founded umovingu, to
-                fix these inefficiencies and finally put the power back into the
-                hands of consumers. With umovingu, we’re building the future of
-                moving—one that’s faster, clearer, and fairer for everyone."
+                The result is blurred lines, broken communication, and
+                responsibilities falling between the cracks. Agents,
+                conveyancers, and consumers alike find themselves shouldering
+                tasks that were never truly theirs to begin with. And while
+                professionals struggle with inefficiency, it’s the consumer who
+                suffers the most. What should be the happiest milestone in their
+                lives — getting the keys to a new home — far too often unravels
+                into a stressful, confusing, and anxiety-inducing nightmare.
+              </p>
+              <p
+                className="italic text-center leading-relaxed mt-12"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Over the years, I’ve seen it affect everyone: first-time buyers,
+                young parents, long-term partners, even businesses grappling
+                with relocations. Again and again, I watched excitement
+                transform into dread. That experience stayed with me.
+              </p>
+              <p
+                className="italic text-center leading-relaxed mt-12"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(56.91% 100% at 70.4% 100%, #00A19A  0%,  #007A74 64.63%,  #000000 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                After exiting my last business, I asked myself a simple but
+                urgent question: what if it didn’t have to be this way? I poured
+                all my time and energy into reimagining what property
+                transactions could look like. Not just a slight improvement to
+                the old system — but a full scale reappraisal of the journey
+                itself: one where transparency, simplicity and connection
+                replace fragmentation and dysfunction, so that no more consumers
+                are forced to pay the emotional or financial price of a broken
+                process.
+              </p>
+              <p
+                className="italic text-center leading-relaxed mt-12"
+                style={{
+                  backgroundImage:
+                    'radial-gradient(56.91% 100% at 70.4% 100%, #007A74 0%, #00A19A 64.63%, #000000 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                This mission isn’t just professional for me — it’s deeply
+                personal. I’ve lived the challenges of this industry from every
+                side, and I know it can be better. That belief is what drives me
+                every single day."
               </p>
             </motion.div>
 
