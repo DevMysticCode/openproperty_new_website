@@ -206,17 +206,18 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      <section data-theme="Light" className="bg-neutral-100">
+      <section data-theme="Light" className="bg-neutral-100 pt-24">
         <div className="relative overflow-hidden">
           {/* Image Section */}
           <img
             alt="OpenProperty"
             // width={1440}
-            // height={840}
+            height={840}
             decoding="async"
-            className="relative z-10 mx-auto object-cover"
+            className="relative z-10 mx-auto"
             src="/about/founder.png"
-            srcSet="s/about/founder.png"
+            srcSet="/about/founder.png"
+            style={{ height: '800px' }}
           />
 
           {/* Overlay Text */}
