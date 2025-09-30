@@ -341,7 +341,7 @@ export default function ProductPage() {
       {/* What Makes Us Different Section */}
       <section
         ref={differentiatorRef}
-        className="relative py-24 bg-gradient-to-br from-[#00A19A] to-white overflow-hidden"
+        className="relative py-24 bg-gradient-to-b from-[#28B0A9] to-white overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -590,7 +590,7 @@ export default function ProductPage() {
                       </motion.div>
 
                       {/* Navigation Arrows */}
-                      <div className="flex justify-end space-x-2">
+                      <div className="flex justify-center space-x-2">
                         <button
                           onClick={prevFeature}
                           className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
