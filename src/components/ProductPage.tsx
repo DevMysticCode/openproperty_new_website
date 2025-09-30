@@ -269,7 +269,7 @@ export default function ProductPage() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={isPlatformInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 1.2, delay: 0.3 }}
-                className="space-y-12 h-full"
+                className="space-y-12"
               >
                 <motion.div>
                   <h2 className="text-4xl sm:text-5xl lg:text-7xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
@@ -279,15 +279,16 @@ export default function ProductPage() {
                     </span>
                   </h2>
 
-                  <p className="text-lg text-white/90 max-w-7xl mx-auto leading-relaxed font-light mb-12">
+                  <p className="text-3xl text-white/90 max-w-7xl mx-auto leading-relaxed font-light mb-12">
                     State of the art features and technology streamlined into
-                    one cutting-edge platform. Experience the future of property
-                    transactions today.
+                    one cutting-edge platform, connecting, all the parties in
+                    the journey, with you at the centre. Experience the future
+                    of property transactions today.
                   </p>
                 </motion.div>
 
                 {/* Add your left side content here */}
-                <div className="text-white">
+                {/* <div className="text-white">
                   <h3 className="text-2xl font-semibold mb-4">
                     Your Left Content
                   </h3>
@@ -295,7 +296,7 @@ export default function ProductPage() {
                     Add your text, features, or other content here that should
                     appear on the left side.
                   </p>
-                </div>
+                </div> */}
 
                 {/* WhatsApp CTA */}
                 <motion.div
