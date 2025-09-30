@@ -255,62 +255,86 @@ export default function ProductPage() {
               'linear-gradient(180deg, rgba(0, 0, 0) 0%, #FFFFFF00 35.44%)',
           }}
         />{' '}
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 container relative z-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 container relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-start mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
-              UMU{' '}
-              <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
-                Platform
-              </span>
-            </h2>
-
-            <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed font-light mb-12">
-              State of the art features and technology streamlined into one
-              cutting-edge platform. Experience the future of property
-              transactions today.
-            </p>
-
-            {/* Dashboard Mockup */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isPlatformInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 1.2, delay: 0.3 }}
-              className="relative max-w-5xl mx-auto"
-            >
-              <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 shadow-2xl">
-                <img
-                  alt="OpenProperty"
-                  width={1440}
-                  height={840}
-                  decoding="async"
-                  className="relative w-full object-cover"
-                  src="/products/product_img.webp"
-                  srcSet="/products/product_img.webp"
-                />
-              </div>
-            </motion.div>
-
-            {/* WhatsApp CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="mt-12"
-            >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] hover:from-[#00e6d6] hover:via-[#00c4b8] hover:to-[#00A19A] text-white text-lg px-8 py-4 rounded-full shadow-xl font-semibold transition-all duration-300"
+            {/* Two Column Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-start align-top">
+              {/* Left Column - Text Content */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={isPlatformInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 1.2, delay: 0.3 }}
+                className="space-y-12 h-full"
               >
-                <Users className="mr-3 h-5 w-5" />
-                Join our WhatsApp community for sneak peeks
-                <ArrowRight className="ml-3 h-5 w-5" />
-              </Button>
-            </motion.div>
+                <motion.div>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
+                    UMU{' '}
+                    <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
+                      Platform
+                    </span>
+                  </h2>
+
+                  <p className="text-lg text-white/90 max-w-7xl mx-auto leading-relaxed font-light mb-12">
+                    State of the art features and technology streamlined into
+                    one cutting-edge platform. Experience the future of property
+                    transactions today.
+                  </p>
+                </motion.div>
+
+                {/* Add your left side content here */}
+                <div className="text-white">
+                  <h3 className="text-2xl font-semibold mb-4">
+                    Your Left Content
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    Add your text, features, or other content here that should
+                    appear on the left side.
+                  </p>
+                </div>
+
+                {/* WhatsApp CTA */}
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 1, delay: 0.8 }}
+                  className="mt-12"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] hover:from-[#00e6d6] hover:via-[#00c4b8] hover:to-[#00A19A] text-white text-lg px-8 py-4 rounded-full shadow-xl font-semibold transition-all duration-300"
+                  >
+                    <Users className="mr-3 h-5 w-5" />
+                    Join our WhatsApp community for sneak peeks
+                    <ArrowRight className="ml-3 h-5 w-5" />
+                  </Button>
+                </motion.div>
+              </motion.div>
+
+              {/* Right Column - Dashboard Mockup */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isPlatformInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 1.2, delay: 0.5 }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-6 shadow-2xl">
+                  <img
+                    alt="OpenProperty"
+                    width={1440}
+                    height={840}
+                    decoding="async"
+                    className="relative rounded-2xl w-full object-cover"
+                    src="/products/product_img.webp"
+                    srcSet="/products/product_img.webp"
+                  />
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
