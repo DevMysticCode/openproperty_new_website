@@ -125,7 +125,7 @@ export default function ContactPage() {
       {/* Creative Contact Form Section */}
       <section
         ref={formRef}
-        className="relative py-32 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden"
+        className="relative py-32 bg-gradient-to-b from-black via-[#00a19a] to-[#4DC4BD] overflow-hidden"
       >
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -527,7 +527,7 @@ export default function ContactPage() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight text-foreground">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
               Other ways to{' '}
               <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
                 reach us
