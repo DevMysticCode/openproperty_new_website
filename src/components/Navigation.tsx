@@ -90,13 +90,16 @@ export default function Navigation() {
             >
               Services
             </motion.a> */}
-            <motion.a
-              href="#services"
-              whileHover={{ y: -2 }}
-              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
-            >
-              Contact Us
-            </motion.a>
+            <Link to="/contact">
+              <motion.a
+                href="#services"
+                whileHover={{ y: -2 }}
+                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+              >
+                Contact Us
+              </motion.a>
+            </Link>
+
             {/* <Button
               variant="ghost"
               size="sm"

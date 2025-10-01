@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './App'
 import AboutUs from './components/AboutUs'
 import ProductPage from './components/ProductPage'
+import ContactPage from './components/ContactPage'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
