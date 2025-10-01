@@ -362,70 +362,15 @@ export default function ProductPage() {
               }}
               className="relative"
             >
-              <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
-                {/* Browser Header */}
-                <div className="flex items-center space-x-2 mb-6">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="flex-1 bg-gray-100 rounded-lg px-4 py-2 ml-4">
-                    <span className="text-sm text-gray-600">
-                      OpenProperty Dashboard
-                    </span>
-                  </div>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="mb-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-gray-700">
-                      Property Setup Progress
-                    </span>
-                    <span className="text-sm text-[#00A19A] font-bold">
-                      85%
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
-                    <div
-                      className="bg-gradient-to-r from-[#00A19A] to-[#00c9bf] h-3 rounded-full"
-                      style={{ width: '85%' }}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Dashboard Cards */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gradient-to-br from-[#00A19A]/10 to-[#00c9bf]/10 rounded-xl p-4">
-                    <div className="w-8 h-8 bg-[#00A19A] rounded-lg mb-3"></div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">
-                      Documents
-                    </h4>
-                    <p className="text-gray-600 text-xs">12/15 Complete</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-4">
-                    <div className="w-8 h-8 bg-purple-500 rounded-lg mb-3"></div>
-                    <h4 className="font-bold text-gray-900 text-sm mb-1">
-                      Notifications
-                    </h4>
-                    <p className="text-gray-600 text-xs">3 New Updates</p>
-                  </div>
-                </div>
-
-                {/* Bottom Section */}
-                <div className="bg-gradient-to-r from-[#00A19A]/5 to-[#00c9bf]/5 rounded-xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-bold text-gray-900 text-sm">
-                        Property Passport
-                      </h4>
-                      <p className="text-gray-600 text-xs">Ready for sharing</p>
-                    </div>
-                    <div className="w-12 h-12 bg-[#00A19A] rounded-xl flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img
+                alt="OpenProperty"
+                width={1440}
+                height={840}
+                decoding="async"
+                className="relative rounded-2xl w-full object-cover"
+                src="/products/differences.png"
+                srcSet="/products/differences.png"
+              />
             </motion.div>
 
             {/* Right Side - Content */}
