@@ -148,18 +148,24 @@ export default function Navigation() {
             >
               <div className="flex flex-col space-y-4">
                 <a
-                  href="#about"
+                  href="/about"
                   className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
                 >
                   About Us
                 </a>
                 <a
-                  href="#services"
+                  href="/products"
                   className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
                 >
-                  Services
+                  Products
                 </a>
-                <Button
+                <a
+                  href="/contact"
+                  className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
+                >
+                  Contact Us
+                </a>
+                {/* <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -176,10 +182,10 @@ export default function Navigation() {
                       Dark Mode
                     </>
                   )}
-                </Button>
-                <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold mt-4 rounded-full">
+                </Button> */}
+                {/* <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold mt-4 rounded-full">
                   CONTACT
-                </Button>
+                </Button> */}
               </div>
             </motion.div>
           )}
