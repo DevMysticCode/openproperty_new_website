@@ -143,9 +143,9 @@ export default function PillarsSection() {
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
           className="text-start mb-20 w-full max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#000000] to-[#000000] bg-clip-text text-transparent text-heading">
             OUR PILLARS
-          </h2>
+          </h1>
 
           <p className="text-black text-18 mx-auto leading-relaxed font-light">
             The core principles that drive our mission to revolutionize property
