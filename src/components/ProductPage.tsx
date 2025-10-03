@@ -24,7 +24,7 @@ import React from 'react'
 const features = [
   {
     icon: FileText,
-    title: 'Property Hub',
+    title: 'Your home`s, second home',
     subtitle: 'Your material information command centre',
     description:
       'Get your home transaction-ready upfront, preventing unnecessary fall-throughs and weeks of wasted time and money.',
@@ -37,6 +37,7 @@ const features = [
       'AI Document Automation - Documents verified via AI',
     ],
     gradient: 'from-[#00A19A] to-[#00c9bf]',
+    image: '/products/PropertyHub.png',
   },
   {
     icon: MapPin,
@@ -51,6 +52,7 @@ const features = [
       'Access Passports - View property documentation',
     ],
     gradient: 'from-[#008a85] to-[#00A19A]',
+    image: '/products/SmarterMoves.png',
   },
   {
     icon: Bell,
@@ -65,6 +67,7 @@ const features = [
       'Complete transparency throughout the process',
     ],
     gradient: 'from-[#00c4b8] to-[#00e6d6]',
+    image: '/products/TransparentTransactions.png',
   },
   {
     icon: Brain,
@@ -79,6 +82,7 @@ const features = [
       'Intelligent workflow optimization',
     ],
     gradient: 'from-[#00A19A] to-[#007a75]',
+    image: '/products/PersonalisedTools.png',
   },
   {
     icon: BookOpen,
@@ -93,6 +97,7 @@ const features = [
       'Demystify property transactions',
     ],
     gradient: 'from-[#00c9bf] to-[#00A19A]',
+    image: '/products/PropertyHub.png',
   },
 ]
 
@@ -346,8 +351,8 @@ export default function ProductPage() {
                     height={840}
                     decoding="async"
                     className="relative rounded-2xl w-full object-cover"
-                    src="/products/product_img.webp"
-                    srcSet="/products/product_img.webp"
+                    src="/products/UMUPlatform.png"
+                    srcSet="/products/UMUPlatform.png"
                   />
                 </div>
               </motion.div>
@@ -447,14 +452,16 @@ export default function ProductPage() {
         <div className="max-w-8xl mx-auto px-6 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isFeaturesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-center mb-20 "
+            className="text-center mb-20"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
-              Robust, feature-rich{' '}
+              Intelligent tools to{' '}
               <span className="bg-gradient-to-r from-[#00A19A] via-[#00c4b8] to-[#00e6d6] bg-clip-text text-transparent">
-                workspaces
+                power your move
               </span>
             </h2>
           </motion.div>
@@ -464,7 +471,11 @@ export default function ProductPage() {
             {/* Left Side - Interactive Visual Container */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-              animate={isFeaturesInView ? { opacity: 1, x: 0 } : {}}
+              animate={
+                isFeaturesInView
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: -100 }
+              }
               transition={{
                 duration: 1.2,
                 delay: 0.3,
@@ -476,22 +487,17 @@ export default function ProductPage() {
                 whileHover={{ scale: 1.02, y: -8 }}
                 className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 shadow-2xl overflow-hidden"
               >
-                {/* Gradient Border */}
-                {/* <div className="absolute inset-0 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-3xl p-1">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl"></div>
-                </div> */}
-
                 {/* Content */}
                 <div className="relative z-10">
-                  {/* Top Navigation Tabs - Moved above the row */}
-                  <div className="flex space-x-4 mb-8 justify-center">
+                  {/* Top Navigation Tabs */}
+                  <div className="flex space-x-4 mb-8 justify-center flex-wrap gap-2">
                     {features.map((feature, tabIndex) => (
                       <button
                         key={feature.title}
                         onClick={() => setActiveFeature(tabIndex)}
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                           tabIndex === activeFeature
-                            ? 'bg-[#00A19A] text-white'
+                            ? 'bg-[#00A19A] text-white shadow-lg'
                             : 'bg-gray-700 text-gray-300 hover:bg-gray-600 cursor-pointer'
                         }`}
                       >
@@ -502,73 +508,54 @@ export default function ProductPage() {
 
                   {/* Two Column Layout */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Left Column - Content */}
+                    {/* Left Column - Dynamic Feature Visual */}
                     <div>
-                      {/* Dynamic Feature Visual */}
                       <motion.div
                         key={`feature-visual-${activeFeature}`}
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+                        className="relative"
                       >
-                        {/* Mock Phone Interface */}
-                        <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-2xl p-1 mb-6 max-w-xs">
-                          <div className="bg-black rounded-2xl p-4">
-                            <div className="text-white text-sm mb-4">
-                              <div className="flex items-center justify-between mb-2">
-                                <span>9:41</span>
-                                <div className="flex space-x-1">
-                                  <div className="w-4 h-2 bg-white rounded-sm"></div>
-                                  <div className="w-1 h-2 bg-white rounded-sm"></div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="space-y-3">
-                              {features[activeFeature].highlights
-                                .slice(0, 3)
-                                .map((highlight, index) => (
-                                  <div
-                                    key={index}
-                                    className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-3"
-                                  >
-                                    <div className="flex items-center space-x-2 mb-2">
-                                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                        {React.createElement(
-                                          features[activeFeature].icon,
-                                          {
-                                            className:
-                                              'h-3 w-3 text-purple-500',
-                                          }
-                                        )}
-                                      </div>
-                                      <span className="text-white text-xs font-medium">
-                                        OpenProperty
-                                      </span>
-                                    </div>
-                                    <p className="text-white text-xs">
-                                      {highlight}
-                                    </p>
-                                  </div>
-                                ))}
-                            </div>
-                          </div>
+                        <img
+                          alt={features[activeFeature].title}
+                          width={600}
+                          height={400}
+                          decoding="async"
+                          className="relative rounded-2xl w-full h-auto object-cover shadow-lg"
+                          src={features[activeFeature].image}
+                          srcSet={features[activeFeature].image}
+                        />
+                        {/* Image Label */}
+                        <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-1">
+                          <span className="text-xs text-white font-medium">
+                            {features[activeFeature].title} Preview
+                          </span>
                         </div>
                       </motion.div>
 
                       {/* Navigation Arrows */}
-                      <div className="flex justify-center space-x-2">
+                      <div className="flex justify-center space-x-4 mt-6">
                         <button
                           onClick={prevFeature}
-                          className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
+                          className="w-12 h-12 bg-gray-700 hover:bg-[#00A19A] rounded-full flex items-center justify-center transition-all duration-300 group"
                         >
-                          <span className="text-white text-sm">←</span>
+                          <span className="text-white text-lg group-hover:scale-110 transition-transform">
+                            ←
+                          </span>
                         </button>
+                        <div className="flex items-center px-4">
+                          <span className="text-gray-400 text-sm">
+                            {activeFeature + 1} / {features.length}
+                          </span>
+                        </div>
                         <button
                           onClick={nextFeature}
-                          className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-full flex items-center justify-center transition-colors"
+                          className="w-12 h-12 bg-gray-700 hover:bg-[#00A19A] rounded-full flex items-center justify-center transition-all duration-300 group"
                         >
-                          <span className="text-white text-sm">→</span>
+                          <span className="text-white text-lg group-hover:scale-110 transition-transform">
+                            →
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -608,15 +595,18 @@ export default function ProductPage() {
                           {features[activeFeature].highlights
                             .slice(0, 4)
                             .map((highlight, highlightIndex) => (
-                              <li
+                              <motion.li
                                 key={highlightIndex}
-                                className="flex items-start space-x-3"
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: highlightIndex * 0.1 }}
+                                className="flex items-start space-x-3 group"
                               >
-                                <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0"></div>
-                                <span className="text-sm text-gray-300 font-light">
+                                <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                                <span className="text-sm text-gray-300 font-light group-hover:text-white transition-colors">
                                   {highlight}
                                 </span>
-                              </li>
+                              </motion.li>
                             ))}
                         </ul>
                       </div>
@@ -626,26 +616,85 @@ export default function ProductPage() {
               </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
 
-          {/* Feature Navigation Indicators */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="flex items-center justify-center space-x-4 mt-16"
-          >
-            {features.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveFeature(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  index === activeFeature
-                    ? 'bg-[#00A19A] scale-125'
-                    : 'bg-gray-400 hover:bg-gray-500'
-                }`}
-              />
-            ))}
-          </motion.div> */}
+      {/* Final CTA Section - With Overlap */}
+      <section className="relative py-32 bg-gradient-to-br from-[#00A19A] via-[#00c4b8] to-[#00e6d6] overflow-hidden">
+        <div className="max-w-8xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+            {/* Left Side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={isFeaturesInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.3,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="space-y-8 italic lg:pr-4 relative z-10"
+            >
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight text-black"
+              >
+                umovingu.
+              </motion.h2>
+
+              <motion.h3
+                initial={{ opacity: 0, y: 50 }}
+                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.7 }}
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black"
+              >
+                your move
+              </motion.h3>
+
+              <motion.h3
+                initial={{ opacity: 0, y: 50 }}
+                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.9 }}
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black"
+              >
+                your way.
+              </motion.h3>
+            </motion.div>
+
+            {/* Right Side - Empowering Figure - Overlapping */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={isFeaturesInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.5,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="relative flex justify-center lg:justify-start items-center lg:-ml-32 xl:-ml-48"
+            >
+              {/* Silhouette Figure - Much Larger with Overlap */}
+              <motion.div
+                animate={{
+                  y: [0, -15, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                className="relative w-full max-w-2xl lg:max-w-none lg:w-[160%] xl:w-[180%]"
+              >
+                <img
+                  alt="Empowering figure representing your move, your way"
+                  decoding="async"
+                  className="relative w-full h-auto object-contain scale-125 lg:scale-150"
+                  src="/products/ctaSection-removebg-preview.png"
+                  srcSet="/products/ctaSection-removebg-preview.png"
+                />
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
