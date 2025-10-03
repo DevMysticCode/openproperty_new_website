@@ -9,18 +9,15 @@ import ChipsScene from './ChipsScene'
 export default function AboutUs() {
   const heroRef = useRef(null)
   const valuesRef = useRef(null)
-  const scientistsRef = useRef(null)
-  const missionRef = useRef(null)
+  const journeyRef = useRef(null) // Add this
+  const latestRef = useRef(null) // Add this
   const isHeroInView = useInView(heroRef, { once: true, margin: '-100px' })
   const isValuesInView = useInView(valuesRef, { once: true, margin: '-100px' })
-  const isScientistsInView = useInView(scientistsRef, {
+  const isJourneyInView = useInView(journeyRef, {
     once: true,
     margin: '-100px',
-  })
-  const isMissionInView = useInView(missionRef, {
-    once: true,
-    margin: '-100px',
-  })
+  }) // Add this
+  const isLatestInView = useInView(latestRef, { once: true, margin: '-100px' })
 
   const coreValues = [
     {
@@ -332,9 +329,12 @@ export default function AboutUs() {
       </section>
 
       {/* Our Why Section */}
-      <section className="relative py-24 bg-gradient-to-b from-[#00a19a] to-white overflow-hidden">
+      <section
+        ref={valuesRef}
+        className="relative py-24 bg-gradient-to-b from-[#00a19a] to-white overflow-hidden"
+      >
         {/* Background Pattern */}
-        {/* <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5">
           <div
             className="absolute inset-0"
             style={{
@@ -343,13 +343,15 @@ export default function AboutUs() {
               backgroundSize: '60px 60px',
             }}
           ></div>
-        </div> */}
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-center mb-20"
           >
@@ -363,7 +365,9 @@ export default function AboutUs() {
             {/* Left Side - The Problem */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              animate={
+                isValuesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
               transition={{
                 duration: 1.2,
                 delay: 0.5,
@@ -438,7 +442,9 @@ export default function AboutUs() {
             {/* Right Side - Our Solution */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
-              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              animate={
+                isValuesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
               transition={{
                 duration: 1.2,
                 delay: 0.7,
@@ -501,7 +507,11 @@ export default function AboutUs() {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 50 }}
-                    animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+                    animate={
+                      isValuesInView
+                        ? { opacity: 1, x: 0 }
+                        : { opacity: 0, x: -100 }
+                    }
                     transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
                     className="flex items-center space-x-4 p-4 rounded-xl bg-white border border-[#00a19a]/10 hover:bg-[#00a19a]/10 transition-colors duration-300"
                   >
@@ -520,7 +530,9 @@ export default function AboutUs() {
           {/* Bottom Section - Our Mission */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
+            }
             transition={{ duration: 1.5, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="mt-20"
           >
@@ -584,7 +596,10 @@ export default function AboutUs() {
       </section>
 
       {/* Our Journey Section */}
-      <section className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <section
+        ref={journeyRef}
+        className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+      >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -601,7 +616,9 @@ export default function AboutUs() {
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isJourneyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-center mb-20"
           >
@@ -658,7 +675,9 @@ export default function AboutUs() {
                   strokeDasharray="10,5"
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={
-                    isValuesInView ? { pathLength: 1, opacity: 0.6 } : {}
+                    isJourneyInView
+                      ? { pathLength: 1, opacity: 0.6 }
+                      : { pathLength: 0, opacity: 0 }
                   }
                   transition={{ duration: 3, delay: 1 }}
                 />
@@ -670,7 +689,9 @@ export default function AboutUs() {
                   strokeDasharray="10,5"
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={
-                    isValuesInView ? { pathLength: 1, opacity: 0.6 } : {}
+                    isJourneyInView
+                      ? { pathLength: 1, opacity: 0.6 }
+                      : { pathLength: 0, opacity: 0 }
                   }
                   transition={{ duration: 3, delay: 1.5 }}
                 />
@@ -682,7 +703,11 @@ export default function AboutUs() {
               {/* Genesis of OpenProperty */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 100 }}
-                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, scale: 1, y: 0 }
+                    : { opacity: 0, scale: 0.8, y: 100 }
+                }
                 transition={{
                   duration: 1.2,
                   delay: 0.5,
@@ -740,7 +765,11 @@ export default function AboutUs() {
               {/* Research + Development Process */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 100 }}
-                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, scale: 1, y: 0 }
+                    : { opacity: 0, scale: 0 }
+                }
                 transition={{
                   duration: 1.2,
                   delay: 0.7,
@@ -798,7 +827,11 @@ export default function AboutUs() {
               {/* Alpha Testing */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 100 }}
-                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, scale: 1, y: 0 }
+                    : { opacity: 0, scale: 0 }
+                }
                 transition={{
                   duration: 1.2,
                   delay: 0.9,
@@ -855,7 +888,11 @@ export default function AboutUs() {
               {/* Platform Launch */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, y: 100 }}
-                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, scale: 1, y: 0 }
+                    : { opacity: 0, scale: 0 }
+                }
                 transition={{
                   duration: 1.2,
                   delay: 1.1,
@@ -918,7 +955,9 @@ export default function AboutUs() {
           {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isJourneyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
             transition={{ duration: 1.5, delay: 2, ease: [0.23, 1, 0.32, 1] }}
             className="text-center mt-20"
           >
@@ -949,7 +988,10 @@ export default function AboutUs() {
       </section>
 
       {/* UMU Latest Section */}
-      <section className="relative py-24 bg-gradient-to-b from-white to-[#00A19A]/90 overflow-hidden">
+      <section
+        ref={latestRef}
+        className="relative py-24 bg-gradient-to-b from-white to-[#00A19A]/90 overflow-hidden"
+      >
         {/* Animated Background Stars */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(35)].map((_, i) => (
@@ -1009,7 +1051,9 @@ export default function AboutUs() {
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            animate={
+              isLatestInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-center mb-20"
           >
@@ -1035,7 +1079,9 @@ export default function AboutUs() {
             {/* Investment Opportunities */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
-              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              animate={
+                isLatestInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
               transition={{
                 duration: 1.2,
                 delay: 0.5,
@@ -1097,7 +1143,9 @@ export default function AboutUs() {
             {/* Newsletter Signup */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
-              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              animate={
+                isLatestInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
+              }
               transition={{
                 duration: 1.2,
                 delay: 0.7,

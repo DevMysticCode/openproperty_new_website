@@ -98,33 +98,32 @@ const features = [
 
 const differentiators = [
   {
-    title: 'Seamlessly share property data',
+    title: 'Innovation at the core',
     description:
-      'Our product is predicated on innovation, not preserving profitable problems.',
+      'Built with cutting-edge technology designed to fix the failures of today’s property process, making the whole process faster, smarter and simpler.',
     subheading1:
-      'We have designed a platform that is interoperable: buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem',
-    subheading2:
-      'All data, documents and communication from all parties can be shared at the click of a button - adding a level of speed that has never been seen before',
-    subheading3:
-      'And all YOUR property data is saved, so you never have to complete it again ',
+      'Built with cutting-edge technology designed to fix the failures of today’s property process, making the whole process faster, smarter and simpler.',
   },
   {
-    title: 'Secure communication and document exchange channels ',
+    title: 'Seamless interoperability ',
     description:
       'Buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem.',
-    subheading1: 'Bank level encryption',
-    subheading2: '24/7 communication with all stakeholders in your sale ',
+    subheading1:
+      'Buyers, sellers, agents, conveyancers and solicitors are all connected in one secure ecosystem, so no more chasing calls or waiting for updates.',
   },
   {
-    title: 'Consumer first, not industry first. ',
+    title: 'One-click data sharing',
     description:
       "We're developing solutions to the market's systemic problems rather than digitalizing them.",
     subheading1:
-      'Our tech is designed for consumers to take control of their own property transactions. Our smart innovative technology provides you with the tools to complete all things required to be move-ready without agents and lenders blocking the communication loop.',
-    subheading2:
-      'Consumers completes property passport which is then passed onto stakeholders - they are in control of their own journey ',
-    subheading3:
-      'Progress, tracker, education, personalised reminders, real time updates ',
+      'Store, share, and access all documents, data and communications at the click of a button',
+  },
+  {
+    title: 'Your data, saved once',
+    description:
+      "We're developing solutions to the market's systemic problems rather than digitalizing them.",
+    subheading1:
+      'Store, share, and access all documents, data and communications at the click of a button',
   },
 ]
 
@@ -411,14 +410,14 @@ export default function ProductPage() {
                       <h3 className="text-lg font-bold text-black mb-2 group-hover:text-black/90 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      {/* <p className="text-black/80 leading-relaxed font-light text-sm">
+                      <p className="text-black/80 leading-relaxed font-light text-sm">
                         {item.description}
-                      </p> */}
-                      <ul className="list-disc list-inside mt-2 space-y-1 text-black/80 leading-relaxed font-light text-sm">
+                      </p>
+                      {/* <ul className="list-disc list-inside mt-2 space-y-1 text-black/80 leading-relaxed font-light text-sm">
                         {item.subheading1 && <li>{item.subheading1}</li>}
                         {item.subheading2 && <li>{item.subheading2}</li>}
                         {item.subheading3 && <li>{item.subheading3}</li>}
-                      </ul>
+                      </ul> */}
                     </div>
                   </motion.div>
                 ))}
