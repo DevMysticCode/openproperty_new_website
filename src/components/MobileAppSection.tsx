@@ -108,9 +108,9 @@ export default function MobileAppSection() {
           </h2>
 
           <p className="text-lg text-black/90 mx-auto leading-relaxed font-light">
-            The current process leaves you waiting on updates and working to
-            other people’s schedules. UMU puts the power in your pocket. Always
-            on, always with you, every step of your move.
+            The current process keeps you waiting and out of control. UMU puts
+            the power in your pocket. Always on, always with you, every step of
+            your move.
           </p>
         </motion.div>
 
