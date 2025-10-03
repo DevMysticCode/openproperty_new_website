@@ -55,37 +55,6 @@ export default function AboutUs() {
     },
   ]
 
-  const scientistValues = [
-    {
-      title: 'Accuracy',
-      description:
-        'Telling the truth, and being explicit about what is fact and what is hypothesis.',
-    },
-    {
-      title: 'Curiosity',
-      description:
-        'Seeking an understanding of the whats, hows, and whys of the world.',
-    },
-    {
-      title: 'Imagination',
-      description:
-        'Thinking outside the box, and being unencumbered by how they currently are.',
-    },
-    {
-      title: 'Logic',
-      description:
-        'Reasoning from solid principles, and articulating ideas clearly.',
-    },
-    {
-      title: 'Meritocracy',
-      description: 'Judging ideas by their merit, not by who proposed them.',
-    },
-    {
-      title: 'Pragmatism',
-      description: 'Focusing on what works in practice, not just in theory.',
-    },
-  ]
-
   const values = [
     {
       title: 'Accuracy',
@@ -362,126 +331,838 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Values Section with Background Image */}
-      <section
-        ref={valuesRef}
-        className="relative min-h-screen flex items-end"
-        style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      {/* Our Why Section */}
+      <section className="relative py-24 bg-gradient-to-b from-[#00a19a] to-white overflow-hidden">
+        {/* Background Pattern */}
+        {/* <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
+                             linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+              backgroundSize: '60px 60px',
+            }}
+          ></div>
+        </div> */}
 
-        {/* Content */}
-        <div className="relative z-10 w-full pb-20">
-          <div className="max-w-7xl mx-auto px-6 py-36 sm:px-8">
-            {/* Main Quote */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mb-20"
+          >
+            <h1 className="text-heading font-light mb-8 tracking-tight leading-tight uppercase">
+              Why we're building UMU
+            </h1>
+          </motion.div>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left Side - The Problem */}
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, x: -100 }}
+              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
               transition={{
-                duration: 1.5,
-                delay: 0.3,
+                duration: 1.2,
+                delay: 0.5,
                 ease: [0.23, 1, 0.32, 1],
               }}
-              className="text-center mb-20"
+              className="space-y-8"
             >
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-8 leading-tight">
-                We're innovators
-              </h2>
+              {/* Problem Statement */}
+              <div className="relative">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-red-400/30 transition-all duration-700 relative overflow-hidden"
+                >
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mr-4">
+                        <span className="text-2xl">⚠️</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        The Broken System
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      The property process as it stands today is broken, and the
+                      numbers prove it/ it's you paying the price. Every year,
+                      over a third of UK house sales collapse before completion,
+                      costing consumers more than £590 million.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      The average transaction drags on for 5–6 months, leaving
+                      buyers and sellers in limbo and vulnerable to chain
+                      breaks. Meanwhile, updates are scarce and fragmented, with
+                      information spread across estate agents, solicitors, and
+                      lenders who all work to their own schedules, not yours.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Impact Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isValuesInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.8, duration: 0.8 }}
+                  className="text-center p-6 rounded-xl bg-red-50 border border-red-100"
+                >
+                  <div className="text-3xl font-bold text-red-600 mb-2">
+                    1/3
+                  </div>
+                  <div className="text-sm text-red-700">Sales Collapse</div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isValuesInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.9, duration: 0.8 }}
+                  className="text-center p-6 rounded-xl bg-orange-50 border border-orange-100"
+                >
+                  <div className="text-3xl font-bold text-orange-600 mb-2">
+                    £590M
+                  </div>
+                  <div className="text-sm text-orange-700">Annual Cost</div>
+                </motion.div>
+              </div>
             </motion.div>
 
-            {/* Values Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-              {coreValues.map((value, index) => (
+            {/* Right Side - Our Solution */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.7,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="space-y-8"
+            >
+              {/* Our Belief */}
+              <div className="relative">
                 <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 1.2,
-                    delay: 0.6 + index * 0.1,
-                    ease: [0.23, 1, 0.32, 1],
-                  }}
-                  className="text-white"
+                  whileHover={{ scale: 1.02 }}
+                  className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00a19a]/30 transition-all duration-700 relative overflow-hidden"
                 >
-                  <h3 className="text-2xl font-bold mb-6 text-[#00A19A]">
-                    {value.title}
-                  </h3>
-                  <p className="text-lg leading-relaxed font-light opacity-90">
-                    {value.description}
-                  </p>
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00a19a]/5 to-[#00c9bf]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-2xl flex items-center justify-center mr-4">
+                        <span className="text-2xl">💡</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        Our Belief
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      At UMU, we believe it doesn't have to be this way. We
+                      believe in turning moving home from one of life's most
+                      stressful journeys into one of the most empowering.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      That's why we're building more than an app, we're building
+                      a movement to give consumers control, clarity, and
+                      confidence in a process that has failed them for far too
+                      long.
+                    </p>
+                  </div>
                 </motion.div>
-              ))}
-            </div>
+              </div>
+
+              {/* UMU Features */}
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: '⚡',
+                    text: 'Real-time updates replace endless chasing',
+                  },
+                  {
+                    icon: '📋',
+                    text: 'Digital property passport keeps information organised',
+                  },
+                  {
+                    icon: '🤖',
+                    text: 'AI-powered tools validate legal documents',
+                  },
+                  { icon: '🎓', text: 'Education hub arms you with knowledge' },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
+                    className="flex items-center space-x-4 p-4 rounded-xl bg-white border border-[#00a19a]/10 hover:bg-[#00a19a]/10 transition-colors duration-300"
+                  >
+                    <div className="w-10 h-10 bg-gradient-to-r  from-[#00c9bf] to-white/50 rounded-full flex items-center justify-center text-white">
+                      {feature.icon}
+                    </div>
+                    <span className="text-gray-700 font-light">
+                      {feature.text}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
+
+          {/* Bottom Section - Our Mission */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.5, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="mt-20"
+          >
+            <motion.div
+              whileHover={{ scale: 1.01 }}
+              className="premium-card p-12 rounded-3xl glassmorphism bg-gradient-to-br from-[#00a19a] via-[#00c9bf]/90 to-[#00e6d6]/90 relative overflow-hidden"
+            >
+              <div className="relative z-10 text-center">
+                <div className="flex items-center justify-center mb-8">
+                  <motion.div
+                    animate={{ rotate: [0, 360] }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: 'linear',
+                    }}
+                    className="w-16 h-16 bg-gradient-to-r from-[#00a19a] to-[#00c9bf] rounded-2xl flex items-center justify-center shadow-2xl"
+                  >
+                    <span className="text-white text-2xl">🚀</span>
+                  </motion.div>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-8 leading-tight text-gray-900">
+                  Most importantly, UMU never clocks off
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                  <div>
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      Unlike traditional processes bound by office hours and
+                      paperwork bottlenecks, UMU lives in your pocket — always
+                      on, always available, always with you, every step of the
+                      move.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      We're not here to tweak the system. We're here to reinvent
+                      it. To create a property market that works for people, not
+                      against them.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      One where buying or selling your home no longer means
+                      stress, uncertainty, or loss, but clarity, speed, and
+                      success.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      With UMU, moving home is no longer just a transaction —
+                      it's a transformation. And together, we're building a
+                      better way forward.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section
-        ref={missionRef}
-        className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden"
-        style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+      {/* Our Journey Section */}
+      <section className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
+                             linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+              backgroundSize: '60px 60px',
+            }}
+          ></div>
+        </div>
 
-        {/* Content */}
-        <div className="relative z-10 text-center max-w-8xl mx-auto px-6 py-24 sm:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
+          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="mb-16"
+            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white mb-8 leading-tight">
-              It's not all <span className="text-gray-400">about us</span>
+            <h2 className="text-heading font-light leading-tight tracking-tight mb-8 text-black">
+              Our{' '}
+              <span
+                className="font-light"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #00A19A, #00c9bf, #00e6d6)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Journey
+              </span>{' '}
+              So Far
             </h2>
-            <p className="text-xl text-gray-300 leading-relaxed font-light max-w-2xl mx-auto">
-              We're thankful for the opportunities the world affords us, and
-              strive to improve things for others.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+              From concept to reality, discover the milestones that shaped
+              OpenProperty into the revolutionary platform it is today.
             </p>
           </motion.div>
 
-          {/* Join Team Section */}
+          {/* Journey Timeline */}
+          <div className="relative">
+            {/* Connecting Lines */}
+            <svg
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              style={{ zIndex: 1 }}
+            >
+              <defs>
+                <linearGradient
+                  id="lineGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stopColor="#00A19A" />
+                  <stop offset="50%" stopColor="#00c9bf" />
+                  <stop offset="100%" stopColor="#00e6d6" />
+                </linearGradient>
+              </defs>
+
+              {/* Desktop connecting lines */}
+              <g className="hidden lg:block">
+                <motion.path
+                  d="M 200 150 Q 400 100 600 200 Q 800 300 1000 150"
+                  stroke="url(#lineGradient)"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeDasharray="10,5"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={
+                    isValuesInView ? { pathLength: 1, opacity: 0.6 } : {}
+                  }
+                  transition={{ duration: 3, delay: 1 }}
+                />
+                <motion.path
+                  d="M 1000 150 Q 800 50 600 250 Q 400 450 200 300"
+                  stroke="url(#lineGradient)"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeDasharray="10,5"
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={
+                    isValuesInView ? { pathLength: 1, opacity: 0.6 } : {}
+                  }
+                  transition={{ duration: 3, delay: 1.5 }}
+                />
+              </g>
+            </svg>
+
+            {/* Journey Milestones */}
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+              {/* Genesis of OpenProperty */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 100 }}
+                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.5,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative group"
+              >
+                <div className="flex items-start space-x-6">
+                  {/* Icon Pin */}
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 8 }}
+                    className="relative flex-shrink-0"
+                  >
+                    <div className="w-20 h-20 bg-gradient-to-r from-[#00A19A] to-[#00c9bf] rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[#00A19A]/40 transition-all duration-500">
+                      <motion.div
+                        animate={{ rotate: [0, 360] }}
+                        transition={{
+                          duration: 20,
+                          repeat: Infinity,
+                          ease: 'linear',
+                        }}
+                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                      >
+                        <div className="w-6 h-6 bg-gradient-to-r from-[#00A19A] to-[#00c9bf] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            💡
+                          </span>
+                        </div>
+                      </motion.div>
+                    </div>
+                    {/* Pin Tail */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-[#00A19A] to-transparent"></div>
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#00A19A] transition-colors duration-300">
+                      Genesis of OpenProperty
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Founded on the idea that property intelligence should be
+                      accessible, transparent, and powerful. Our journey began
+                      in 2023 with a vision to revolutionize how property
+                      decisions are made.
+                    </p>
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00A19A]/10 border border-[#00A19A]/20">
+                      <span className="text-[#00A19A] font-semibold text-sm">
+                        2023 - Foundation
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Research + Development Process */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 100 }}
+                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.7,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative group lg:mt-24"
+              >
+                <div className="flex items-start space-x-6">
+                  {/* Icon Pin */}
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: -8 }}
+                    className="relative flex-shrink-0"
+                  >
+                    <div className="w-20 h-20 bg-gradient-to-r from-[#00c9bf] to-[#00e6d6] rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[#00c9bf]/40 transition-all duration-500">
+                      <motion.div
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
+                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                      >
+                        <div className="w-6 h-6 bg-gradient-to-r from-[#00c9bf] to-[#00e6d6] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            📋
+                          </span>
+                        </div>
+                      </motion.div>
+                    </div>
+                    {/* Pin Tail */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-[#00c9bf] to-transparent"></div>
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#00c9bf] transition-colors duration-300">
+                      Research + Development Process
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Over the following months, we conducted extensive market
+                      research, interviewed hundreds of property professionals,
+                      and developed our core technology framework in partnership
+                      with leading universities.
+                    </p>
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00c9bf]/10 border border-[#00c9bf]/20">
+                      <span className="text-[#00c9bf] font-semibold text-sm">
+                        2023-2024 - R&D Phase
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Alpha Testing */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 100 }}
+                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.9,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative group"
+              >
+                <div className="flex items-start space-x-6">
+                  {/* Icon Pin */}
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: 8 }}
+                    className="relative flex-shrink-0"
+                  >
+                    <div className="w-20 h-20 bg-gradient-to-r from-[#00e6d6] to-[#00A19A] rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[#00e6d6]/40 transition-all duration-500">
+                      <motion.div
+                        animate={{ rotate: [0, -360] }}
+                        transition={{
+                          duration: 15,
+                          repeat: Infinity,
+                          ease: 'linear',
+                        }}
+                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                      >
+                        <div className="w-6 h-6 bg-gradient-to-r from-[#00e6d6] to-[#00A19A] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            ✓
+                          </span>
+                        </div>
+                      </motion.div>
+                    </div>
+                    {/* Pin Tail */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-[#00e6d6] to-transparent"></div>
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#00e6d6] transition-colors duration-300">
+                      Alpha Testing
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      October 2024: We are launching our alpha version with
+                      select property professionals for comprehensive testing
+                      and feedback collection.
+                    </p>
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00e6d6]/10 border border-[#00e6d6]/20">
+                      <span className="text-[#00e6d6] font-semibold text-sm">
+                        October 2024 - Alpha Launch
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Platform Launch */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 100 }}
+                animate={isValuesInView ? { opacity: 1, scale: 1, y: 0 } : {}}
+                transition={{
+                  duration: 1.2,
+                  delay: 1.1,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative group lg:mt-24"
+              >
+                <div className="flex items-start space-x-6">
+                  {/* Icon Pin */}
+                  <motion.div
+                    whileHover={{ scale: 1.2, rotate: -8 }}
+                    className="relative flex-shrink-0"
+                  >
+                    <div className="w-20 h-20 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[#00A19A]/40 transition-all duration-500">
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 180, 360],
+                        }}
+                        transition={{
+                          duration: 4,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
+                        className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                      >
+                        <div className="w-6 h-6 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            📱
+                          </span>
+                        </div>
+                      </motion.div>
+                    </div>
+                    {/* Pin Tail */}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-[#00A19A] to-transparent"></div>
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[#00A19A] transition-colors duration-300">
+                      Full Platform Launch
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Our comprehensive platform launched in early 2025,
+                      featuring AI-powered analytics, real-time market data, and
+                      the revolutionary Property Passport system that's
+                      transforming the industry.
+                    </p>
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00A19A]/10 border border-[#00A19A]/20">
+                      <span className="text-[#00A19A] font-semibold text-sm">
+                        2025 - Full Launch
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, delay: 0.8, ease: [0.23, 1, 0.32, 1] }}
-            className="flex flex-col lg:flex-row items-center gap-12"
+            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.5, delay: 2, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mt-20"
           >
-            <div className="text-left">
-              <h3 className="text-3xl font-light text-white mb-8">
-                Join our team
-              </h3>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Explore careers
-              </motion.button>
-            </div>
-            <div className="flex-shrink-0">
-              <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt="Team collaboration"
-                className="w-80 h-60 object-cover rounded-2xl shadow-2xl"
-              />
+            <div className="inline-flex items-center justify-center p-8 rounded-2xl glassmorphism max-w-4xl mx-auto bg-gradient-to-r from-[#00A19A]/10 via-[#00c9bf]/10 to-[#00e6d6]/10">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4 leading-tight text-gray-900">
+                  Join us on our{' '}
+                  <span
+                    style={{
+                      background: 'linear-gradient(135deg, #00A19A, #00c9bf)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    continuing journey
+                  </span>
+                </h3>
+                <p className="text-gray-600 leading-relaxed font-light max-w-2xl mx-auto">
+                  We're just getting started. Be part of the revolution that's
+                  transforming property intelligence and decision-making
+                  worldwide.
+                </p>
+              </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* UMU Latest Section */}
+      <section className="relative py-24 bg-gradient-to-b from-white to-[#00A19A]/90 overflow-hidden">
+        {/* Animated Background Stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(35)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 rounded-full"
+              style={{
+                background: `linear-gradient(135deg, 
+                  ${
+                    i % 3 === 0
+                      ? '#ffffff'
+                      : i % 3 === 1
+                      ? '#00a19a'
+                      : '#00c9bf'
+                  }, 
+                  ${
+                    i % 3 === 0
+                      ? '#00a19a'
+                      : i % 3 === 1
+                      ? '#00c9bf'
+                      : '#00e6d6'
+                  })`,
+              }}
+              animate={{
+                x: [0, 60, 0],
+                y: [0, -30, 0],
+                opacity: [0, 0.8, 0],
+                scale: [0, 1.2, 0],
+              }}
+              transition={{
+                duration: 8 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 3,
+                ease: 'easeInOut',
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
+                             linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+              backgroundSize: '60px 60px',
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-heading font-light mb-8 tracking-tight leading-tight text-black">
+              Stay{' '}
+              <span
+                className="font-light"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #00A19A, #00c9bf, #00e6d6)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Connected
+              </span>
+            </h2>
+          </motion.div>
+
+          {/* Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* Investment Opportunities */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.5,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="group"
+            >
+              <motion.div
+                whileHover={{ scale: 1.02, y: -8 }}
+                className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00a19a]/30 transition-all duration-700 relative overflow-hidden h-full"
+              >
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00a19a]/5 to-[#00c9bf]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 8 }}
+                      className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-2xl flex items-center justify-center mr-4"
+                    >
+                      <motion.span
+                        animate={{ rotate: [0, 5, -5, 0] }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
+                        className="text-2xl"
+                      >
+                        💼
+                      </motion.span>
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#00a19a] transition-colors duration-500">
+                      Investment Opportunities
+                    </h3>
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed font-light mb-6">
+                    The team welcome investment proposals from founders,
+                    companies or organisations in the PropTech/FinTech/EdTech
+                    space.
+                  </p>
+
+                  <div className="bg-gradient-to-r from-[#00a19a]/10 to-[#00c9bf]/10 rounded-xl p-4 border border-[#00a19a]/20">
+                    <p className="text-sm text-gray-600 mb-2">
+                      Please address any email enquiries to:
+                    </p>
+                    <a
+                      href="mailto:hello@penproperty.io"
+                      className="text-[#00a19a] font-semibold hover:text-[#00c9bf] transition-colors duration-300 text-lg"
+                    >
+                      hello@penproperty.io
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Newsletter Signup */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={isValuesInView ? { opacity: 1, x: 0 } : {}}
+              transition={{
+                duration: 1.2,
+                delay: 0.7,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="group"
+            >
+              <motion.div
+                whileHover={{ scale: 1.02, y: -8 }}
+                className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00c9bf]/30 transition-all duration-700 relative overflow-hidden h-full"
+              >
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00c9bf]/5 to-[#00e6d6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div className="relative z-10">
+                  <div className="flex items-center mb-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: -8 }}
+                      className="w-12 h-12 bg-gradient-to-r from-[#00c9bf]/20 to-[#00e6d6]/20 rounded-2xl flex items-center justify-center mr-4"
+                    >
+                      <motion.span
+                        animate={{
+                          y: [0, -2, 0],
+                          rotate: [0, 2, -2, 0],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
+                        className="text-2xl"
+                      >
+                        📬
+                      </motion.span>
+                    </motion.div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#00c9bf] transition-colors duration-500">
+                      Monthly Newsletter
+                    </h3>
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed font-light mb-6">
+                    Sign up to our mailing list to receive our monthly
+                    newsletters, featuring the latest developments in umovingu's
+                    flagship product.
+                  </p>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full bg-gradient-to-r from-[#00c9bf] to-[#00e6d6] hover:from-[#00a19a] hover:to-[#00c9bf] text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  >
+                    <div className="flex items-center justify-center">
+                      <span className="mr-2">Subscribe Now</span>
+                      <motion.span
+                        animate={{ x: [0, 4, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        →
+                      </motion.span>
+                    </div>
+                  </motion.button>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
