@@ -101,29 +101,41 @@ const differentiators = [
     title: 'Innovation at the core',
     description:
       'Built with cutting-edge technology designed to fix the failures of today’s property process, making the whole process faster, smarter and simpler.',
-    subheading1:
-      'Built with cutting-edge technology designed to fix the failures of today’s property process, making the whole process faster, smarter and simpler.',
   },
   {
     title: 'Seamless interoperability ',
     description:
       'Buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem.',
-    subheading1:
-      'Buyers, sellers, agents, conveyancers and solicitors are all connected in one secure ecosystem, so no more chasing calls or waiting for updates.',
   },
   {
     title: 'One-click data sharing',
     description:
       "We're developing solutions to the market's systemic problems rather than digitalizing them.",
-    subheading1:
-      'Store, share, and access all documents, data and communications at the click of a button',
   },
   {
     title: 'Your data, saved once',
     description:
       "We're developing solutions to the market's systemic problems rather than digitalizing them.",
-    subheading1:
-      'Store, share, and access all documents, data and communications at the click of a button',
+  },
+  {
+    title: 'AI-powered intelligence',
+    description:
+      'Smart tools that verify legal documents, flag risks, and answer queries in real time',
+  },
+  {
+    title: 'Made personal',
+    description:
+      'Features tailored to your property journey, like progress updates, favourited properties, and reminders that keep you one step ahead.',
+  },
+  {
+    title: 'Unified platform',
+    description:
+      'No more juggling different systems or paperwork, everything you need for your move, brought together in one sleek, easy-to-use app.',
+  },
+  {
+    title: 'Secure by design',
+    description:
+      'Your data is protected with the highest standards, giving you confidence and peace of mind at every step.',
   },
 ]
 
