@@ -6,40 +6,30 @@ import { Button } from './ui/button'
 const appScreens = [
   {
     id: 'search',
-    title: 'Property Search',
-    description:
-      'Discover properties with our intelligent search engine. Filter by location, price, size, and get instant AI-powered recommendations tailored to your investment goals.',
+    title: 'Your data. Your move. Your way',
     features: [
-      'AI-powered search',
-      'Advanced filters',
-      'Instant results',
-      'Location intelligence',
+      'At umovingu we are on a mission to equip you with the tools to make buying or selling your home as easy as snapping your fingers.',
+      'Democratisation of tools, knowledge and data, will make buying and selling homes: faster, fairer, and accessible for all/ everyone',
     ],
     image: '/mobileAppImages/screen1.png',
   },
   {
     id: 'details',
-    title: 'Property Details',
-    description:
-      'Get comprehensive property insights with detailed analytics, market comparisons, and investment potential analysis. Make informed decisions with verified data.',
+    title: 'Its you, just moving better',
     features: [
-      'Detailed analytics',
-      'Market comparisons',
-      'Investment metrics',
-      'Verified data',
+      'We believe the key to a successful move isn’t just technology, it’s knowledge and confidence. Our app gives you the tools, but the real power lies within you.',
+      'With the right education and guidance, you are empowered to take control of your own move and ensure property failure is a thing of the past',
     ],
     image: '/mobileAppImages/screen2.png',
   },
   {
     id: 'passport',
-    title: 'Property Passport',
-    description:
-      'Access comprehensive property documentation and reports. Get instant property passports with all essential information in one secure, shareable document.',
+    title: 'Impossible? Not anymore.',
     features: [
-      'Digital documentation',
-      'Instant reports',
-      'Secure sharing',
-      'Complete history',
+      'We’ve created a secure digital platform designed to tackle the biggest frustrations in property transactions, from slow sales and lack of transparency to limited buyer or seller knowledge and outdated processes. ',
+      'Want all your property documents in one place? umovingu has it. Need real-time updates on the progress of your move? Done. Legal paperwork validated in an instant? Absolutely. Seamless communication between every party involved? Built in. Better yet, everything works togetherseamlessly, so you stay in control without the endless chasing.',
+      'umovingu delivers a faster, smarter, more confident move all in the palm of your hand.',
+      'Whether you want faster sales, fewer fall-throughs, or total clarity from start to finish, umovingu has you covered.',
     ],
     image: '/mobileAppImages/screen3.png',
   },
@@ -188,12 +178,9 @@ export default function MobileAppSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-black mb-4 leading-tight">
+              <h3 className="text-3xl font-bold text-black mb-4 leading-tight">
                 {appScreens[activeScreen].title}
               </h3>
-              <p className="text-base text-black/90 mb-6 leading-relaxed font-light">
-                {appScreens[activeScreen].description}
-              </p>
 
               <div className="space-y-3">
                 {appScreens[activeScreen].features.map(
@@ -203,7 +190,7 @@ export default function MobileAppSection() {
                       className="flex items-center space-x-4"
                     >
                       <div className="w-3 h-3 bg-[#00a19a] rounded-full"></div>
-                      <span className="text-black/90 text-sm font-light">
+                      <span className="text-black/90 text-lg font-light">
                         {feature}
                       </span>
                     </div>
@@ -211,6 +198,123 @@ export default function MobileAppSection() {
                 )}
               </div>
             </div>
+
+            {/* Discover More Features Link - Creative Animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="pt-6 border-t border-gray-200/50"
+            >
+              <a
+                href="/product"
+                className="group relative inline-flex items-center space-x-3 px-6 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/10 to-[#00000]/10 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
+              >
+                {/* Animated background shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+
+                {/* Pulsing dot */}
+                <motion.div
+                  className="w-2 h-2 bg-[#00a19a] rounded-full"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.7, 1, 0.7],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+
+                {/* Text with gradient animation */}
+                <div className="relative">
+                  <motion.span
+                    className="text-lg font-medium bg-gradient-to-r from-[#00857E] to-[#000000] bg-clip-text text-transparent"
+                    animate={{
+                      backgroundPosition: ['0%', '200%', '0%'],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'linear',
+                    }}
+                    style={{
+                      backgroundSize: '200% 100%',
+                    }}
+                  >
+                    Discover more features
+                  </motion.span>
+                </div>
+
+                {/* Animated arrows container */}
+                <div className="relative flex items-center">
+                  {/* Main arrow with continuous movement */}
+                  <motion.svg
+                    className="w-5 h-5 text-[#00a19a]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    animate={{
+                      x: [0, 4, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </motion.svg>
+
+                  {/* Trailing dot */}
+                  <motion.div
+                    className="absolute -left-2 w-1 h-1 bg-[#00c9bf] rounded-full opacity-0"
+                    animate={{
+                      opacity: [0, 1, 0],
+                      x: [0, 8, 16],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      delay: 0.3,
+                      ease: 'easeOut',
+                    }}
+                  />
+                </div>
+
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute -top-1 -right-1 w-2 h-2 bg-[#00a19a] rounded-full opacity-60"
+                  animate={{
+                    y: [0, -3, 0],
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: 0.5,
+                  }}
+                />
+                <motion.div
+                  className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-[#00c9bf] rounded-full opacity-60"
+                  animate={{
+                    y: [0, 2, 0],
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: 1,
+                  }}
+                />
+              </a>
+            </motion.div>
 
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
