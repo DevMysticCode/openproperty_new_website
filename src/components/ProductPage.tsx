@@ -193,7 +193,7 @@ export default function ProductPage() {
             transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
             className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-light leading-tight tracking-tight mb-8"
           >
-            <span className="text-white">Your</span>{' '}
+            <span className="text-white">Yo</span>
             <span
               className="italic font-light"
               style={{
@@ -205,17 +205,9 @@ export default function ProductPage() {
                 paddingLeft: '8px',
               }}
             >
-              Next Move.
-            </span>
-          </motion.h1>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight tracking-tight mb-8"
-          >
-            <span className="text-white">In The Palm Of</span>{' '}
+              ur Data.
+            </span>{' '}
+            <span className="text-white">Yo</span>
             <span
               className="italic font-light"
               style={{
@@ -224,9 +216,31 @@ export default function ProductPage() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
+                paddingLeft: '8px',
               }}
             >
-              Your Hand.
+              ur Move.
+            </span>
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
+            className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-light leading-tight tracking-tight mb-8"
+          >
+            <span className="text-white">Yo</span>
+            <span
+              className="italic font-light"
+              style={{
+                background:
+                  'linear-gradient(135deg, #00857E, #00A19A, #4DC4BD, #E0F2F1)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                paddingLeft: '8px',
+              }}
+            >
+              ur Way.
             </span>
           </motion.h1>
         </motion.div>
