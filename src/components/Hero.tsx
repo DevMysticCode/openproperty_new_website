@@ -10,83 +10,82 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* 3D Hexagonal Shape */}
-      <div className="relative w-full">
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="relative flex items-center justify-center"
-        >
-          <ChipsScene />
-        </motion.div>
-      </div>
+      <div className="relative w-full max-w-8xl mx-auto px-6 sm:px-8">
+        {/* Main Content Row - Reversed order for mobile */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          {/* Text Content - Now first on mobile, left on desktop */}
+          <div className="flex-1 text-left order-2 lg:order-1">
+            {/* Main Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
+              className="text-6xl sm:text-7xl lg:text-8xl xl:text-8xl font-light leading-tight tracking-tight mb-6"
+            >
+              <span className="text-white">Every</span>{' '}
+              <span
+                className="italic font-light"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #00857E, #00A19A, #4DC4BD, #E0F2F1)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                move,
+              </span>
+              <br />
+              <span className="text-white">starts with</span>{' '}
+              <span
+                className="italic font-light"
+                style={{
+                  background:
+                    'linear-gradient(135deg, #00857E, #00A19A, #4DC4BD, #E0F2F1)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                you.
+              </span>
+            </motion.h1>
 
-      {/* Main Text */}
-      <div className="relative z-10 text-center px-6 sm:px-8 max-w-8xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-          className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-light leading-tight tracking-tight mb-8"
-        >
-          <span className="text-white">Every</span>{' '}
-          <span
-            className="italic font-light"
-            style={{
-              background:
-                'linear-gradient(135deg, #00857E, #00A19A, #4DC4BD, #E0F2F1)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            {/* Subtitle */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1.2,
+                delay: 1.5,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="max-w-lg"
+            >
+              <p className="text-xl sm:text-2xl text-white/70 font-light leading-relaxed">
+                Our centralised, property intelligence platform brings together
+                all the essential information you need to make smarter and
+                faster property decisions.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* 3D Hexagonal Shape - Now second on mobile, right on desktop */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
+            className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            Move,
-          </span>
-          <span className="text-white">Starts with</span>{' '}
-          <span
-            className="italic font-light"
-            style={{
-              background:
-                'linear-gradient(135deg, #00857E, #00A19A, #4DC4BD, #E0F2F1)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            You.
-          </span>
-        </motion.h1>
+            <div className="w-full max-w-md lg:max-w-lg">
+              <ChipsScene />
+            </div>
+          </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="space-y-48 mt-48 hero-subtext bg-gradient-paragraph-light max-w-4xl mx-auto bg-clip-text bg-no-repeat pb-1 text-fluid-30-56 leading-tight -tracking-4 text-transparent bg-gradient-paragraph-light pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 text-left"
-        >
-          <p>Finally, the future of property is in your hands.</p>
-
-          <p>
-            Our centralized open data and property intelligence platform brings
-            together all the essential information you need to make smarter and
-            faster property decisions.
-          </p>
-
-          {/* <p>
-            We own and operate leading digital products, including Evernote,
-            komoot, Meetup, Remini, StreamYard, and WeTransfer. And we develop
-            the technology to power them.
-          </p>
-
-          <p>
-            Our products have served nearly a billion people across the globe.
-            Still, we've only just crossed the starting line on the road to
-            building an all-time great company.
-          </p> */}
-        </motion.div>
-
+        {/* Mission Section - Below the main content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,16 +112,16 @@ export default function Hero() {
           </p>
 
           {/* <p>
-            We own and operate leading digital products, including Evernote,
-            komoot, Meetup, Remini, StreamYard, and WeTransfer. And we develop
-            the technology to power them.
-          </p>
-
-          <p>
-            Our products have served nearly a billion people across the globe.
-            Still, we've only just crossed the starting line on the road to
-            building an all-time great company.
-          </p> */}
+                    We own and operate leading digital products, including Evernote,
+                    komoot, Meetup, Remini, StreamYard, and WeTransfer. And we develop
+                    the technology to power them.
+                  </p>
+        
+                  <p>
+                    Our products have served nearly a billion people across the globe.
+                    Still, we've only just crossed the starting line on the road to
+                    building an all-time great company.
+                  </p> */}
         </motion.div>
       </div>
 
