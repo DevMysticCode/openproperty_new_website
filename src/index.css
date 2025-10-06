@@ -535,7 +535,7 @@ html {
 }
 
 .text-fluid-lg-24-40 {
-  font-size: clamp(1.5rem, 3vw + 0.3rem, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw + 0.3rem, 2rem);
   line-height: 1.4;
 }
 
