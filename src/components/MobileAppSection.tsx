@@ -20,7 +20,7 @@ const appScreens = [
       'We believe the key to a successful move isn’t just technology, it’s knowledge and confidence. Our app gives you the tools, but the real power lies within you.',
       'With the right education and guidance, you are empowered to take control of your own move and ensure property failure is a thing of the past',
     ],
-    image: '/mobileAppImages/screen2.png',
+    image: '/mobileAppImages/screen2_old.png',
   },
   {
     id: 'passport',
@@ -98,7 +98,7 @@ export default function MobileAppSection() {
               </span>
             </h2>
 
-            <p className="text-lg text-black/90 mx-auto leading-relaxed font-light">
+            <p className="text-xl text-black/90 mx-auto leading-relaxed font-light">
               The current process keeps you waiting and out of control. UMU puts
               the power in your pocket. Always on, always with you, every step
               of your move.
@@ -180,7 +180,7 @@ export default function MobileAppSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-black mb-4 leading-tight">
+              <h3 className="text-4xl font-light mb-4 leading-tight bg-gradient-to-r from-[#000000] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
                 {appScreens[activeScreen].title}
               </h3>
 
@@ -191,7 +191,7 @@ export default function MobileAppSection() {
                       key={featureIndex}
                       className="flex items-center space-x-4"
                     >
-                      <div className="w-3 h-3 bg-[#00a19a] rounded-full"></div>
+                      <div className="w-[12px] h-[12px] bg-[#00a19a] min-w-[12px] min-h-[12px] rounded-full"></div>
                       <span className="text-black/90 text-lg font-light">
                         {feature}
                       </span>
@@ -209,7 +209,7 @@ export default function MobileAppSection() {
               className="pt-6 border-t border-gray-200/50"
             >
               <a
-                href="/product"
+                href="/products"
                 className="group relative inline-flex items-center space-x-3 px-6 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/10 to-[#00000]/10 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Animated background shimmer */}
@@ -319,7 +319,7 @@ export default function MobileAppSection() {
             </motion.div>
 
             {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* <div className="flex flex-col sm:flex-row gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -360,7 +360,7 @@ export default function MobileAppSection() {
                   </div>
                 </Button>
               </motion.div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
 
