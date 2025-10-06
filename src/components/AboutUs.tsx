@@ -357,7 +357,7 @@ export default function AboutUs() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-start mb-20"
           >
-            <h1 className="text-heading font-light mb-8 tracking-tight leading-tight uppercase">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase">
               OUR WHY
             </h1>
           </motion.div>
@@ -624,7 +624,7 @@ export default function AboutUs() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-start mb-20"
           >
-            <h2 className="text-heading font-light leading-tight tracking-tight mb-8 text-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-8 text-black">
               OUR JOURNEY
               {/* <span
                 className="font-light"
@@ -1058,8 +1058,8 @@ export default function AboutUs() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-start mb-20"
           >
-            <h2 className="text-heading font-light mb-8 tracking-tight leading-tight text-black">
-              Stay Connected
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
+              THE LATEST
               {/* <span
                 className="font-light"
                 style={{
