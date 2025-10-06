@@ -192,7 +192,7 @@ export default function AboutUs() {
         <div className="relative overflow-hidden mx-auto px-6 sm:px-8 z-20">
           {/* Overlay Text */}
           <div className="relative z-20 flex h-full items-end max-w-7xl justify-start mx-auto mt-10 lg:mt-36">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#00a19a] via-[#00c4b8 to-[#00a19a] bg-clip-text text-transparent text-heading">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff to-[#ffffff] bg-clip-text text-transparent text-heading">
               OUR FOUNDER
             </h1>
             {/* <h2
@@ -355,15 +355,15 @@ export default function AboutUs() {
               isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-center mb-20"
+            className="text-start mb-20"
           >
             <h1 className="text-heading font-light mb-8 tracking-tight leading-tight uppercase">
-              Why we're building UMU
+              OUR WHY
             </h1>
           </motion.div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-4xl mx-auto">
             {/* Left Side - The Problem */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -536,7 +536,7 @@ export default function AboutUs() {
               isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }
             }
             transition={{ duration: 1.5, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="mt-20"
+            className="mt-20 max-w-4xl mx-auto"
           >
             <motion.div
               whileHover={{ scale: 1.01 }}
@@ -622,7 +622,7 @@ export default function AboutUs() {
               isJourneyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-center mb-20"
+            className="text-start mb-20"
           >
             <h2 className="text-heading font-light leading-tight tracking-tight mb-8 text-black">
               Our{' '}
@@ -637,8 +637,7 @@ export default function AboutUs() {
                 }}
               >
                 Journey
-              </span>{' '}
-              So Far
+              </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               From concept to reality, discover the milestones that shaped
