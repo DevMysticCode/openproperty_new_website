@@ -98,7 +98,7 @@ export default function MobileAppSection() {
               </span>
             </h2>
 
-            <p className="text-xl text-black/90 mx-auto leading-relaxed font-light">
+            <p className="text-[24px] text-black/90 mx-auto leading-relaxed font-light">
               The current process keeps you waiting and out of control. UMU puts
               the power in your pocket. Always on, always with you, every step
               of your move.
