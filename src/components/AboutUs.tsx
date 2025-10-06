@@ -1074,7 +1074,7 @@ export default function AboutUs() {
               </span> */}
             </h2>
           </motion.div>
-          <div className="max-w-4xl text-center mx-auto text-[22px]">
+          <div className="max-w-4xl text-center mx-auto text-[32px]">
             <p className="text-black leading-relaxed font-light mb-6">
               The team welcome investment proposals from founders, companies or
               organisations in the PropTech/FinTech/EdTech space.
