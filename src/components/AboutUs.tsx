@@ -625,8 +625,8 @@ export default function AboutUs() {
             className="text-start mb-20"
           >
             <h2 className="text-heading font-light leading-tight tracking-tight mb-8 text-black">
-              Our{' '}
-              <span
+              OUR JOURNEY
+              {/* <span
                 className="font-light"
                 style={{
                   background:
@@ -636,8 +636,8 @@ export default function AboutUs() {
                   backgroundClip: 'text',
                 }}
               >
-                Journey
-              </span>
+                JOURNEY
+              </span> */}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               From concept to reality, discover the milestones that shaped
@@ -1056,11 +1056,11 @@ export default function AboutUs() {
               isLatestInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-center mb-20"
+            className="text-start mb-20"
           >
             <h2 className="text-heading font-light mb-8 tracking-tight leading-tight text-black">
-              Stay{' '}
-              <span
+              Stay Connected
+              {/* <span
                 className="font-light"
                 style={{
                   background:
@@ -1071,7 +1071,7 @@ export default function AboutUs() {
                 }}
               >
                 Connected
-              </span>
+              </span> */}
             </h2>
           </motion.div>
 
