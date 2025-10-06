@@ -90,28 +90,30 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="space-y-12 mt-48 hero-subtext bg-gradient-paragraph-light max-w-4xl mx-auto bg-clip-text bg-no-repeat pb-1  leading-tight -tracking-4 text-transparent bg-gradient-paragraph-light pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 text-left"
+          className="space-y-12 mt-48 hero-subtext bg-gradient-paragraph-light max-w-7xl mx-auto bg-clip-text bg-no-repeat pb-1  leading-tight -tracking-4 text-transparent bg-gradient-paragraph-light pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 text-left"
         >
           <h1 className="text-white/50 font-light text-fluid-30-56">
             OUR MISSION
           </h1>
-          <p className="text-fluid-sm-16-28">
-            The world is accelerating. Technology and AI are rewriting the rules
-            of how we live, work, and connect. Entire industries are being
-            reshaped — but the UK property market has been left behind. Burdened
-            by outdated processes and fragmented systems, it struggles to serve
-            the very people it exists for.
-          </p>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <p className="text-fluid-sm-16-28">
+              The world is accelerating. Technology and AI are rewriting the
+              rules of how we live, work, and connect. Entire industries are
+              being reshaped — but the UK property market has been left behind.
+              Burdened by outdated processes and fragmented systems, it
+              struggles to serve the very people it exists for.
+            </p>
 
-          <p className="text-fluid-sm-16-28">
-            We believe it’s time for something different. A future where moving
-            home is simple, transparent, and stress-free. Where every step is
-            digitised, every connection seamless, and every decision faster and
-            smarter. By reimagining the entire journey end to end, we’re
-            creating a property experience built for the 21st century — one that
-            saves time, reduces stress, and empowers consumers like never
-            before.
-          </p>
+            <p className="text-fluid-sm-16-28">
+              We believe it’s time for something different. A future where
+              moving home is simple, transparent, and stress-free. Where every
+              step is digitised, every connection seamless, and every decision
+              faster and smarter. By reimagining the entire journey end to end,
+              we’re creating a property experience built for the 21st century —
+              one that saves time, reduces stress, and empowers consumers like
+              never before.
+            </p>
+          </div>
 
           {/* <p>
                     We own and operate leading digital products, including Evernote,
