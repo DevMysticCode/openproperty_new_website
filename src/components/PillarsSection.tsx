@@ -280,7 +280,7 @@ export default function PillarsSection() {
 
                       {/* Title */}
                       <h3
-                        className={`text-lg font-bold ${
+                        className={`text-2xl font-bold ${
                           pillar.type === 'video' ? 'text-white' : 'text-black'
                         }  transition-colors duration-300 mt-2`}
                       >
@@ -289,7 +289,7 @@ export default function PillarsSection() {
 
                       {/* Subtitle */}
                       <p
-                        className={`text-sm ${
+                        className={`text-lg ${
                           pillar.type === 'video' ? 'text-white' : 'text-black'
                         }  font-medium leading-relaxed mt-2`}
                       >
