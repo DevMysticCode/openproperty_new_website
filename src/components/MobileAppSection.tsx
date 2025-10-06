@@ -154,7 +154,7 @@ export default function MobileAppSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-              className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 flex items-center space-x-6"
+              className="absolute -bottom-16 left-1/4 transform -translate-x-1/2 flex items-center space-x-6"
             >
               {/* Previous Button */}
               <motion.button
