@@ -1074,10 +1074,20 @@ export default function AboutUs() {
               </span> */}
             </h2>
           </motion.div>
+          <div className="max-w-4xl text-center mx-auto text-[22px]">
+            <p className="text-black leading-relaxed font-light mb-6">
+              The team welcome investment proposals from founders, companies or
+              organisations in the PropTech/FinTech/EdTech space.
+            </p>
+
+            <p className="text-black leading-relaxed font-light mb-6">
+              Sign up to our mailing list to receive our monthly newsletters,
+              featuring the latest developments in umovingu's flagship product.
+            </p>
+          </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Investment Opportunities */}
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={
@@ -1094,7 +1104,7 @@ export default function AboutUs() {
                 whileHover={{ scale: 1.02, y: -8 }}
                 className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00a19a]/30 transition-all duration-700 relative overflow-hidden h-full"
               >
-                {/* Background Gradient */}
+               
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00a19a]/5 to-[#00c9bf]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                 <div className="relative z-10">
@@ -1141,7 +1151,6 @@ export default function AboutUs() {
               </motion.div>
             </motion.div>
 
-            {/* Newsletter Signup */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={
@@ -1158,7 +1167,7 @@ export default function AboutUs() {
                 whileHover={{ scale: 1.02, y: -8 }}
                 className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00c9bf]/30 transition-all duration-700 relative overflow-hidden h-full"
               >
-                {/* Background Gradient */}
+              
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00c9bf]/5 to-[#00e6d6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                 <div className="relative z-10">
@@ -1211,7 +1220,7 @@ export default function AboutUs() {
                 </div>
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </section>
 
