@@ -190,6 +190,21 @@ export default function AboutUs() {
           }}
         />
         <div className="relative overflow-hidden mx-auto px-6 sm:px-8 z-20">
+          {/* Overlay Text */}
+          <div className="relative z-20 flex h-full items-end max-w-7xl justify-start mx-auto mt-10 lg:mt-36">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#00a19a] via-[#00c4b8 to-[#00a19a] bg-clip-text text-transparent text-heading">
+              OUR FOUNDER
+            </h1>
+            {/* <h2
+              className="bg-clip-text px-6 pb-2 text-fluid-48-110 font-normal leading-tight -tracking-7 text-transparent md:mb-8 md:whitespace-pre md:px-[12%] text-center md:text-left"
+              style={{
+                backgroundImage:
+                  'radial-gradient(56.91% 100% at 70.4% 100%, #000000 0%, #00A19A 64.63%, #000000 100%)',
+              }}
+            >
+              Meet Our Founder
+            </h2> */}
+          </div>
           {/* Image Section */}
           <img
             alt="OpenProperty"
@@ -201,19 +216,6 @@ export default function AboutUs() {
             srcSet="/about/founder.png"
             style={{ height: '800px' }}
           />
-
-          {/* Overlay Text */}
-          <div className="relative z-20 flex h-full items-end justify-center -mt-10 lg:-mt-36">
-            <h2
-              className="bg-clip-text px-6 pb-2 text-fluid-48-110 font-normal leading-tight -tracking-7 text-transparent md:mb-8 md:whitespace-pre md:px-[12%] text-center md:text-left"
-              style={{
-                backgroundImage:
-                  'radial-gradient(56.91% 100% at 70.4% 100%, #000000 0%, #00A19A 64.63%, #000000 100%)',
-              }}
-            >
-              Meet Our Founder
-            </h2>
-          </div>
 
           {/* Values Grid */}
           <div className="pt-20 md:pt-0 z-20">

@@ -518,7 +518,7 @@ html {
 }
 
 .text-fluid-20-56 {
-  font-size: clamp(1.25rem, 5.36vw + -1.32rem, 3.5rem);
+  font-size: clamp(1.25rem, 5.36vw + -1.32rem, 2.5rem);
 }
 
 .text-fluid-sm-100-300 {
