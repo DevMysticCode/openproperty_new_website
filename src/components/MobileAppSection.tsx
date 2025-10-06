@@ -150,7 +150,13 @@ export default function MobileAppSection() {
             })}
 
             {/* Navigation Controls */}
-            <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
+              className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 flex items-center space-x-6"
+            >
+              {/* Previous Button */}
               <motion.button
                 onClick={prevScreen}
                 whileHover={{ scale: 1.1 }}
@@ -160,6 +166,22 @@ export default function MobileAppSection() {
                 <ChevronLeft className="h-6 w-6 text-white" />
               </motion.button>
 
+              {/* Navigation Indicators */}
+              <div className="flex items-center justify-center space-x-4">
+                {appScreens.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveScreen(index)}
+                    className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                      index === activeScreen
+                        ? 'bg-white scale-125'
+                        : 'bg-gray-600 hover:bg-gray-500'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {/* Next Button */}
               <motion.button
                 onClick={nextScreen}
                 whileHover={{ scale: 1.1 }}
@@ -168,7 +190,7 @@ export default function MobileAppSection() {
               >
                 <ChevronRight className="h-6 w-6 text-white" />
               </motion.button>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Dynamic Content */}
@@ -206,11 +228,11 @@ export default function MobileAppSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="pt-6"
+              className="pt-6 text-end"
             >
               <a
                 href="/products"
-                className="text-end group relative inline-flex items-center space-x-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/90 to-[#00a19a]/80 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
+                className="group relative inline-flex items-center space-x-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/90 to-[#00a19a]/80 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Animated background shimmer */}
                 {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" /> */}
@@ -361,26 +383,6 @@ export default function MobileAppSection() {
             </div> */}
           </motion.div>
         </div>
-
-        {/* Navigation Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-          className="flex items-center justify-center space-x-4 mt-16"
-        >
-          {appScreens.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveScreen(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                index === activeScreen
-                  ? 'bg-white scale-125'
-                  : 'bg-gray-600 hover:bg-gray-500'
-              }`}
-            />
-          ))}
-        </motion.div>
       </div>
     </section>
   )
