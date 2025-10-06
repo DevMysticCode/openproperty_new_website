@@ -2,13 +2,13 @@ import { ThemeProvider } from './components/theme-provider'
 import Navigation from './components/Navigation'
 import Hero from './components/Hero'
 import StatsSectionNew from './components/StatsSectionNew'
-import ProblemSection from './components/ProblemSection'
-import StatsSection from './components/StatsSection'
+// import ProblemSection from './components/ProblemSection'
+// import StatsSection from './components/StatsSection'
 import PillarsSection from './components/PillarsSection'
 import MobileAppSection from './components/MobileAppSection'
-import FeaturesSection from './components/FeaturesSection'
-import TestimonialsSection from './components/TestimonialsSection'
-import CTASection from './components/CTASection'
+// import FeaturesSection from './components/FeaturesSection'
+// import TestimonialsSection from './components/TestimonialsSection'
+// import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 
 function App() {
@@ -21,12 +21,12 @@ function App() {
           <StatsSectionNew delay={2} />
           <PillarsSection />
           <MobileAppSection />
-          <ProblemSection />
-          <StatsSection />
+          {/* <ProblemSection /> */}
+          {/* <StatsSection /> */}
 
-          <FeaturesSection />
-          <TestimonialsSection />
-          <CTASection />
+          {/* <FeaturesSection /> */}
+          {/* <TestimonialsSection /> */}
+          {/* <CTASection /> */}
         </main>
         <Footer />
       </div>

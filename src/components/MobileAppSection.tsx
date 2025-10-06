@@ -84,24 +84,26 @@ export default function MobileAppSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-start mb-20 max-w-4xl mx-auto"
+          className="text-start mb-20 max-w-7xl mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-24 tracking-tight leading-tight text-black">
             OUR PRODUCT{' '}
           </h2>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-black">
-            Powerful Property Intelligence{' '}
-            <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
-              In Your Pocket
-            </span>
-          </h2>
+          <div className="max-w-4xl mx-auto mt-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-black">
+              Powerful Property Intelligence{' '}
+              <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
+                In Your Pocket
+              </span>
+            </h2>
 
-          <p className="text-lg text-black/90 mx-auto leading-relaxed font-light">
-            The current process keeps you waiting and out of control. UMU puts
-            the power in your pocket. Always on, always with you, every step of
-            your move.
-          </p>
+            <p className="text-lg text-black/90 mx-auto leading-relaxed font-light">
+              The current process keeps you waiting and out of control. UMU puts
+              the power in your pocket. Always on, always with you, every step
+              of your move.
+            </p>
+          </div>
         </motion.div>
 
         {/* Main Content */}
