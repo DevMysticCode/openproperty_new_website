@@ -109,7 +109,7 @@ export default function Footer() {
                 />
               </motion.div>
               <span className="text-2xl font-bold tracking-tight text-white">
-                UmovingU
+                umovingu
               </span>
             </div>
 
