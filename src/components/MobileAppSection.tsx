@@ -10,6 +10,7 @@ const appScreens = [
     features: [
       'At umovingu we are on a mission to equip you with the tools to make buying or selling your home as easy as snapping your fingers.',
       'Democratisation of tools, knowledge and data, will make buying and selling homes: faster, fairer, and accessible for all/ everyone',
+      'We’ve created a secure digital platform designed to tackle the biggest frustrations in property transactions, from slow sales and lack of transparency to limited buyer or seller knowledge and outdated processes. ',
     ],
     image: '/mobileAppImages/screen1.png',
   },
@@ -26,7 +27,6 @@ const appScreens = [
     id: 'passport',
     title: 'Impossible? Not anymore.',
     features: [
-      'We’ve created a secure digital platform designed to tackle the biggest frustrations in property transactions, from slow sales and lack of transparency to limited buyer or seller knowledge and outdated processes. ',
       'Want all your property documents in one place? umovingu has it. Need real-time updates on the progress of your move? Done. Legal paperwork validated in an instant? Absolutely. Seamless communication between every party involved? Built in. Better yet, everything works togetherseamlessly, so you stay in control without the endless chasing.',
       'umovingu delivers a faster, smarter, more confident move all in the palm of your hand.',
       'Whether you want faster sales, fewer fall-throughs, or total clarity from start to finish, umovingu has you covered.',
@@ -206,7 +206,7 @@ export default function MobileAppSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="pt-6 border-t border-gray-200/50"
+              className="pt-6"
             >
               <a
                 href="/products"
