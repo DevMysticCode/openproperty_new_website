@@ -14,7 +14,7 @@ export default function Hero() {
     >
       <div className="relative w-full max-w-8xl mx-auto px-6 sm:px-8">
         {/* Main Content Row - Reversed order for mobile */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        <div className="container flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mx-auto mt-24">
           {/* Text Content - Now first on mobile, left on desktop */}
           <div className="flex-1 text-left order-2 lg:order-1">
             {/* Main Heading */}
@@ -22,7 +22,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-              className="text-6xl sm:text-7xl lg:text-8xl xl:text-8xl font-light leading-tight tracking-tight mb-6"
+              className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-light leading-tight tracking-tight mb-6"
             >
               <span className="text-white">Every</span>{' '}
               <span
@@ -79,7 +79,7 @@ export default function Hero() {
             transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
             className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2"
           >
-            <div className="w-full max-w-md lg:max-w-lg">
+            <div className="w-full">
               <ChipsScene />
             </div>
           </motion.div>
