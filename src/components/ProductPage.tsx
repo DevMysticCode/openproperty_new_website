@@ -270,6 +270,11 @@ export default function ProductPage() {
           }}
         />{' '}
         <div className="max-w-7xl mx-auto px-6 sm:px-8 container relative z-20">
+          <div className="">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-white text-start uppercase">
+              The Platform
+            </h2>
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
@@ -368,9 +373,8 @@ export default function ProductPage() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-center">
-              What makes us{' '}
-              <span className="text-black/90 italic">different?</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-start uppercase">
+              The Difference
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -450,6 +454,11 @@ export default function ProductPage() {
         className="relative py-24 bg-gradient-to-br from-white to-white overflow-hidden"
       >
         <div className="max-w-8xl mx-auto px-6 sm:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-start uppercase">
+              Our Features
+            </h2>
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={
