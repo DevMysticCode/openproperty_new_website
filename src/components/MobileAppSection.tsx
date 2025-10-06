@@ -210,15 +210,29 @@ export default function MobileAppSection() {
             >
               <a
                 href="/products"
-                className="group relative inline-flex items-center space-x-3 px-6 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/10 to-[#00000]/10 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
+                className="text-end group relative inline-flex items-center space-x-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-[#00a19a]/90 to-[#00a19a]/80 hover:from-[#00a19a]/20 hover:to-[#00c9bf]/20 border border-[#00a19a]/20 hover:border-[#00a19a]/40 transition-all duration-500 overflow-hidden"
               >
                 {/* Animated background shimmer */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" /> */}
+
+                {/* Pulsing dot */}
+                {/* <motion.div
+                  className="w-2 h-2 bg-[#00a19a] rounded-full"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.7, 1, 0.7],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                /> */}
 
                 {/* Text with gradient animation */}
                 <div className="relative">
                   <motion.span
-                    className="text-lg font-medium bg-gradient-to-r from-[#00857E] to-[#000000] bg-clip-text text-transparent"
+                    className="text-lg font-medium bg-gradient-to-r from-[#ffffff] to-[#ffffff] hover:text-[#065f5b] bg-clip-text text-transparent transition-all duration-500"
                     animate={{
                       backgroundPosition: ['0%', '200%', '0%'],
                     }}
@@ -236,8 +250,7 @@ export default function MobileAppSection() {
                 </div>
 
                 {/* Animated arrows container */}
-                <div className="relative flex items-center">
-                  {/* Main arrow with continuous movement */}
+                {/* <div className="relative flex items-center">
                   <motion.svg
                     className="w-5 h-5 text-[#00a19a]"
                     fill="none"
@@ -260,7 +273,6 @@ export default function MobileAppSection() {
                     />
                   </motion.svg>
 
-                  {/* Trailing dot */}
                   <motion.div
                     className="absolute -left-2 w-1 h-1 bg-[#00c9bf] rounded-full opacity-0"
                     animate={{
@@ -274,7 +286,7 @@ export default function MobileAppSection() {
                       ease: 'easeOut',
                     }}
                   />
-                </div>
+                </div> */}
 
                 {/* Floating particles */}
                 <motion.div
