@@ -148,7 +148,7 @@ export default function PillarsSection() {
           </h1>
 
           <div className="max-w-4xl mx-auto mt-16">
-            <p className="text-black text-18 mx-auto leading-relaxed font-light">
+            <p className="text-black text-24 mx-auto leading-relaxed font-light">
               The core principles that drive our mission to revolutionize
               property intelligence and empower smarter decision-making.
             </p>
