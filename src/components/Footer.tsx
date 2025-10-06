@@ -48,7 +48,7 @@ export default function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-black border-t border-border/30 overflow-hidden py-20"
+      className="relative bg-black border-t border-border/30 overflow-hidden py-20"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">

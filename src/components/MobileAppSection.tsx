@@ -215,20 +215,6 @@ export default function MobileAppSection() {
                 {/* Animated background shimmer */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                {/* Pulsing dot */}
-                <motion.div
-                  className="w-2 h-2 bg-[#00a19a] rounded-full"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.7, 1, 0.7],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                />
-
                 {/* Text with gradient animation */}
                 <div className="relative">
                   <motion.span
