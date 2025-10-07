@@ -25,77 +25,67 @@ import React from 'react'
 const features = [
   {
     icon: FileText,
-    title: 'Your home`s, second home',
-    subtitle: 'Your material information command centre',
-    description:
-      'Get your home transaction-ready upfront, preventing unnecessary fall-throughs and weeks of wasted time and money.',
+    tab: 'Your home`s, second home',
+    title: 'The home for your home.',
     highlights: [
-      'Document Storage - All property documents stored in app',
-      'Journey Mapping - Visual representation of steps needed',
-      'Progress Trackers - Monitor progress on different forms',
-      'Point Reward System - Incentivize getting sale ready upfront',
-      'Collaborate with your partner/cohabitant',
-      'AI Document Automation - Documents verified via AI',
+      'Get your home transaction-ready upfront',
+      'Keep every property document safely in one place',
+      'Clear, visual guide showing every step needed to get sale-ready',
+      'Monitor your progress across the platform',
+      'Invite your partner or cohabitant to contribute, upload documents, and complete key steps with you.',
     ],
     gradient: 'from-[#00A19A] to-[#00c9bf]',
     image: '/products/PropertyHub.png',
   },
   {
     icon: MapPin,
+    tab: 'Move smarter, not harder',
     title: 'Smarter Moves',
-    subtitle: 'Property information that gives you confidence',
-    description:
-      'In-depth information about crime rates, schools, transport links integrated into our explore setting.',
     highlights: [
-      'Favourite Properties - Save and track properties',
-      'Tap Owner - Connect with property owners directly',
-      'Register Interest - Express interest seamlessly',
-      'Access Passports - View property documentation',
+      'Bite-sized videos and guides built seamlessly into your journey',
+      'Expert-curated content for those who want to go deeper.',
+      'Help videos, tips, and info boxes placed right where you need them',
+      'AI tools to verify documents, flag missing steps and answer your questions',
+      'Smart notifications that keep your tasks on track and you moving forward.',
     ],
     gradient: 'from-[#008a85] to-[#00A19A]',
     image: '/products/SmarterMoves.png',
   },
   {
     icon: Bell,
-    title: 'Transparent Transactions',
-    subtitle: 'Share property data across the whole transaction',
-    description:
-      'Push notifications and chain visibility with open data sharing replaces current hidden process.',
+    tab: 'Clear and connected.',
+    title: 'Always n sync.',
     highlights: [
-      'Personalised reminders for progress tracking',
-      'Everyone sees the same information',
-      'Reduces mistrust, duplication, and delays',
-      'Complete transparency throughout the process',
+      'Communication between all parties flows seamlessly with everyone being updated at the same time and no one being kept in the dark',
+      'Push notifications and chain visibility and open data sharing replaces current hidden process',
+      'Secure communication channels built into one app',
+      'Live progress tracker (like parcel tracking but for your home)',
     ],
     gradient: 'from-[#00c4b8] to-[#00e6d6]',
     image: '/products/TransparentTransactions.png',
   },
   {
     icon: Brain,
-    title: 'Personalised Tools',
-    subtitle: 'Robust, feature-rich workspaces',
-    description:
-      "AI anticipates bottlenecks and automates repetitive tasks, accelerating progress in ways traditional platforms can't.",
+    tab: 'Your move, your way',
+    title: 'Moving made personal',
     highlights: [
-      'Predictive analytics for transaction bottlenecks',
-      'Automated repetitive task handling',
-      'Smart document processing',
-      'Intelligent workflow optimization',
+      'Your move is mapped to your unique circumstances, so the app feels personal to you at every step.',
+      'Like and favourite the homes you love, and UMU will suggest others you might like based on your activity.',
+      'Recommended videos and guides appear in your feed based on where you are in the process and what you’ve interacted with',
+      'Get personalised tips, reminders, and recommendations that match your timeline and goals.',
     ],
     gradient: 'from-[#00A19A] to-[#007a75]',
     image: '/products/PersonalisedTools.png',
   },
   {
     icon: BookOpen,
+    tab: 'A move that gives back.',
     title: 'Rewards',
-    subtitle: 'Populate TA forms with ease',
-    description:
-      'Seamlessly built into the process, our free bite-sized videos simplify legal forms and provide clear guidance.',
+    subtitle: 'Earn whilst you move.',
     highlights: [
-      'Bite-sized educational videos',
-      'Clear guidance on legal forms',
-      'Integrated into user journey',
-      'Demystify property transactions',
+      'Reward users for getting sale ready upfront.',
+      'Awarded at every step of your journey, whether it’s a document upload, form completion or simply empowering yourself with our bite-sized videos.',
+      'Collected points can be used within our app as offers, deals or discounts.',
     ],
     gradient: 'from-[#00c9bf] to-[#00A19A]',
     image: '/products/rewards.png',
@@ -503,7 +493,7 @@ export default function ProductPage() {
                   <div className="flex space-x-4 mb-8 justify-center flex-wrap gap-2">
                     {features.map((feature, tabIndex) => (
                       <button
-                        key={feature.title}
+                        key={feature.tab}
                         onClick={() => setActiveFeature(tabIndex)}
                         className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                           tabIndex === activeFeature
@@ -511,7 +501,7 @@ export default function ProductPage() {
                             : 'bg-gray-700 text-gray-300 hover:bg-gray-600 cursor-pointer'
                         }`}
                       >
-                        {feature.title}
+                        {feature.tab}
                       </button>
                     ))}
                   </div>
@@ -578,32 +568,15 @@ export default function ProductPage() {
                       transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
                       className="space-y-6"
                     >
-                      <motion.div
-                        whileHover={{ scale: 1.05, rotate: 8 }}
-                        className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${features[activeFeature].gradient} shadow-lg`}
-                      >
-                        {React.createElement(features[activeFeature].icon, {
-                          className: 'h-8 w-8 text-white',
-                        })}
-                      </motion.div>
-
                       <div>
-                        <h3 className="text-2xl font-bold mb-2 leading-tight text-white">
+                        <h3 className="text-2xl font-bold mb-2 leading-tight text-white italic">
                           {features[activeFeature].title}
                         </h3>
-
-                        <p className="text-lg font-semibold text-[#00A19A] mb-4">
-                          {features[activeFeature].subtitle}
-                        </p>
-
-                        <p className="text-gray-300 mb-6 leading-relaxed font-light">
-                          {features[activeFeature].description}
-                        </p>
 
                         {/* Highlights */}
                         <ul className="space-y-3">
                           {features[activeFeature].highlights
-                            .slice(0, 4)
+                            .slice(0, 5)
                             .map((highlight, highlightIndex) => (
                               <motion.li
                                 key={highlightIndex}

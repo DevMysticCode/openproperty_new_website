@@ -865,6 +865,265 @@ export default function AboutUs() {
       {/* Our Journey Section */}
       <section
         ref={journeyRef}
+        className="relative py-24 bg-white overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
+                         linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+              backgroundSize: '60px 60px',
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={
+              isJourneyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
+            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-start mb-20"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight tracking-tight mb-8 text-black">
+              OUR JOURNEY
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+              Ipsum dolor sit amet, consectetur adipiscing elit, amet eiusmod
+              tempor incididunt ut labore et dolore aliqua.
+            </p>
+          </motion.div>
+
+          {/* Road Timeline Container */}
+          <div className="relative">
+            {/* Main Road */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-[#00A19A] via-[#00c9bf] to-[#00e6d6] rounded-full opacity-20"></div>
+
+            {/* Road Dashes */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-2 h-full">
+              <div className="relative w-full h-full">
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={isJourneyInView ? { opacity: 1 } : {}}
+                    transition={{ delay: 0.5 + i * 0.2, duration: 0.5 }}
+                    className="absolute left-0 w-2 h-8 bg-white rounded-full"
+                    style={{ top: `${12.5 + i * 12.5}%` }}
+                  ></motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Journey Milestones */}
+            <div className="relative space-y-32">
+              {/* Genesis of UNU */}
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: -100 }
+                }
+                transition={{
+                  duration: 1.2,
+                  delay: 0.3,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative flex items-center"
+              >
+                {/* Content */}
+                <div className="w-1/2 pr-12 text-right">
+                  <div className="inline-block">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Genesis of UNU
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Hazine landed on the idea of UNU way back in 2022 and has
+                      been developing and innovating since.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Road Marker */}
+                <div className="absolute left-1/2 transform -translate-x-1/2">
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    className="w-6 h-6 bg-[#00A19A] rounded-full border-4 border-white shadow-lg"
+                  ></motion.div>
+                </div>
+
+                {/* Right Spacer */}
+                <div className="w-1/2"></div>
+              </motion.div>
+
+              {/* Thought + Discussion Process */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: 100 }
+                }
+                transition={{
+                  duration: 1.2,
+                  delay: 0.5,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative flex items-center"
+              >
+                {/* Left Spacer */}
+                <div className="w-1/2"></div>
+
+                {/* Road Marker */}
+                <div className="absolute left-1/2 transform -translate-x-1/2">
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    className="w-6 h-6 bg-[#00c9bf] rounded-full border-4 border-white shadow-lg"
+                  ></motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="w-1/2 pl-12">
+                  <div className="inline-block">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Thought + Discussion Process
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Over the following decade Hazine continued to run her own
+                      estate agency whilst developing UNU alongside it, working
+                      with Coventry University to build the framework.
+                    </p>
+                    <div className="w-full h-px bg-gray-300 my-4"></div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Prototype Built */}
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: -100 }
+                }
+                transition={{
+                  duration: 1.2,
+                  delay: 0.7,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative flex items-center"
+              >
+                {/* Content */}
+                <div className="w-1/2 pr-12 text-right">
+                  <div className="inline-block">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Prototype Built
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light mb-4">
+                      Our prototype was completed in mid 2025 and we are now
+                      hoping to raise investment
+                    </p>
+                    <div className="w-full h-px bg-gray-300 my-4"></div>
+                  </div>
+                </div>
+
+                {/* Road Marker */}
+                <div className="absolute left-1/2 transform -translate-x-1/2">
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    className="w-6 h-6 bg-[#00e6d6] rounded-full border-4 border-white shadow-lg"
+                  ></motion.div>
+                </div>
+
+                {/* Right Spacer */}
+                <div className="w-1/2"></div>
+              </motion.div>
+
+              {/* Beta Testing */}
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={
+                  isJourneyInView
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: 100 }
+                }
+                transition={{
+                  duration: 1.2,
+                  delay: 0.9,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="relative flex items-center"
+              >
+                {/* Left Spacer */}
+                <div className="w-1/2"></div>
+
+                {/* Road Marker */}
+                <div className="absolute left-1/2 transform -translate-x-1/2">
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    className="w-6 h-6 bg-[#00A19A] rounded-full border-4 border-white shadow-lg"
+                  ></motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="w-1/2 pl-12">
+                  <div className="inline-block">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Beta Testing
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed font-light">
+                      October 2025! We will be launching our product very soon
+                      for beta testing.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={
+              isJourneyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
+            transition={{ duration: 1.5, delay: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mt-32"
+          >
+            <div className="inline-flex items-center justify-center p-8 rounded-2xl max-w-4xl mx-auto bg-gradient-to-r from-[#00A19A]/10 via-[#00c9bf]/10 to-[#00e6d6]/10 border border-[#00A19A]/20">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4 leading-tight text-gray-900">
+                  Join us on our{' '}
+                  <span
+                    style={{
+                      background: 'linear-gradient(135deg, #00A19A, #00c9bf)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    continuing journey
+                  </span>
+                </h3>
+                <p className="text-gray-600 leading-relaxed font-light max-w-2xl mx-auto">
+                  We're just getting started. Be part of the revolution that's
+                  transforming property intelligence and decision-making
+                  worldwide.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Journey Section */}
+      <section
+        ref={journeyRef}
         className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
       >
         {/* Background Pattern */}
