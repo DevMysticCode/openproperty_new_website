@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
+import CTASectionNew from './CTASectionNew'
 import Footer from './Footer'
 import ChipsScene from './ChipsScene'
 
@@ -1224,6 +1225,7 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <CTASectionNew />
       {/* Footer */}
       <Footer />
     </div>

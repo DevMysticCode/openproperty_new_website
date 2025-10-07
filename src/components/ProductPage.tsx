@@ -19,6 +19,7 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 import { Button } from './ui/button'
 import ChipsScene from './ChipsScene'
+import CTASectionNew from './CTASectionNew'
 import React from 'react'
 
 const features = [
@@ -629,83 +630,7 @@ export default function ProductPage() {
       </section>
 
       {/* Final CTA Section - With Overlap */}
-      <section className="relative py-32 bg-gradient-to-br from-[#00A19A] via-[#00c4b8] to-[#00e6d6] overflow-hidden">
-        <div className="max-w-8xl mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
-            {/* Left Side - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              animate={isFeaturesInView ? { opacity: 1, x: 0 } : {}}
-              transition={{
-                duration: 1.2,
-                delay: 0.3,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              className="space-y-8 italic lg:pr-4 relative z-10"
-            >
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight text-black"
-              >
-                umovingu.
-              </motion.h2>
-
-              <motion.h3
-                initial={{ opacity: 0, y: 50 }}
-                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: 0.7 }}
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black"
-              >
-                your move
-              </motion.h3>
-
-              <motion.h3
-                initial={{ opacity: 0, y: 50 }}
-                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: 0.9 }}
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black"
-              >
-                your way.
-              </motion.h3>
-            </motion.div>
-
-            {/* Right Side - Empowering Figure - Overlapping */}
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={isFeaturesInView ? { opacity: 1, x: 0 } : {}}
-              transition={{
-                duration: 1.2,
-                delay: 0.5,
-                ease: [0.23, 1, 0.32, 1],
-              }}
-              className="relative flex justify-center lg:justify-start items-center lg:-ml-32 xl:-ml-48"
-            >
-              {/* Silhouette Figure - Much Larger with Overlap */}
-              <motion.div
-                animate={{
-                  y: [0, -15, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                className="relative w-full max-w-2xl lg:max-w-none lg:w-[160%] xl:w-[180%]"
-              >
-                <img
-                  alt="Empowering figure representing your move, your way"
-                  decoding="async"
-                  className="relative w-full h-auto object-contain scale-125 lg:scale-150"
-                  src="/products/ctaSection-removebg-preview.png"
-                  srcSet="/products/ctaSection-removebg-preview.png"
-                />
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <CTASectionNew />
 
       <Footer />
     </div>

@@ -15,6 +15,7 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 import { Button } from './ui/button'
 import ChipsScene from './ChipsScene'
+import CTASectionNew from './CTASectionNew'
 
 const hearAboutOptions = [
   'Google Search',
@@ -608,7 +609,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
+      <CTASectionNew />
       <Footer />
     </div>
   )

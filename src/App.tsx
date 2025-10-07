@@ -9,6 +9,7 @@ import MobileAppSection from './components/MobileAppSection'
 // import FeaturesSection from './components/FeaturesSection'
 // import TestimonialsSection from './components/TestimonialsSection'
 // import CTASection from './components/CTASection'
+import CTASectionNew from './components/CTASectionNew'
 import Footer from './components/Footer'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           {/* <TestimonialsSection /> */}
           {/* <CTASection /> */}
         </main>
+        <CTASectionNew />
         <Footer />
       </div>
     </ThemeProvider>
