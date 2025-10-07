@@ -331,6 +331,270 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <section
+        ref={valuesRef}
+        className="relative py-24 bg-white overflow-hidden"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(45deg, #00a19a 1px, transparent 1px),
+                         linear-gradient(-45deg, #00c9bf 1px, transparent 1px)`,
+              backgroundSize: '60px 60px',
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={
+              isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+            }
+            transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+            className="text-center mb-20"
+          >
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase">
+              OUR WHY
+            </h1>
+          </motion.div>
+
+          {/* Three Column Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-20">
+            {/* For You */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-[#00a19a] mb-4">
+                  01.
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  For you
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed font-light text-lg">
+                Jeton is designed with you at its core. Our goal is to create a
+                product that seamlessly fits into your life, simplifying your
+                finances and make money better for you.
+              </p>
+            </motion.div>
+
+            {/* Accessible */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-[#00a19a] mb-4">
+                  02.
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Accessible
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed font-light text-lg">
+                We try to make Jeton accessible and inclusive for everyone. Our
+                commitment is to ensure that our services are easy to use and
+                available to all.
+              </p>
+            </motion.div>
+
+            {/* Transparent */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="mb-6">
+                <div className="text-4xl font-bold text-[#00a19a] mb-4">
+                  03.
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Transparent
+                </h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed font-light text-lg">
+                We believe in transparency and honesty. There are no complicated
+                jargons or hard-to-understand terms here. We understand that
+                money can be complex, so we are dedicated to making it
+                straightforward and transparent. With Jeton, there are no hidden
+                fees or surprises. What you see is truly what you get.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Bottom Content - Problem & Solution */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-4xl mx-auto">
+            {/* Left Side - The Problem */}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={
+                isValuesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
+              transition={{
+                duration: 1.2,
+                delay: 0.9,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="space-y-8"
+            >
+              {/* Problem Statement */}
+              <div className="relative">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-red-400/30 transition-all duration-700 relative overflow-hidden border border-gray-200"
+                >
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mr-4">
+                        <span className="text-2xl">⚠️</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        The Broken System
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      The property process as it stands today is broken, and the
+                      numbers prove it/ it's you paying the price. Every year,
+                      over a third of UK house sales collapse before completion,
+                      costing consumers more than £590 million.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      The average transaction drags on for 5–6 months, leaving
+                      buyers and sellers in limbo and vulnerable to chain
+                      breaks. Meanwhile, updates are scarce and fragmented, with
+                      information spread across estate agents, solicitors, and
+                      lenders who all work to their own schedules, not yours.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Impact Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isValuesInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 1.1, duration: 0.8 }}
+                  className="text-center p-6 rounded-xl bg-red-50 border border-red-100"
+                >
+                  <div className="text-3xl font-bold text-red-600 mb-2">
+                    1/3
+                  </div>
+                  <div className="text-sm text-red-700">Sales Collapse</div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isValuesInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 1.2, duration: 0.8 }}
+                  className="text-center p-6 rounded-xl bg-orange-50 border border-orange-100"
+                >
+                  <div className="text-3xl font-bold text-orange-600 mb-2">
+                    £590M
+                  </div>
+                  <div className="text-sm text-orange-700">Annual Cost</div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Our Solution */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={
+                isValuesInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+              }
+              transition={{
+                duration: 1.2,
+                delay: 1.1,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+              className="space-y-8"
+            >
+              {/* Our Belief */}
+              <div className="relative">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00a19a]/30 transition-all duration-700 relative overflow-hidden border border-gray-200"
+                >
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-2xl flex items-center justify-center mr-4">
+                        <span className="text-2xl">💡</span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        Our Belief
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed font-light mb-6">
+                      At UMU, we believe it doesn't have to be this way. We
+                      believe in turning moving home from one of life's most
+                      stressful journeys into one of the most empowering.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed font-light">
+                      That's why we're building more than an app, we're building
+                      a movement to give consumers control, clarity, and
+                      confidence in a process that has failed them for far too
+                      long.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* UMU Features */}
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: '⚡',
+                    text: 'Real-time updates replace endless chasing',
+                  },
+                  {
+                    icon: '📋',
+                    text: 'Digital property passport keeps information organised',
+                  },
+                  {
+                    icon: '🤖',
+                    text: 'AI-powered tools validate legal documents',
+                  },
+                  { icon: '🎓', text: 'Education hub arms you with knowledge' },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={
+                      isValuesInView
+                        ? { opacity: 1, x: 0 }
+                        : { opacity: 0, x: -100 }
+                    }
+                    transition={{ delay: 1.3 + index * 0.1, duration: 0.8 }}
+                    className="flex items-center space-x-4 p-4 rounded-xl bg-white border border-[#00a19a]/10 hover:bg-[#00a19a]/10 transition-colors duration-300"
+                  >
+                    <div className="w-10 h-10 bg-gradient-to-r from-[#00a19a] to-[#00c9bf] rounded-full flex items-center justify-center text-white">
+                      {feature.icon}
+                    </div>
+                    <span className="text-gray-700 font-light">
+                      {feature.text}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* Our Why Section */}
       <section
         ref={valuesRef}

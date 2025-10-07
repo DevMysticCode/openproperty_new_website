@@ -10,7 +10,7 @@ export default function CTASectionNew() {
   return (
     <section
       ref={featuresRef}
-      className="relative pt-4 bg-gradient-to-tl from-[#032774] via-[#00A19A] to-[#caf5f2] overflow-hidden"
+      className="relative pt-4 bg-gradient-to-tl from-[#000000] via-[#00A19A] to-[#caf5f2] overflow-hidden"
     >
       <div className="max-w-8xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
