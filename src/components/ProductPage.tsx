@@ -97,7 +97,7 @@ const features = [
       'Demystify property transactions',
     ],
     gradient: 'from-[#00c9bf] to-[#00A19A]',
-    image: '/products/PropertyHub.png',
+    image: '/products/rewards.png',
   },
 ]
 
