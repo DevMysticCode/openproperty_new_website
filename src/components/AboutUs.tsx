@@ -215,7 +215,7 @@ export default function AboutUs() {
             className="relative z-10 mx-auto"
             src="/about/founder.png"
             srcSet="/about/founder.png"
-            style={{ height: '800px' }}
+            style={{ height: '440px' }}
           />
 
           {/* Values Grid */}
