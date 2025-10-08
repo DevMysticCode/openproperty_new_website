@@ -340,7 +340,7 @@ export default function ProductPage() {
                 transition={{ duration: 1.2, delay: 0.5 }}
                 className="relative"
               >
-                <div className="shadow-2xl">
+                <div className="">
                   <img
                     alt="OpenProperty"
                     width={1440}
