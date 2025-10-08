@@ -36,7 +36,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
         className="container relative z-20 flex flex-col items-center pb-20 pt-32 md:pb-52 md:pt-80 mx-auto"
       >
         <div className="flex flex-col items-start first:pb-30 md:first:pb-24 w-full max-w-7xl">
-          <h1 className="text-white/80 font-light text-heading text-left">
+          <h1 className="text-white font-light text-heading text-left">
             THE PROBLEM
           </h1>
         </div>
