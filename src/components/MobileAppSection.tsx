@@ -9,7 +9,7 @@ const appScreens = [
     title: 'Your data. Your move. Your way',
     features: [
       'At umovingu we are on a mission to equip you with the tools to make buying or selling your home as easy as snapping your fingers.',
-      'Democratisation of tools, knowledge and data, will make buying and selling homes: faster, fairer, and accessible for all/ everyone',
+      'Democratisation of tools, knowledge and data, will make buying and selling homes: faster, fairer, and accessible for everyone.',
       'We’ve created a secure digital platform designed to tackle the biggest frustrations in property transactions, from slow sales and lack of transparency to limited buyer or seller knowledge and outdated processes. ',
     ],
     image: '/mobileAppImages/screen1.png',

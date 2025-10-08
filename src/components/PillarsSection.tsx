@@ -32,8 +32,7 @@ const pillars = [
   {
     id: 2,
     title: 'Radical Transparency',
-    subtitle:
-      'No hidden steps, no surprises. Real time updates from offer to completion.',
+    subtitle: 'No hidden steps, no surprises.',
     type: 'image',
     image: '/pillars/image_3.jpg',
     icon: Shield,
@@ -74,7 +73,7 @@ const pillars = [
   {
     id: 6,
     title: 'Learn & Earn',
-    subtitle: 'Earn rewards when you learn with our AI powered education hub',
+    subtitle: 'Earn rewards when you learn with our AI powered education hub.',
     type: 'image',
     image: '/pillars/image_2.jpg',
     icon: Building2,
