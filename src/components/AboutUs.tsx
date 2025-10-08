@@ -10,10 +10,15 @@ import ChipsScene from './ChipsScene'
 export default function AboutUs() {
   const heroRef = useRef(null)
   const valuesRef = useRef(null)
+  const founderRef = useRef(null)
   const journeyRef = useRef(null) // Add this
   const latestRef = useRef(null) // Add this
   const isHeroInView = useInView(heroRef, { once: true, margin: '-100px' })
   const isValuesInView = useInView(valuesRef, { once: true, margin: '-100px' })
+  const isFounderInView = useInView(founderRef, {
+    once: true,
+    margin: '-100px',
+  })
   const isJourneyInView = useInView(journeyRef, {
     once: true,
     margin: '-100px',
@@ -173,7 +178,11 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      <section data-theme="Light" className="relative bg-neutral-100 pt-24 ">
+      <section
+        ref={founderRef}
+        data-theme="Light"
+        className="relative bg-neutral-100 pt-24 "
+      >
         <img
           alt="Background glows"
           loading="lazy"
@@ -223,7 +232,7 @@ export default function AboutUs() {
             <div className="px-6 pb-20 md:grid-cols-2 md:gap-x-5 text-2xl text-black md:gap-y-24 md:px-[12%] md:pb-44">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
-                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
+                animate={isFounderInView ? { opacity: 1, y: 0 } : {}}
               >
                 <p
                   className="italic text-center leading-relaxed"
