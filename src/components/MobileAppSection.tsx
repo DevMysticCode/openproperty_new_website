@@ -211,9 +211,9 @@ export default function MobileAppSection() {
                   (feature, featureIndex) => (
                     <div
                       key={featureIndex}
-                      className="flex items-center space-x-4"
+                      className="flex items-start space-x-4"
                     >
-                      <div className="w-[12px] h-[12px] bg-[#00a19a] min-w-[12px] min-h-[12px] rounded-full"></div>
+                      <div className="w-[12px] h-[12px] bg-[#00a19a] min-w-[12px] min-h-[12px] rounded-full mt-2"></div>
                       <span className="text-black/90 text-lg font-light">
                         {feature}
                       </span>

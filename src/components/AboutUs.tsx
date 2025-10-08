@@ -117,7 +117,7 @@ export default function AboutUs() {
           className="relative flex items-center justify-center w-full"
         >
           <ChipsScene
-            src="https://my.spline.design/animatedbackgroundgradientforweb-nHu8T9y4nQ95XqXHtTFlvvau/"
+            src="https://my.spline.design/claritystream-NFVRq6xtPoGJygaEzpBvdd1x/"
             height="100vh"
           />
         </motion.div>
@@ -1121,40 +1121,40 @@ export default function AboutUs() {
               viewBox="0 0 1200 500"
               preserveAspectRatio="xMidYMid meet"
             >
-              {/* Main Horizontal Road Path with Better Spaced Curves */}
+              {/* Main Horizontal Road Path with Gentle Curves */}
               <path
-                d="M 80 250
-             L 250 250
-             Q 400 250 400 150
-             L 400 150
-             Q 400 80 500 80
-             L 700 80
-             Q 800 80 800 180
-             L 800 180
-             Q 800 280 950 280
-             L 1100 280
-             Q 1150 280 1150 340
-             L 1150 420"
+                d="M 80 200
+       L 200 200
+       Q 300 200 300 150
+       L 300 150
+       Q 300 100 400 100
+       L 600 100
+       Q 700 100 700 180
+       L 700 180
+       Q 700 250 850 250
+       L 1100 250
+       Q 1150 250 1150 300
+       L 1150 350"
                 stroke="#d1d5db"
-                strokeWidth="45"
+                strokeWidth="40"
                 fill="none"
                 strokeLinecap="round"
               />
 
               {/* Road Center Dashed Line */}
               <path
-                d="M 80 250
-             L 250 250
-             Q 400 250 400 150
-             L 400 150
-             Q 400 80 500 80
-             L 700 80
-             Q 800 80 800 180
-             L 800 180
-             Q 800 280 950 280
-             L 1100 280
-             Q 1150 280 1150 340
-             L 1150 420"
+                d="M 80 200
+       L 200 200
+       Q 300 200 300 150
+       L 300 150
+       Q 300 100 400 100
+       L 600 100
+       Q 700 100 700 180
+       L 700 180
+       Q 700 250 850 250
+       L 1100 250
+       Q 1150 250 1150 300
+       L 1150 350"
                 stroke="#ffffff"
                 strokeWidth="3"
                 fill="none"
