@@ -340,7 +340,7 @@ export default function ProductPage() {
                 transition={{ duration: 1.2, delay: 0.5 }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-6 shadow-2xl">
+                <div className="shadow-2xl">
                   <img
                     alt="OpenProperty"
                     width={1440}
