@@ -127,11 +127,8 @@ export default function Footer() {
               whileHover={{ scale: 1.02 }}
               className="flex items-center text-gray-300 text-base group mb-4"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#ffffff] to-[#ffffff] rounded-xl flex items-center justify-center mr-4 group-hover:from-[#00a19a]/40 group-hover:to-[#00c9bf]/40 transition-all duration-500">
-                <Mail className="h-6 w-6 text-[#00a19a]" />
-              </div>
+              <Mail className="h-6 w-6 text-white mr-4" />
               <div>
-                <div className="font-medium">Email</div>
                 <div className="text-gray-400">hello@openproperty.io</div>
               </div>
             </motion.div>
