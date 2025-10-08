@@ -8,7 +8,11 @@ import {
   Twitter,
   Github,
   ArrowUp,
+  Instagram,
+  Youtube,
+  Music,
 } from 'lucide-react'
+import { FaTiktok } from 'react-icons/fa'
 
 const footerLinks = {
   product: [
@@ -113,18 +117,32 @@ export default function Footer() {
               </span>
             </div>
 
-            <p className="text-gray-300 mb-8 max-w-lg leading-relaxed text-base font-light">
+            <p className="text-gray-300 mb-4 max-w-lg leading-relaxed text-base font-light">
               The future of property intelligence. Centralized data, powerful
               analytics, and verified insights to transform your property
               decisions.
             </p>
 
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="flex items-center text-gray-300 text-base group mb-4"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-[#ffffff] to-[#ffffff] rounded-xl flex items-center justify-center mr-4 group-hover:from-[#00a19a]/40 group-hover:to-[#00c9bf]/40 transition-all duration-500">
+                <Mail className="h-6 w-6 text-[#00a19a]" />
+              </div>
+              <div>
+                <div className="font-medium">Email</div>
+                <div className="text-gray-400">hello@openproperty.io</div>
+              </div>
+            </motion.div>
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {[
                 { icon: Linkedin, href: '#linkedin' },
-                { icon: Twitter, href: '#twitter' },
-                { icon: Github, href: '#github' },
+                { icon: Youtube, href: '#youtube' },
+                { icon: Instagram, href: '#instagram' },
+                { icon: FaTiktok, href: '#tiktok' },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -172,59 +190,6 @@ export default function Footer() {
               </motion.div>
             ))}
         </div>
-
-        {/* Contact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, delay: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="border-t border-gray-700 pt-12 mb-12"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex items-center text-gray-300 text-base group"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-xl flex items-center justify-center mr-4 group-hover:from-[#00a19a]/40 group-hover:to-[#00c9bf]/40 transition-all duration-500">
-                <Mail className="h-6 w-6 text-[#00a19a]" />
-              </div>
-              <div>
-                <div className="font-medium">Email</div>
-                <div className="text-gray-400">hello@openproperty.io</div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex items-center text-gray-300 text-base group"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-xl flex items-center justify-center mr-4 group-hover:from-[#00a19a]/40 group-hover:to-[#00c9bf]/40 transition-all duration-500">
-                <Phone className="h-6 w-6 text-[#00a19a]" />
-              </div>
-              <div>
-                <div className="font-medium">Phone</div>
-                <div className="text-gray-400">+1 (555) 123-4567</div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="flex items-start text-gray-300 text-base group"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#00a19a]/20 to-[#00c9bf]/20 rounded-xl flex items-center justify-center mr-4 mt-1 group-hover:from-[#00a19a]/40 group-hover:to-[#00c9bf]/40 transition-all duration-500">
-                <MapPin className="h-6 w-6 text-[#00a19a]" />
-              </div>
-              <div>
-                <div className="font-medium">Address</div>
-                <div className="text-gray-400">
-                  123 Property St
-                  <br />
-                  Tech City, TC 12345
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
 
         {/* Bottom Bar */}
         <motion.div
