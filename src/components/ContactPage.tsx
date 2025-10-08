@@ -170,11 +170,11 @@ export default function ContactPage() {
             {/* Creative Form Container */}
             <motion.div
               whileHover={{ scale: 1.01 }}
-              className="relative premium-card rounded-3xl glassmorphism overflow-hidden"
+              className="relative premium-card rounded-3xl overflow-hidden"
             >
               {/* Animated Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#00a19a] via-[#00c9bf] to-[#00e6d6] rounded-3xl p-1">
-                <div className="w-full h-full bg-gradient-to-br from-gray-900/95 via-black/95 to-gray-900/95 rounded-3xl"></div>
+                <div className="w-full h-full bg-gradient-to-br from-white/95 via-white/95 to-white/95 rounded-3xl"></div>
               </div>
 
               {/* Floating Orbs */}
