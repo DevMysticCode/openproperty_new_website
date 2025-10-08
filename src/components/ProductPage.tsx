@@ -40,7 +40,7 @@ const features = [
   {
     icon: MapPin,
     tab: 'Move smarter, not harder',
-    title: 'Smarter Moves',
+    title: 'Smarter Moves.',
     highlights: [
       'Bite-sized videos and guides built seamlessly into your journey',
       'Expert-curated content for those who want to go deeper.',
@@ -53,8 +53,8 @@ const features = [
   },
   {
     icon: Bell,
-    tab: 'Clear and connected.',
-    title: 'Always n sync.',
+    tab: 'Clear and connected',
+    title: 'Always in sync.',
     highlights: [
       'Communication between all parties flows seamlessly with everyone being updated at the same time and no one being kept in the dark',
       'Push notifications and chain visibility and open data sharing replaces current hidden process',
@@ -67,7 +67,7 @@ const features = [
   {
     icon: Brain,
     tab: 'Your move, your way',
-    title: 'Moving made personal',
+    title: 'Moving made personal.',
     highlights: [
       'Your move is mapped to your unique circumstances, so the app feels personal to you at every step.',
       'Like and favourite the homes you love, and UMU will suggest others you might like based on your activity.',
@@ -79,8 +79,8 @@ const features = [
   },
   {
     icon: BookOpen,
-    tab: 'A move that gives back.',
-    title: 'Rewards',
+    tab: 'A move that gives back',
+    title: 'Earm whilst you move.',
     subtitle: 'Earn whilst you move.',
     highlights: [
       'Reward users for getting sale ready upfront.',
@@ -586,7 +586,7 @@ export default function ProductPage() {
                                 className="flex items-start space-x-3 group"
                               >
                                 <div className="w-2 h-2 bg-[#00A19A] rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
-                                <span className="text-sm text-gray-300 font-light group-hover:text-white transition-colors">
+                                <span className="text-lg text-gray-300 font-light group-hover:text-white transition-colors">
                                   {highlight}
                                 </span>
                               </motion.li>
