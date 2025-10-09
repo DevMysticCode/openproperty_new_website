@@ -136,10 +136,16 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex space-x-4">
               {[
-                { icon: Linkedin, href: '#linkedin' },
-                { icon: Youtube, href: '#youtube' },
-                { icon: Instagram, href: '#instagram' },
-                { icon: FaTiktok, href: '#tiktok' },
+                {
+                  icon: Linkedin,
+                  href: 'https://www.linkedin.com/company/umovingu/?viewAsMember=true',
+                },
+                { icon: Youtube, href: 'https://www.youtube.com/@umovingu' },
+                {
+                  icon: Instagram,
+                  href: 'https://www.instagram.com/umovingu/',
+                },
+                { icon: FaTiktok, href: 'https://www.tiktok.com/@umovingu' },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -176,6 +182,7 @@ export default function Footer() {
                     <li key={linkIndex}>
                       <motion.a
                         href={link.href}
+                        target="_blank"
                         whileHover={{ x: 8, color: '#00c9bf' }}
                         className="text-gray-300 hover:text-[#00c9bf] transition-all duration-500 text-base block font-light"
                       >
