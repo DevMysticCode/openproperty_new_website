@@ -46,7 +46,7 @@ export default function Navigation() {
           >
             <div className="h-10rounded-xl shadow-lg">
               <img
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Logo"
                 className="w-full h-full object-contain"
               />
