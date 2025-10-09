@@ -214,7 +214,7 @@ export default function PillarsSection() {
                         <div className="relative h-full w-full">
                           <div className="absolute bottom-0 left-0 h-2/3 w-4/5 justify-end">
                             <motion.img
-                              src={pillar.image}
+                              src={pillar.video}
                               alt={pillar.title}
                               className="w-full h-full object-cover"
                               whileHover={{ scale: 1.1 }}
