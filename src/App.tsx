@@ -10,6 +10,7 @@ import MobileAppSection from './components/MobileAppSection'
 // import TestimonialsSection from './components/TestimonialsSection'
 // import CTASection from './components/CTASection'
 import CTASectionNew from './components/CTASectionNew'
+import ScrollProgressBar from './components/ScrollProgressBar'
 import Footer from './components/Footer'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <Navigation />
         <main className="scroll-snap-section">
+          <ScrollProgressBar />
           <Hero />
           <StatsSectionNew delay={2} />
           <PillarsSection />

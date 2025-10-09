@@ -1,4 +1,4 @@
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useTransform, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -6,11 +6,13 @@ import Navigation from './Navigation'
 import CTASectionNew from './CTASectionNew'
 import Footer from './Footer'
 import ChipsScene from './ChipsScene'
+import ScrollProgressBar from './ScrollProgressBar'
 
 export default function AboutUs() {
   const heroRef = useRef(null)
   const valuesRef = useRef(null)
   const founderRef = useRef(null)
+  const whyRef = useRef(null)
   const journeyRef = useRef(null) // Add this
   const latestRef = useRef(null) // Add this
   const isHeroInView = useInView(heroRef, { once: true, margin: '-100px' })
@@ -24,6 +26,19 @@ export default function AboutUs() {
     margin: '-100px',
   }) // Add this
   const isLatestInView = useInView(latestRef, { once: true, margin: '-100px' })
+  const isWhyInView = useInView(whyRef, { once: true, margin: '-100px' })
+
+  const { scrollYProgress } = useScroll({
+    target: whyRef,
+    offset: ['start end', 'end start'],
+  })
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3])
+
+  const item1Y = useTransform(scrollYProgress, [0, 1], ['0px', '0px'])
+  const item2Y = useTransform(scrollYProgress, [0, 1], ['50px', '-50px'])
+  const item3Y = useTransform(scrollYProgress, [0, 1], ['100px', '-100px'])
+  const itemYTransforms = [item1Y, item2Y, item3Y]
 
   const coreValues = [
     {
@@ -104,8 +119,33 @@ export default function AboutUs() {
     },
   ]
 
+  const whyItems = [
+    {
+      number: '01.',
+      title: 'For you',
+      description:
+        'OpenProperty is designed with you at its core. Our goal is to create a product that seamlessly fits into your life, simplifying your property decisions and making property intelligence better for you.',
+      delay: 0,
+    },
+    {
+      number: '02.',
+      title: 'Accessible',
+      description:
+        'We try to make OpenProperty accessible and inclusive for everyone. Our commitment is to ensure that our services are easy to use and available to all.',
+      delay: 50,
+    },
+    {
+      number: '03.',
+      title: 'Transparent',
+      description:
+        'We believe in transparency and honesty. There are no complicated jargons or hard-to-understand terms here. We understand that property can be complex, so we are dedicated to making it straightforward and transparent. With OpenProperty, there are no hidden fees or surprises. What you see is truly what you get.',
+      delay: 100,
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgressBar />
       {/* Navigation */}
       <Navigation />
 
@@ -604,12 +644,109 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      {/* Our Why Section */}
+
       <section
+        ref={whyRef}
+        className="relative py-24 bg-gradient-to-br from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden px-6 sm:px-8"
+      >
+        <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                             radial-gradient(circle at 40% 20%, rgba(0, 230, 214, 0.3) 0%, transparent 40%)`,
+              backgroundSize: '100% 100%',
+            }}
+          ></div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={
+            isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
+          }
+          transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
+          className="text-start mb-20"
+        >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase">
+            OUR WHY
+          </h1>
+        </motion.div>
+
+        <motion.div
+          className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10"
+          style={{ opacity }}
+        >
+          <div className="space-y-0">
+            {whyItems.map((item, index) => (
+              <motion.div
+                key={item.number}
+                initial={{ opacity: 0, x: -100 }}
+                animate={isWhyInView ? { opacity: 1, x: 0 } : {}}
+                style={{ y: itemYTransforms[index] }}
+                transition={{
+                  duration: 1.2,
+                  delay: index * 0.3,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-12 lg:py-16 border-b border-white/20 last:border-b-0"
+              >
+                <div className="lg:col-span-1 flex items-start">
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={isWhyInView ? { scale: 1 } : {}}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.3 + 0.3,
+                      ease: [0.23, 1, 0.32, 1],
+                    }}
+                    className="text-white/70 text-2xl lg:text-3xl font-light tracking-tight"
+                  >
+                    {item.number}
+                  </motion.span>
+                </div>
+
+                <div className="lg:col-span-4">
+                  <motion.h3
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isWhyInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{
+                      duration: 1,
+                      delay: index * 0.3 + 0.4,
+                      ease: [0.23, 1, 0.32, 1],
+                    }}
+                    className="text-white text-4xl lg:text-6xl font-light tracking-tight leading-tight"
+                  >
+                    {item.title}
+                  </motion.h3>
+                </div>
+
+                <div className="lg:col-span-7">
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isWhyInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{
+                      duration: 1,
+                      delay: index * 0.3 + 0.5,
+                      ease: [0.23, 1, 0.32, 1],
+                    }}
+                    className="text-white/95 text-xl lg:text-2xl font-light leading-relaxed"
+                  >
+                    {item.description}
+                  </motion.p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Our Why Section */}
+      {/* <section
         ref={valuesRef}
         className="relative py-24 bg-gradient-to-b from-[#00a19a] to-white overflow-hidden"
       >
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
             className="absolute inset-0"
@@ -622,7 +759,7 @@ export default function AboutUs() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
-          {/* Section Header */}
+         
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={
@@ -636,9 +773,9 @@ export default function AboutUs() {
             </h1>
           </motion.div>
 
-          {/* Content Grid */}
+        
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-4xl mx-auto">
-            {/* Left Side - The Problem */}
+          
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={
@@ -651,13 +788,13 @@ export default function AboutUs() {
               }}
               className="space-y-8"
             >
-              {/* Problem Statement */}
+            
               <div className="relative">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-red-400/30 transition-all duration-700 relative overflow-hidden"
                 >
-                  {/* Background Gradient */}
+               
                   <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                   <div className="relative z-10">
@@ -688,7 +825,7 @@ export default function AboutUs() {
                 </motion.div>
               </div>
 
-              {/* Impact Stats */}
+           
               <div className="grid grid-cols-2 gap-4">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -715,7 +852,7 @@ export default function AboutUs() {
               </div>
             </motion.div>
 
-            {/* Right Side - Our Solution */}
+            
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={
@@ -728,13 +865,13 @@ export default function AboutUs() {
               }}
               className="space-y-8"
             >
-              {/* Our Belief */}
+           
               <div className="relative">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="premium-card p-8 rounded-2xl bg-white hover:bg-white/90 hover:border-[#00a19a]/30 transition-all duration-700 relative overflow-hidden"
                 >
-                  {/* Background Gradient */}
+                 
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00a19a]/5 to-[#00c9bf]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                   <div className="relative z-10">
@@ -763,7 +900,7 @@ export default function AboutUs() {
                 </motion.div>
               </div>
 
-              {/* UMU Features */}
+          
               <div className="space-y-4">
                 {[
                   {
@@ -803,7 +940,6 @@ export default function AboutUs() {
             </motion.div>
           </div>
 
-          {/* Bottom Section - Our Mission */}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={
@@ -869,7 +1005,7 @@ export default function AboutUs() {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Journey Roadmap Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">

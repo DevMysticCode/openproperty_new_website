@@ -21,6 +21,7 @@ import { Button } from './ui/button'
 import ChipsScene from './ChipsScene'
 import CTASectionNew from './CTASectionNew'
 import React from 'react'
+import ScrollProgressBar from './ScrollProgressBar'
 
 const features = [
   {
@@ -168,6 +169,7 @@ export default function ProductPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgressBar />
       <Navigation />
 
       {/* Hero Section with Animated Logo */}

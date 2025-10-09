@@ -16,6 +16,7 @@ import Footer from './Footer'
 import { Button } from './ui/button'
 import ChipsScene from './ChipsScene'
 import CTASectionNew from './CTASectionNew'
+import ScrollProgressBar from './ScrollProgressBar'
 
 const hearAboutOptions = [
   'Google Search',
@@ -73,6 +74,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <ScrollProgressBar />
       <Navigation />
 
       {/* Hero Section with Animated Logo */}
