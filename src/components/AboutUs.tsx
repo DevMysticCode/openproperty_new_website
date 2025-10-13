@@ -397,7 +397,7 @@ export default function AboutUs() {
       {/* OUR Why section */}
       <section
         ref={whyRef}
-        className="relative py-24 bg-gradient-to-b from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden mx-auto px-6 sm:px-8"
+        className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden mx-auto px-6 sm:px-8"
       >
         <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
           <div
@@ -449,7 +449,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.3,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-white/70 text-2xl lg:text-3xl font-light tracking-tight"
+                    className="text-black/80 text-2xl lg:text-3xl font-light tracking-tight"
                   >
                     {item.number}
                   </motion.span>
@@ -464,7 +464,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.4,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-white text-4xl lg:text-6xl font-light tracking-tight leading-tight"
+                    className="text-black text-4xl lg:text-6xl font-light tracking-tight leading-tight"
                   >
                     {item.title}
                   </motion.h3>
@@ -479,7 +479,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.5,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-white/95 text-xl lg:text-2xl font-light leading-relaxed"
+                    className="text-black/95 text-xl lg:text-2xl font-light leading-relaxed"
                   >
                     {item.description}
                   </motion.p>
