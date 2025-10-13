@@ -151,8 +151,10 @@ export default function PillarsSection() {
 
           <div className="max-w-4xl mx-auto mt-16">
             <p className="mx-auto leading-relaxed font-light text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-black">
-              The core principles that drive our mission to revolutionize
-              property intelligence and empower smarter decision-making.
+              At our core, we believe in empowering people to take charge of
+              their property journey, with the tools, education, and support to
+              become sale-ready on their own terms. No more waiting for someone
+              else to start your journey.
             </p>
           </div>
         </motion.div>
