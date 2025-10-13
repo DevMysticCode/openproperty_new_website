@@ -162,7 +162,7 @@ export default function MobileAppSection() {
                 onClick={prevScreen}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-black/20 transition-all duration-300"
+                className="w-12 h-12  bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <ChevronLeft className="h-6 w-6 text-white" />
               </motion.button>
@@ -176,7 +176,7 @@ export default function MobileAppSection() {
                     className={`w-4 h-4 rounded-full transition-all duration-300 ${
                       index === activeScreen
                         ? 'bg-[#00a19a] scale-125'
-                        : 'bg-gray-600 hover:bg-gray-500'
+                        : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   />
                 ))}
@@ -187,7 +187,7 @@ export default function MobileAppSection() {
                 onClick={nextScreen}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-black/20 transition-all duration-300"
+                className="w-12 h-12 bg-[#00a19a] text-white shadow-lg hover:bg-[#00857E] backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <ChevronRight className="h-6 w-6 text-white" />
               </motion.button>
