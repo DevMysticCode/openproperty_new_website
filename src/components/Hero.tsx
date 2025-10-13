@@ -97,21 +97,28 @@ export default function Hero() {
           </h1>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-fluid-lg-24-40">
-              The world is accelerating. Technology and AI are rewriting the
-              rules of how we live, work, and connect. Entire industries are
-              being reshaped — but the UK property market has been left behind.
-              Burdened by outdated processes and fragmented systems, it
-              struggles to serve the very people it exists for.
+              The world is moving faster than ever. Technology and AI are
+              transforming the way we live, work and connect. Entire industries
+              are being reshaped, but the UK property market has been left
+              behind. Burdened by outdated processes and fragmented systems, it
+              struggles to serve the very people it exists for, leaving buyers
+              and sellers frustrated and out of control.
             </p>
 
             <p className="text-fluid-lg-24-40">
-              We believe it’s time for something different. A future where
-              moving home is simple, transparent, and stress-free. Where every
-              step is digitised, every connection seamless, and every decision
-              faster and smarter. By reimagining the entire journey end to end,
-              we’re creating a property experience built for the 21st century —
-              one that saves time, reduces stress, and empowers consumers like
-              never before.
+              We believe it’s time for something better. A future where moving
+              home is simple, transparent, and stress-free, where every step is
+              digitised, every connection seamless, and every decision smarter.
+              By reimagining the entire journey end to end, we’ve created a
+              property experience built for the 21st century, one that saves
+              time, reduces stress, and empowers consumers like never before.
+            </p>
+
+            <p className="text-fluid-lg-24-40">
+              How? By getting you sale-ready now, not next month and not next
+              year. Why wait until you move to prepare, when you can take
+              control today? Be move-ready before the market even knows you’re
+              coming. UMU, where u are sale-ready now, not someday.
             </p>
           </div>
 

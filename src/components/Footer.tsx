@@ -107,7 +107,7 @@ export default function Footer() {
                 className="w-13 h-13 rounded-xl shadow-lg"
               >
                 <img
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Logo"
                   className="w-full h-full object-contain"
                 />
