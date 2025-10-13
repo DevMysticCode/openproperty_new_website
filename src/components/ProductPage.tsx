@@ -268,6 +268,14 @@ export default function ProductPage() {
               The Platform
             </h2>
           </div>
+          <motion.div className="max-w-4xl mx-auto px-6 sm:px-8 container relative z-20 text-start">
+            <h2 className="text-3xl sm:text-3xl lg:text-5xl font-light mb-8 text-white tracking-tight leading-tight text-foreground text-left">
+              The filing cabinet your home has{' '}
+              <span className="bg-gradient-to-r from-[#00A19A] via-[#585757] to-[#000000] bg-clip-text text-transparent">
+                always wanted!
+              </span>
+            </h2>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
@@ -284,13 +292,6 @@ export default function ProductPage() {
                 className="space-y-12"
               >
                 <motion.div>
-                  <h2 className="text-4xl sm:text-5xl lg:text-7xl font-light mb-8 text-white tracking-tight leading-tight text-foreground">
-                    The filing cabinet your home has{' '}
-                    <span className="bg-gradient-to-r from-[#00A19A] via-[#585757] to-[#000000] bg-clip-text text-transparent">
-                      always wanted!
-                    </span>
-                  </h2>
-
                   <p className="text-3xl text-white/90 max-w-7xl mx-auto leading-relaxed font-light mb-12">
                     State of the art features and technology streamlined into
                     one cutting-edge platform, connecting, all the parties in
