@@ -269,7 +269,7 @@ export default function ProductPage() {
             </h2>
           </div>
           <motion.div className="max-w-4xl mx-auto px-6 sm:px-8 container relative z-20 text-start">
-            <h2 className="text-2xl sm:text-2xl lg:text-4xl font-light mb-8 text-white tracking-tight leading-tight text-foreground text-left">
+            <h2 className="text-3xl sm:text-3xl lg:text-5xl font-light mb-8 text-white tracking-tight leading-tight text-foreground text-left">
               The filing cabinet your home has always wanted!
               <span className="bg-gradient-to-r from-[#00A19A] via-[#585757] to-[#000000] bg-clip-text text-transparent"></span>
             </h2>
