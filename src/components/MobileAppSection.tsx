@@ -64,7 +64,7 @@ export default function MobileAppSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 bg-gradient-to-b from-white via-[#ffffff] to-[#00c9bf] overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-white via-[#ffffff] to-[#ffffff] overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
@@ -161,7 +161,7 @@ export default function MobileAppSection() {
                 onClick={prevScreen}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+                className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-black/20 transition-all duration-300"
               >
                 <ChevronLeft className="h-6 w-6 text-white" />
               </motion.button>
@@ -174,7 +174,7 @@ export default function MobileAppSection() {
                     onClick={() => setActiveScreen(index)}
                     className={`w-4 h-4 rounded-full transition-all duration-300 ${
                       index === activeScreen
-                        ? 'bg-white scale-125'
+                        ? 'bg-[#00a19a] scale-125'
                         : 'bg-gray-600 hover:bg-gray-500'
                     }`}
                   />
@@ -186,7 +186,7 @@ export default function MobileAppSection() {
                 onClick={nextScreen}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300"
+                className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-black/20 transition-all duration-300"
               >
                 <ChevronRight className="h-6 w-6 text-white" />
               </motion.button>

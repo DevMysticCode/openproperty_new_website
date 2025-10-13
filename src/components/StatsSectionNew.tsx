@@ -44,7 +44,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
         <div className="max-w-4xl mx-auto mt-8">
           <p className="mx-auto leading-relaxed font-light text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-white">
             The real cost of a broken market, where the numbers speak for
-            themselves, but/ and no one speaks for the consumer.
+            themselves, and no one speaks for the consumer.
           </p>
         </div>
 
