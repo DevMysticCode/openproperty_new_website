@@ -202,8 +202,18 @@ export default function Footer() {
           transition={{ duration: 1.2, delay: 1, ease: [0.23, 1, 0.32, 1] }}
           className="flex flex-col md:flex-row items-center justify-between border-t border-gray-700 pt-8"
         >
-          <p className="text-gray-400 text-base mb-4 md:mb-0">
-            &copy; 2025 OpenProperty. All rights reserved.
+          <p className="text-gray-400 text-base mb-4 md:mb-0 flex items-center">
+            <motion.div
+              // whileHover={{ scale: 1.1, rotate: 8 }}
+              className="w-13 h-13 rounded-xl shadow-lg inline-block mr-2"
+            >
+              <img
+                src="/openPropertyLogo.svg"
+                alt="Logo"
+                className="w-[40px] h-13 object-contain"
+              />
+            </motion.div>
+            &reg; 2025 OpenProperty. All rights reserved.
           </p>
 
           {/* Back to Top Button */}

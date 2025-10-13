@@ -59,9 +59,9 @@ const features = [
     title: 'Always in sync.',
     highlights: [
       'Communication between all parties flows seamlessly with everyone being updated at the same time and no one being kept in the dark.',
-      'Push notifications and chain visibility and open data sharing replaces current hidden process.',
+      'Push notifications and chain visibility and open data sharing replaces current hidden processes.',
       'Secure communication channels built into one app.',
-      'Live progress tracker (like parcel tracking but for your home).',
+      'Live progress tracker (like parcel tracking but for your home).',
     ],
     gradient: 'from-[#00c4b8] to-[#00e6d6]',
     image: '/products/TransparentTransactions.png',
