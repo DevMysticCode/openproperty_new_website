@@ -146,7 +146,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
               %
             </p>
             <p className="text-fluid-sm-16-28 -tracking-4 text-black text-center">
-              are open to the creation/ development of a digital solution
+              are open to the creation of a digital solution
             </p>
           </div>
         </div>
