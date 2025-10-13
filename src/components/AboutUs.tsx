@@ -357,11 +357,11 @@ export default function AboutUs() {
                   urgent question: what if it didn’t have to be this way? I
                   poured all my time and energy into reimagining what property
                   transactions could look like. Not just a slight improvement to
-                  the old system — but a full scale reappraisal of the journey
-                  itself: one where transparency, simplicity and connection
-                  replace fragmentation and dysfunction, so that no more
-                  consumers are forced to pay the emotional or financial price
-                  of a broken process.
+                  the old system — but a reinvention of the journey itself: one
+                  where transparency, simplicity and connection replace
+                  fragmentation and dysfunction, so that no more consumers are
+                  forced to pay the emotional or financial price of a broken
+                  process.
                 </p>
                 <p
                   className="italic text-center leading-relaxed mt-12"
@@ -449,7 +449,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.3,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-black/80 text-2xl lg:text-3xl font-light tracking-tight"
+                    className="text-black/80 text-3xl lg:text-5xl font-light tracking-tight"
                   >
                     {item.number}
                   </motion.span>
@@ -464,7 +464,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.4,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-black text-4xl lg:text-6xl font-light tracking-tight leading-tight"
+                    className="text-black text-3xl lg:text-5xl font-light tracking-tight leading-tight"
                   >
                     {item.title}
                   </motion.h3>
