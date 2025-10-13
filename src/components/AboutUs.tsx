@@ -38,7 +38,9 @@ export default function AboutUs() {
   const item1Y = useTransform(scrollYProgress, [0, 1], ['0px', '0px'])
   const item2Y = useTransform(scrollYProgress, [0, 1], ['50px', '-50px'])
   const item3Y = useTransform(scrollYProgress, [0, 1], ['100px', '-100px'])
-  const itemYTransforms = [item1Y, item2Y, item3Y]
+  const item4Y = useTransform(scrollYProgress, [0, 1], ['150px', '-150px'])
+  const item5Y = useTransform(scrollYProgress, [0, 1], ['200px', '-200px'])
+  const itemYTransforms = [item1Y, item2Y, item3Y, item4Y, item5Y]
 
   const coreValues = [
     {
@@ -131,7 +133,7 @@ export default function AboutUs() {
       number: '02.',
       title: 'The Future',
       description:
-        'At UMU, we believe it doesn’t have to be this way. We believe in turning moving home from one of life’s most stressful journeys into one of the most empowering. That’s why we’re building more than an app, we’re building a movement to give consumers control, clarity, and confidence in a process that has failed them for far too long. UMU is designed to tackle the root causes of the problem.',
+        'At UMU, we believe it doesn’t have to be this way. We believe in turning moving home from one of life’s most stressful journeys into one of the most empowering and exciting one. That’s why we’re building more than an app, we’re building a movement to give consumers control, clarity, and confidence in a process that has failed them for far too long. UMU is designed to tackle the root causes of the problem.',
       delay: 50,
     },
     {
@@ -397,7 +399,7 @@ export default function AboutUs() {
       {/* OUR Why section */}
       <section
         ref={whyRef}
-        className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden mx-auto px-6 sm:px-8"
+        className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-[#28B0A9] to-[#28B0A9] overflow-hidden mx-auto px-6 sm:px-8"
       >
         <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
           <div
@@ -449,7 +451,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.3,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-black/80 text-3xl lg:text-5xl font-light tracking-tight"
+                    className="text-white/80 text-3xl lg:text-5xl font-light tracking-tight"
                   >
                     {item.number}
                   </motion.span>
@@ -464,7 +466,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.4,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-black text-3xl lg:text-5xl font-light tracking-tight leading-tight"
+                    className="text-white text-3xl lg:text-5xl font-light tracking-tight leading-tight"
                   >
                     {item.title}
                   </motion.h3>
@@ -479,7 +481,7 @@ export default function AboutUs() {
                       delay: index * 0.3 + 0.5,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="text-black/95 text-xl lg:text-2xl font-light leading-relaxed"
+                    className="text-white/95 text-xl lg:text-2xl font-light leading-relaxed"
                   >
                     {item.description}
                   </motion.p>
