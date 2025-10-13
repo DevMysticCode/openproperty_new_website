@@ -7,6 +7,7 @@ import CTASectionNew from './CTASectionNew'
 import Footer from './Footer'
 import ChipsScene from './ChipsScene'
 import ScrollProgressBar from './ScrollProgressBar'
+import PoweredByFooter from './PoweredByFooter'
 
 export default function AboutUs() {
   const heroRef = useRef(null)
@@ -1001,6 +1002,7 @@ export default function AboutUs() {
       </section>
 
       <CTASectionNew />
+      <PoweredByFooter />
       {/* Footer */}
       <Footer />
     </div>

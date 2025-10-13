@@ -17,6 +17,7 @@ import { Button } from './ui/button'
 import ChipsScene from './ChipsScene'
 import CTASectionNew from './CTASectionNew'
 import ScrollProgressBar from './ScrollProgressBar'
+import PoweredByFooter from './PoweredByFooter'
 
 const hearAboutOptions = [
   'Google Search',
@@ -612,6 +613,7 @@ export default function ContactPage() {
         </div>
       </section>
       <CTASectionNew />
+      <PoweredByFooter />
       <Footer />
     </div>
   )

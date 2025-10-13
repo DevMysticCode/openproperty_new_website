@@ -22,6 +22,7 @@ import ChipsScene from './ChipsScene'
 import CTASectionNew from './CTASectionNew'
 import React from 'react'
 import ScrollProgressBar from './ScrollProgressBar'
+import PoweredByFooter from './PoweredByFooter'
 
 const features = [
   {
@@ -612,7 +613,7 @@ export default function ProductPage() {
 
       {/* Final CTA Section - With Overlap */}
       <CTASectionNew />
-
+      <PoweredByFooter />
       <Footer />
     </div>
   )
