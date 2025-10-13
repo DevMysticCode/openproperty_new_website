@@ -830,7 +830,7 @@ export default function AboutUs() {
                 className="font-light"
                 style={{
                   background:
-                    'linear-gradient(135deg, #00A19A, #00c9bf, #000000)',
+                    'linear-gradient(135deg, #00A19A, #00c9bf, #00A19A)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
