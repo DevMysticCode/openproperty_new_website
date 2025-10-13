@@ -65,9 +65,8 @@ export default function Hero() {
               className="max-w-lg"
             >
               <p className="text-xl sm:text-2xl text-white/70 font-light leading-relaxed">
-                Our centralised, property intelligence platform brings together
-                all the essential information you need to make smarter and
-                faster property decisions.
+                Making the future of moving, easy, transparent, fast and most
+                importantly, focused around you.
               </p>
             </motion.div>
           </div>
