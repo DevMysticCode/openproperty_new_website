@@ -397,7 +397,7 @@ export default function AboutUs() {
       {/* OUR Why section */}
       <section
         ref={whyRef}
-        className="relative py-24 bg-gradient-to-br from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden px-6 sm:px-8"
+        className="relative py-24 bg-gradient-to-b from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden px-6 sm:px-8"
       >
         <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
           <div
@@ -758,7 +758,7 @@ export default function AboutUs() {
       {/* UMU Latest Section */}
       <section
         ref={latestRef}
-        className="relative py-24 bg-gradient-to-b from-white to-[#00A19A]/90 overflow-hidden"
+        className="relative py-24 bg-white overflow-hidden"
       >
         {/* Animated Background Stars */}
         <div className="absolute inset-0 overflow-hidden">
@@ -826,22 +826,29 @@ export default function AboutUs() {
             className="text-start mb-20"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight text-black">
-              THE LATEST
-              {/* <span
+              <span
                 className="font-light"
                 style={{
                   background:
-                    'linear-gradient(135deg, #00A19A, #00c9bf, #00e6d6)',
+                    'linear-gradient(135deg, #00A19A, #00c9bf, #000000)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                 }}
               >
-                Connected
-              </span> */}
+                THE LATEST
+              </span>
             </h2>
           </motion.div>
-          <div className="max-w-4xl text-center mx-auto text-[32px]">
+          <div
+            className="max-w-4xl text-center mx-auto text-[32px]"
+            style={{
+              background: 'linear-gradient(135deg, #00A19A, #1e6864, #000000)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             <p className="text-black leading-relaxed font-light mb-6">
               The team welcome investment proposals from founders, companies or
               organisations in the PropTech/FinTech/EdTech space.
