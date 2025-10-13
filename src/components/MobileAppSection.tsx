@@ -20,6 +20,7 @@ const appScreens = [
     features: [
       'We believe the key to a successful move isn’t just technology, it’s knowledge and confidence. Our app gives you the tools, but the real power lies within you.',
       'With the right education and guidance, you are empowered to take control of your own move and ensure property failure is a thing of the past',
+      'We protect your data like it’s our own — every action is encrypted, every connection verified, so you can move forward with complete confidence.',
     ],
     image: '/mobileAppImages/screen2_old.png',
   },
