@@ -122,24 +122,38 @@ export default function AboutUs() {
   const whyItems = [
     {
       number: '01.',
-      title: 'For you',
+      title: 'The Now',
       description:
-        'OpenProperty is designed with you at its core. Our goal is to create a product that seamlessly fits into your life, simplifying your property decisions and making property intelligence better for you.',
+        'The property process as it stands today is broken, and the numbers prove it/ it’s you paying the price. Every year, over a third of UK house sales collapse before completion, costing consumers more than £590 million. The average transaction drags on for 5–6 months, leaving buyers and sellers in limbo and vulnerable to chain breaks. Meanwhile, updates are scarce and fragmented, with information spread across estate agents, solicitors, and lenders who all work to their own schedules, not yours. The result? Stress, wasted time, lost money, and a system that leaves you powerless during one of the most important moments of your life.',
       delay: 0,
     },
     {
       number: '02.',
-      title: 'Accessible',
+      title: 'The Future',
       description:
-        'We try to make OpenProperty accessible and inclusive for everyone. Our commitment is to ensure that our services are easy to use and available to all.',
+        'At UMU, we believe it doesn’t have to be this way. We believe in turning moving home from one of life’s most stressful journeys into one of the most empowering. That’s why we’re building more than an app, we’re building a movement to give consumers control, clarity, and confidence in a process that has failed them for far too long. UMU is designed to tackle the root causes of the problem.',
       delay: 50,
     },
     {
       number: '03.',
-      title: 'Transparent',
+      title: 'Features',
       description:
-        'We believe in transparency and honesty. There are no complicated jargons or hard-to-understand terms here. We understand that property can be complex, so we are dedicated to making it straightforward and transparent. With OpenProperty, there are no hidden fees or surprises. What you see is truly what you get.',
+        'Real-time updates replace endless chasing. A digital property passport keeps your information organised and ready from day one. AI- powered tools validate legal documents and reduce risk. An education hub arms you with the knowledge to make smarter decisions. And a secure, connected platform means every party stays aligned, cutting sales from months to weeks and reducing fall-throughs.',
       delay: 100,
+    },
+    {
+      number: '04.',
+      title: 'How',
+      description:
+        'Most importantly, UMU never clocks off. Unlike traditional processes bound by office hours and paperwork bottlenecks, UMU lives in your pocket — always on, always available, always with you, every step of the move.',
+      delay: 150,
+    },
+    {
+      number: '05.',
+      title: 'The Result',
+      description:
+        'We’re not here to tweak the system. We’re here to reinvent it. To create a property market that works for people, not against them. One where buying or selling your home no longer means stress, uncertainty, or loss, but clarity, speed, and success. With UMU, moving home is no longer just a transaction — it’s a transformation. And together, we’re building a better way forward.',
+      delay: 200,
     },
   ]
 
@@ -380,6 +394,7 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* OUR Why section */}
       <section
         ref={whyRef}
         className="relative py-24 bg-gradient-to-br from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden px-6 sm:px-8"
@@ -398,9 +413,7 @@ export default function AboutUs() {
 
         <motion.div
           initial={{ opacity: 0, y: 100 }}
-          animate={
-            isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
-          }
+          animate={isWhyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
           className="text-start mb-20"
         >
