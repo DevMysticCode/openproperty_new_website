@@ -2,17 +2,13 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import {
   ArrowRight,
-  Users,
-  Shield,
-  Zap,
   BookOpen,
-  Star,
   MapPin,
   FileText,
   Bell,
   Brain,
-  Award,
-  Heart,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
@@ -550,7 +546,7 @@ export default function ProductPage() {
                           className="w-12 h-12 bg-gray-700 hover:bg-[#00A19A] rounded-full flex items-center justify-center transition-all duration-300 group"
                         >
                           <span className="text-white text-lg group-hover:scale-110 transition-transform">
-                            ←
+                            <ChevronLeft className="w-6 h-6" />
                           </span>
                         </button>
                         <div className="flex items-center px-4">
@@ -563,7 +559,7 @@ export default function ProductPage() {
                           className="w-12 h-12 bg-gray-700 hover:bg-[#00A19A] rounded-full flex items-center justify-center transition-all duration-300 group"
                         >
                           <span className="text-white text-lg group-hover:scale-110 transition-transform">
-                            →
+                            <ChevronRight className="w-6 h-6" />
                           </span>
                         </button>
                       </div>
