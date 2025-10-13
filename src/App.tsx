@@ -11,6 +11,7 @@ import MobileAppSection from './components/MobileAppSection'
 // import CTASection from './components/CTASection'
 import CTASectionNew from './components/CTASectionNew'
 import ScrollProgressBar from './components/ScrollProgressBar'
+import PoweredByFooter from './components/PoweredByFooter'
 import Footer from './components/Footer'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           {/* <TestimonialsSection /> */}
           {/* <CTASection /> */}
         </main>
+        <PoweredByFooter />
         <CTASectionNew />
         <Footer />
       </div>
