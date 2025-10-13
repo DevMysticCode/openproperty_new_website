@@ -570,7 +570,7 @@ export default function ProductPage() {
                       className="space-y-6"
                     >
                       <div>
-                        <h3 className="text-2xl font-bold mb-2 leading-tight text-white italic">
+                        <h3 className="text-2xl font-bold leading-tight text-white italic mb-4">
                           {features[activeFeature].title}
                         </h3>
 
