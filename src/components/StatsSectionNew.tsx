@@ -35,10 +35,17 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
         transition={{ duration: 1, delay, ease: [0.23, 1, 0.32, 1] }}
         className="container relative z-20 flex flex-col items-center pb-20 pt-32 md:pb-52 md:pt-80 mx-auto"
       >
-        <div className="flex flex-col items-start first:pb-30 md:first:pb-24 w-full max-w-7xl">
+        <div className="flex flex-col items-start mb-8 w-full max-w-7xl">
           <h1 className="text-white font-light text-heading text-left">
             THE PROBLEM
           </h1>
+        </div>
+
+        <div className="max-w-4xl mx-auto mt-8">
+          <p className="mx-auto leading-relaxed font-light text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-white">
+            The real cost of a broken market, where the numbers speak for
+            themselves, but/ and no one speaks for the consumer.
+          </p>
         </div>
 
         {/* First item - kept as is with original sizes */}
