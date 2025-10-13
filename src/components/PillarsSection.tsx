@@ -74,10 +74,10 @@ const pillars = [
   },
   {
     id: 6,
-    title: 'Learn & Earn',
-    subtitle: 'Earn rewards when you learn with our AI powered education hub.',
+    title: 'Effortless Learning',
+    subtitle: 'Learning made simple with our AI powered education hub.',
     type: 'video',
-    video: '/pillars/LearningVid.mp4',
+    video: '/pillars/LearningVId.mp4',
     videoPlaceholder: true,
     icon: Building2,
     gradient: 'from-teal-500 to-blue-500',

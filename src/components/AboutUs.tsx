@@ -124,7 +124,7 @@ export default function AboutUs() {
       number: '01.',
       title: 'The Now',
       description:
-        'The property process as it stands today is broken, and the numbers prove it/ it’s you paying the price. Every year, over a third of UK house sales collapse before completion, costing consumers more than £590 million. The average transaction drags on for 5–6 months, leaving buyers and sellers in limbo and vulnerable to chain breaks. Meanwhile, updates are scarce and fragmented, with information spread across estate agents, solicitors, and lenders who all work to their own schedules, not yours. The result? Stress, wasted time, lost money, and a system that leaves you powerless during one of the most important moments of your life.',
+        'The property process as it stands today is broken - the numbers prove it and it’s you paying the price. Every year, over a third of UK house sales collapse before completion, costing consumers more than £590 million. The average transaction drags on for 5–6 months, leaving buyers and sellers in limbo and vulnerable to chain breaks. Meanwhile, updates are scarce and fragmented, with information spread across estate agents, solicitors, and lenders who all work to their own schedules, not yours. The result? Stress, wasted time, lost money, and a system that leaves you powerless during one of the most important moments of your life.',
       delay: 0,
     },
     {
@@ -397,7 +397,7 @@ export default function AboutUs() {
       {/* OUR Why section */}
       <section
         ref={whyRef}
-        className="relative py-24 bg-gradient-to-b from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden px-6 sm:px-8"
+        className="relative py-24 bg-gradient-to-b from-[#00A19A] via-[#00b5ad] to-[#00c9bf] overflow-hidden mx-auto px-6 sm:px-8"
       >
         <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
           <div
@@ -415,9 +415,9 @@ export default function AboutUs() {
           initial={{ opacity: 0, y: 100 }}
           animate={isWhyInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
           transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-          className="text-start mb-20"
+          className="text-start mb-20 max-w-7xl mx-auto"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase ">
             OUR WHY
           </h1>
         </motion.div>

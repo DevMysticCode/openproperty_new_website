@@ -92,9 +92,9 @@ export default function MobileAppSection() {
 
           <div className="max-w-4xl mx-auto mt-16 text-start">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-8 tracking-tight leading-tight text-black">
-              A toolkit built to put you ahead —{' '}
+              Move smarter, plan sooner, stay ahead —{' '}
               <span className="bg-gradient-to-r from-[#00a19a] via-[#00c4b8] to-[#00a19a] bg-clip-text text-transparent">
-                right in your pocket
+                all from your pocket.
               </span>
             </h2>
 
