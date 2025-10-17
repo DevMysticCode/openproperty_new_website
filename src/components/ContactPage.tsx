@@ -129,32 +129,6 @@ export default function ContactPage() {
         ref={formRef}
         className="relative py-32 bg-gradient-to-b from-black via-[#00a19a] to-[#4DC4BD] overflow-hidden"
       >
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-[#00a19a]/30 rounded-full"
-              animate={{
-                x: [0, 100, 0],
-                y: [0, -60, 0],
-                opacity: [0, 0.8, 0],
-                scale: [0, 1.5, 0],
-              }}
-              transition={{
-                duration: 8 + Math.random() * 4,
-                repeat: Infinity,
-                delay: Math.random() * 3,
-                ease: 'easeInOut',
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
-
         {/* Gradient Mesh Background */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-[#00a19a]/20 via-transparent to-[#00c9bf]/20"></div>
@@ -168,19 +142,14 @@ export default function ContactPage() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="relative"
           >
-            {/* Creative Form Container */}
             <motion.div
               whileHover={{ scale: 1.01 }}
-              className="relative premium-card rounded-3xl overflow-hidden"
+              className="relative premium-card rounded-3xl glassmorphism overflow-hidden"
             >
               {/* Animated Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#00a19a] via-[#00c9bf] to-[#00e6d6] rounded-3xl p-1">
-                <div className="w-full h-full bg-gradient-to-br from-white/95 via-white/95 to-white/95 rounded-3xl"></div>
+                <div className="w-full h-full bg-white rounded-3xl"></div>
               </div>
-
-              {/* Floating Orbs */}
-              <div className="absolute top-10 right-10 w-20 h-20 bg-gradient-to-r from-[#00a19a]/30 to-[#00c9bf]/30 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute bottom-10 left-10 w-16 h-16 bg-gradient-to-r from-[#00c9bf]/20 to-[#00e6d6]/20 rounded-full blur-lg animate-pulse delay-1000"></div>
 
               <div className="relative z-10 p-12">
                 {!isSubmitted ? (
@@ -195,7 +164,7 @@ export default function ContactPage() {
                       <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#00a19a] via-[#00c9bf] to-[#00e6d6] bg-clip-text text-transparent">
                         Start Your Journey
                       </h2>
-                      <p className="text-gray-300 text-lg font-light">
+                      <p className="text-gray-600 text-lg font-light">
                         Transform your property decisions with our intelligence
                         platform
                       </p>
@@ -216,8 +185,8 @@ export default function ContactPage() {
                               scale: focusedField === 'firstName' ? 1.05 : 1,
                             }}
                           />
-                          <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
-                            <label className="text-sm font-semibold text-[#00c9bf] flex items-center mb-4">
+                          <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
+                            <label className="text-sm font-semibold text-gray-700 flex items-center mb-4">
                               <User className="h-4 w-4 mr-2" />
                               First Name*
                             </label>
@@ -229,7 +198,7 @@ export default function ContactPage() {
                               onFocus={() => setFocusedField('firstName')}
                               onBlur={() => setFocusedField('')}
                               required
-                              className="w-full bg-transparent text-white placeholder-gray-400 border-0 border-b-2 border-gray-600 focus:border-[#00a19a] outline-none pb-2 text-lg transition-all duration-300"
+                              className="w-full bg-transparent text-gray-900 placeholder-gray-500 border-0 border-b-2 border-gray-300 focus:border-[#00a19a] outline-none pb-2 text-lg transition-all duration-300"
                               placeholder="Enter your first name"
                               whileFocus={{ scale: 1.02 }}
                             />
@@ -248,8 +217,8 @@ export default function ContactPage() {
                               scale: focusedField === 'lastName' ? 1.05 : 1,
                             }}
                           />
-                          <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00c9bf]/50 transition-all duration-500">
-                            <label className="text-sm font-semibold text-[#00c9bf] flex items-center mb-4">
+                          <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00c9bf]/50 transition-all duration-500">
+                            <label className="text-sm font-semibold text-gray-700 flex items-center mb-4">
                               <User className="h-4 w-4 mr-2" />
                               Last Name*
                             </label>
@@ -261,7 +230,7 @@ export default function ContactPage() {
                               onFocus={() => setFocusedField('lastName')}
                               onBlur={() => setFocusedField('')}
                               required
-                              className="w-full bg-transparent text-white placeholder-gray-400 border-0 border-b-2 border-gray-600 focus:border-[#00c9bf] outline-none pb-2 text-lg transition-all duration-300"
+                              className="w-full bg-transparent text-gray-900 placeholder-gray-500 border-0 border-b-2 border-gray-300 focus:border-[#00c9bf] outline-none pb-2 text-lg transition-all duration-300"
                               placeholder="Enter your last name"
                               whileFocus={{ scale: 1.02 }}
                             />
@@ -282,8 +251,8 @@ export default function ContactPage() {
                             scale: focusedField === 'companyName' ? 1.05 : 1,
                           }}
                         />
-                        <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
-                          <label className="text-sm font-semibold text-[#00c9bf] flex items-center mb-4">
+                        <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
+                          <label className="text-sm font-semibold text-gray-700 flex items-center mb-4">
                             <Building className="h-4 w-4 mr-2" />
                             Company Name*
                           </label>
@@ -295,7 +264,7 @@ export default function ContactPage() {
                             onFocus={() => setFocusedField('companyName')}
                             onBlur={() => setFocusedField('')}
                             required
-                            className="w-full bg-transparent text-white placeholder-gray-400 border-0 border-b-2 border-gray-600 focus:border-[#00a19a] outline-none pb-2 text-lg transition-all duration-300"
+                            className="w-full bg-transparent text-gray-900 placeholder-gray-500 border-0 border-b-2 border-gray-300 focus:border-[#00a19a] outline-none pb-2 text-lg transition-all duration-300"
                             placeholder="Your company name"
                             whileFocus={{ scale: 1.02 }}
                           />
@@ -315,8 +284,8 @@ export default function ContactPage() {
                             scale: focusedField === 'email' ? 1.05 : 1,
                           }}
                         />
-                        <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00c9bf]/50 transition-all duration-500">
-                          <label className="text-sm font-semibold text-[#00c9bf] flex items-center mb-4">
+                        <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00c9bf]/50 transition-all duration-500">
+                          <label className="text-sm font-semibold text-gray-700 flex items-center mb-4">
                             <Mail className="h-4 w-4 mr-2" />
                             Email Address*
                           </label>
@@ -328,7 +297,7 @@ export default function ContactPage() {
                             onFocus={() => setFocusedField('email')}
                             onBlur={() => setFocusedField('')}
                             required
-                            className="w-full bg-transparent text-white placeholder-gray-400 border-0 border-b-2 border-gray-600 focus:border-[#00c9bf] outline-none pb-2 text-lg transition-all duration-300"
+                            className="w-full bg-transparent text-gray-900 placeholder-gray-500 border-0 border-b-2 border-gray-300 focus:border-[#00c9bf] outline-none pb-2 text-lg transition-all duration-300"
                             placeholder="your.email@company.com"
                             whileFocus={{ scale: 1.02 }}
                           />
@@ -348,8 +317,8 @@ export default function ContactPage() {
                             scale: focusedField === 'message' ? 1.05 : 1,
                           }}
                         />
-                        <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
-                          <label className="text-sm font-semibold text-[#00c9bf] flex items-center mb-4">
+                        <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00a19a]/50 transition-all duration-500">
+                          <label className="text-sm font-semibold text-gray-700 flex items-center mb-4">
                             <MessageSquare className="h-4 w-4 mr-2" />
                             How Can We Help?*
                           </label>
@@ -361,7 +330,7 @@ export default function ContactPage() {
                             onBlur={() => setFocusedField('')}
                             required
                             rows={6}
-                            className="w-full bg-transparent text-white placeholder-gray-400 border border-gray-600 focus:border-[#00a19a] outline-none p-4 text-lg rounded-xl transition-all duration-300 resize-none"
+                            className="w-full bg-transparent text-gray-900 placeholder-gray-500 border border-gray-300 focus:border-[#00a19a] outline-none p-4 text-lg rounded-xl transition-all duration-300 resize-none"
                             placeholder="Tell us about your property intelligence needs..."
                             whileFocus={{ scale: 1.02 }}
                           />
@@ -381,8 +350,8 @@ export default function ContactPage() {
                             scale: focusedField === 'hearAbout' ? 1.05 : 1,
                           }}
                         />
-                        <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00e6d6]/50 transition-all duration-500">
-                          <label className="text-sm font-semibold text-[#00c9bf] mb-4 block">
+                        <div className="relative bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00e6d6]/50 transition-all duration-500">
+                          <label className="text-sm font-semibold text-gray-700 mb-4 block">
                             How Did You Hear About Us?
                           </label>
                           <motion.select
@@ -391,17 +360,17 @@ export default function ContactPage() {
                             onChange={handleInputChange}
                             onFocus={() => setFocusedField('hearAbout')}
                             onBlur={() => setFocusedField('')}
-                            className="w-full bg-gray-800/50 text-white border border-gray-600 focus:border-[#00e6d6] outline-none p-4 text-lg rounded-xl transition-all duration-300"
+                            className="w-full bg-white text-gray-900 border border-gray-300 focus:border-[#00e6d6] outline-none p-4 text-lg rounded-xl transition-all duration-300"
                             whileFocus={{ scale: 1.02 }}
                           >
-                            <option value="" className="bg-gray-800">
+                            <option value="" className="bg-white">
                               Please Select
                             </option>
                             {hearAboutOptions.map((option) => (
                               <option
                                 key={option}
                                 value={option}
-                                className="bg-gray-800"
+                                className="bg-white"
                               >
                                 {option}
                               </option>
@@ -417,7 +386,7 @@ export default function ContactPage() {
                         transition={{ duration: 1, delay: 1.1 }}
                         className="relative group"
                       >
-                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 group-hover:border-[#00a19a]/30 transition-all duration-500">
+                        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 group-hover:border-[#00a19a]/30 transition-all duration-500">
                           <div className="flex items-start space-x-4">
                             <motion.input
                               type="checkbox"
@@ -425,11 +394,11 @@ export default function ContactPage() {
                               checked={formData.consent}
                               onChange={handleInputChange}
                               required
-                              className="mt-1 w-5 h-5 text-[#00a19a] bg-transparent border-2 border-gray-600 rounded focus:ring-[#00a19a] focus:ring-2"
+                              className="mt-1 w-5 h-5 text-[#00a19a] bg-white border-2 border-gray-300 rounded focus:ring-[#00a19a] focus:ring-2"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
                             />
-                            <label className="text-sm text-gray-300 leading-relaxed">
+                            <label className="text-sm text-gray-700 leading-relaxed">
                               By submitting this form, I consent to the
                               processing of the personal data that I provide
                               OpenProperty in accordance with and as described
@@ -588,7 +557,7 @@ export default function ContactPage() {
                     <item.icon className="h-8 w-8 text-white" />
                   </motion.div>
 
-                  <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-[#00A19A] transition-colors duration-500">
+                  <h3 className="text-xl font-bold mb-4 leading-tight text-[#00A19A] group-hover:text-[#00A19A] transition-colors duration-500">
                     {item.title}
                   </h3>
 
