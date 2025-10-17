@@ -166,7 +166,6 @@ export default function ProductPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <ScrollProgressBar />
       <Navigation />
 
       {/* Hero Section with Animated Logo */}
@@ -238,6 +237,7 @@ export default function ProductPage() {
         </motion.div>
       </section>
 
+      <ScrollProgressBar />
       {/* UMU Platform Section */}
       <section
         ref={platformRef}
@@ -362,6 +362,7 @@ export default function ProductPage() {
         </div>
       </section>
 
+      <ScrollProgressBar />
       {/* What Makes Us Different Section */}
       <section
         ref={differentiatorRef}
@@ -444,6 +445,7 @@ export default function ProductPage() {
         </div>
       </section>
 
+      <ScrollProgressBar />
       {/* Features Section */}
       <section
         ref={featuresRef}

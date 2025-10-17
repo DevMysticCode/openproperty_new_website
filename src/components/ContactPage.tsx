@@ -75,9 +75,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <ScrollProgressBar />
       <Navigation />
-
       {/* Hero Section with Animated Logo */}
       <section
         ref={heroRef}
@@ -125,7 +123,7 @@ export default function ContactPage() {
           </motion.h1>
         </motion.div>
       </section>
-
+      <ScrollProgressBar />
       {/* Creative Contact Form Section */}
       <section
         ref={formRef}
@@ -518,7 +516,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
+      <ScrollProgressBar />
       {/* Contact Information Section */}
       <section
         ref={contactInfoRef}
