@@ -106,7 +106,7 @@ export default function CTASectionNew() {
                 delay: 0.5,
                 ease: [0.23, 1, 0.32, 1],
               }}
-              className="relative flex justify-center lg:justify-end items-center"
+              className="relative flex justify-center lg:justify-center items-center"
             >
               {/* Silhouette Figure */}
               <motion.div
