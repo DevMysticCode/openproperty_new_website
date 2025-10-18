@@ -44,7 +44,7 @@ export default function Navigation() {
             whileTap={{ scale: 0.95 }}
             className="flex items-center space-x-2"
           >
-            <div className="h-10rounded-xl shadow-lg">
+            <div className="h-10 rounded-xl">
               <img
                 src="/logo.svg"
                 alt="Logo"
