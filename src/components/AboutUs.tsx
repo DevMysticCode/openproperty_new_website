@@ -34,7 +34,11 @@ export default function AboutUs() {
     offset: ['start end', 'end start'],
   })
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3])
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.2, 0.8, 1, 0.8, 0.2]
+  )
 
   const item1Y = useTransform(scrollYProgress, [0, 1], ['0px', '0px'])
   const item2Y = useTransform(scrollYProgress, [0, 1], ['50px', '-50px'])
@@ -43,83 +47,72 @@ export default function AboutUs() {
   const item5Y = useTransform(scrollYProgress, [0, 1], ['200px', '-200px'])
   const itemYTransforms = [item1Y, item2Y, item3Y, item4Y, item5Y]
 
-  const coreValues = [
-    {
-      title: 'Dedication',
-      description:
-        'Always doing your best so you diligently progress toward your goal.',
-    },
-    {
-      title: 'Long-term orientation',
-      description:
-        'Seeking to optimize with a long-term view, even at the expense of short-term benefits.',
-    },
-    {
-      title: 'Optimism',
-      description:
-        'Believing that with the right work, you can make the future better than the present.',
-    },
-    {
-      title: 'Ownership',
-      description:
-        'Feeling deeply responsible for your work, and constantly asking the question.',
-    },
-    {
-      title: 'Passion',
-      description:
-        'Finding purpose and purpose in doing the work to improve the goal.',
-    },
-    {
-      title: 'Tenacity',
-      description:
-        'Not giving up in the face of obstacles, treating every setback as a learning opportunity to verify after every fall.',
-    },
+  // Add scale transforms for each item
+  const item1Scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 0.98, 1.05, 0.98, 0.95]
+  )
+  const item2Scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 0.98, 1.05, 0.98, 0.95]
+  )
+  const item3Scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 0.98, 1.05, 0.98, 0.95]
+  )
+  const item4Scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 0.98, 1.05, 0.98, 0.95]
+  )
+  const item5Scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 0.98, 1.05, 0.98, 0.95]
+  )
+  const itemScaleTransforms = [
+    item1Scale,
+    item2Scale,
+    item3Scale,
+    item4Scale,
+    item5Scale,
   ]
 
-  const values = [
-    {
-      title: 'Accuracy',
-      description:
-        "Telling the truth, and being explicit about what's a fact and what's a hypothesis.",
-    },
-    {
-      title: 'Curiosity',
-      description:
-        'Seeking an understanding of the whats, hows, and whys of the world.',
-    },
-    {
-      title: 'Imagination',
-      description:
-        'Envisioning how things could be, unencumbered by how they currently are.',
-    },
-    {
-      title: 'Logic',
-      description:
-        'Reasoning from first principles, and structuring ideas sharply.',
-    },
-    {
-      title: 'Meritocracy',
-      description:
-        "Assigning responsibilities solely based on people's ability to carry them out, and evaluating ideas regardless of where or whom they came from.",
-    },
-    {
-      title: 'Pragmatism',
-      description:
-        'Optimizing for impact, finding the right scope—and the ideal balance between speed and sophistication—at all times.',
-    },
-    {
-      title: 'Precision',
-      description: 'Identifying and taking care of the details that matter.',
-    },
-    {
-      title: 'Rationality',
-      description: 'Resisting the influence of biases.',
-    },
-    {
-      title: 'Research',
-      description:
-        'Gathering all relevant information, and rigorously testing hypotheses.',
-    },
+  // Add individual opacity transforms for each item
+  const item1Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 0.8, 1, 0.8, 0.3]
+  )
+  const item2Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 0.8, 1, 0.8, 0.3]
+  )
+  const item3Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 0.8, 1, 0.8, 0.3]
+  )
+  const item4Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 0.8, 1, 0.8, 0.3]
+  )
+  const item5Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 0.8, 1, 0.8, 0.3]
+  )
+  const itemOpacityTransforms = [
+    item1Opacity,
+    item2Opacity,
+    item3Opacity,
+    item4Opacity,
+    item5Opacity,
   ]
 
   const whyItems = [
@@ -409,8 +402,8 @@ export default function AboutUs() {
               className="absolute inset-0"
               style={{
                 backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-                             radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-                             radial-gradient(circle at 40% 20%, rgba(0, 230, 214, 0.3) 0%, transparent 40%)`,
+                         radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                         radial-gradient(circle at 40% 20%, rgba(0, 230, 214, 0.3) 0%, transparent 40%)`,
                 backgroundSize: '100% 100%',
               }}
             ></div>
@@ -424,22 +417,23 @@ export default function AboutUs() {
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
             className="text-start mb-20 max-w-7xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase ">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight uppercase">
               OUR WHY
             </h1>
           </motion.div>
 
-          <motion.div
-            className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10"
-            style={{ opacity }}
-          >
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
             <div className="space-y-0">
               {whyItems.map((item, index) => (
                 <motion.div
                   key={item.number}
                   initial={{ opacity: 0, x: -100 }}
                   animate={isWhyInView ? { opacity: 1, x: 0 } : {}}
-                  style={{ y: itemYTransforms[index] }}
+                  style={{
+                    y: itemYTransforms[index],
+                    scale: itemScaleTransforms[index],
+                    opacity: itemOpacityTransforms[index],
+                  }}
                   transition={{
                     duration: 1.2,
                     delay: index * 0.3,
@@ -494,7 +488,7 @@ export default function AboutUs() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Our Why Section */}
