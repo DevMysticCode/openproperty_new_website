@@ -278,7 +278,7 @@ export default function ProductPage() {
         />{' '}
         <div className="max-w-7xl mx-auto px-6 sm:px-8 container relative z-20">
           <div className="">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-white text-start uppercase">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-20 tracking-tight leading-tight text-white text-start uppercase">
               The Platform
             </h2>
           </div>
@@ -292,7 +292,7 @@ export default function ProductPage() {
             initial={{ opacity: 0, y: 100 }}
             animate={isPlatformInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
-            className="text-start mb-16"
+            className="text-start mb-20"
           >
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-start align-top">
@@ -387,7 +387,7 @@ export default function ProductPage() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-start uppercase">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-20 tracking-tight leading-tight text-black text-start uppercase">
               The Difference
             </h2>
           </div>
@@ -470,7 +470,7 @@ export default function ProductPage() {
       >
         <div className="max-w-8xl mx-auto px-6 sm:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-16 tracking-tight leading-tight text-black text-start uppercase">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-20 tracking-tight leading-tight text-black text-start uppercase">
               Our Features
             </h2>
           </div>
