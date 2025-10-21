@@ -19,6 +19,8 @@ import CTASectionNew from './CTASectionNew'
 import ScrollProgressBar from './ScrollProgressBar'
 import PoweredByFooter from './PoweredByFooter'
 
+import { MessageCircle, Share2 } from 'lucide-react'
+
 const hearAboutOptions = [
   'Google Search',
   'Social Media',
@@ -510,23 +512,23 @@ export default function ContactPage() {
             {[
               {
                 icon: Mail,
-                title: 'Email Us',
+                title: 'Email',
                 content: 'info@openproperty.com',
                 description: 'Send us an email anytime',
                 gradient: 'from-[#00a19a] to-[#00c9bf]',
               },
               {
-                icon: Phone,
-                title: 'Call Us',
+                icon: MessageCircle, // WhatsApp-like icon
+                title: 'Join Us',
                 content: '+1 (555) 123-4567',
-                description: 'Mon-Fri 9AM-6PM EST',
+                description: 'Connect with us on WhatsApp',
                 gradient: 'from-[#00c9bf] to-[#00e6d6]',
               },
               {
-                icon: MapPin,
-                title: 'Visit Us',
-                content: '123 Property Street',
-                description: 'New York, NY 10001',
+                icon: Share2, // Social media icon
+                title: 'Check our socials',
+                content: '@openproperty',
+                description: 'Follow us on social media',
                 gradient: 'from-[#00e6d6] to-[#00a19a]',
               },
             ].map((item, index) => (
