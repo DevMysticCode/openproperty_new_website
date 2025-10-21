@@ -10,20 +10,45 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [textColor, setTextColor] = useState('white')
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const scrollY = window.scrollY
+      setIsScrolled(scrollY > 50)
+
+      // Get all sections that might have light backgrounds
+      const lightSections = document.querySelectorAll('.light-bg-section')
+      let isOnLightBg = false
+
+      lightSections.forEach((section) => {
+        const rect = section.getBoundingClientRect()
+        // Check if navigation is overlapping with light background section
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          isOnLightBg = true
+        }
+      })
+
+      setTextColor(isOnLightBg ? 'black' : 'white')
     }
 
     window.addEventListener('scroll', handleScroll)
+    // Initial check
+    handleScroll()
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   if (!mounted) return null
+
+  const textColorClass =
+    textColor === 'black'
+      ? 'text-black hover:text-[#00a19a]'
+      : 'text-white hover:text-[#00a19a]'
 
   return (
     <motion.nav
@@ -46,12 +71,16 @@ export default function Navigation() {
           >
             <div className="h-10 rounded-xl">
               <img
-                src="/logo.svg"
+                src={textColor === 'black' ? '/logo.svg' : '/logo.svg'}
                 alt="Logo"
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-3xl font-bold tracking-tight">umovingu</span>
+            <span
+              className={`text-3xl font-bold tracking-tight ${textColorClass}`}
+            >
+              umovingu
+            </span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -59,7 +88,7 @@ export default function Navigation() {
             <Link to="/">
               <motion.div
                 whileHover={{ y: -2 }}
-                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+                className={`transition-all duration-300 font-medium ${textColorClass}`}
               >
                 Home
               </motion.div>
@@ -68,55 +97,29 @@ export default function Navigation() {
             <Link to="/about">
               <motion.div
                 whileHover={{ y: -2 }}
-                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium cursor-pointer"
+                className={`transition-all duration-300 font-medium cursor-pointer ${textColorClass}`}
               >
                 About Us
               </motion.div>
             </Link>
+
             <Link to="/products">
-              <motion.a
-                href="#products"
+              <motion.div
                 whileHover={{ y: -2 }}
-                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+                className={`transition-all duration-300 font-medium ${textColorClass}`}
               >
                 Product
-              </motion.a>
+              </motion.div>
             </Link>
 
-            {/* <motion.a
-              href="#services"
-              whileHover={{ y: -2 }}
-              className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
-            >
-              Services
-            </motion.a> */}
             <Link to="/contact">
-              <motion.a
-                href="#services"
+              <motion.div
                 whileHover={{ y: -2 }}
-                className="text-white hover:text-[#00a19a] transition-all duration-300 font-medium"
+                className={`transition-all duration-300 font-medium ${textColorClass}`}
               >
                 Contact Us
-              </motion.a>
+              </motion.div>
             </Link>
-
-            {/* <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-3 hover:bg-[#00a19a]/10 rounded-xl"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button> */}
-            {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                CONTACT US
-              </Button>
-            </motion.div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -125,7 +128,9 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2"
+              className={`p-2 ${
+                textColor === 'black' ? 'text-black' : 'text-white'
+              }`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -147,45 +152,24 @@ export default function Navigation() {
               className="md:hidden border-t border-border/50 mt-4 pt-4 pb-6"
             >
               <div className="flex flex-col space-y-4">
-                <a
-                  href="/about"
-                  className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
+                <Link
+                  to="/about"
+                  className={`transition-colors font-medium ${textColorClass}`}
                 >
                   About Us
-                </a>
-                <a
-                  href="/products"
-                  className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
+                </Link>
+                <Link
+                  to="/products"
+                  className={`transition-colors font-medium ${textColorClass}`}
                 >
                   Products
-                </a>
-                <a
-                  href="/contact"
-                  className="text-muted-foreground hover:text-[#00a19a] transition-colors font-medium"
+                </Link>
+                <Link
+                  to="/contact"
+                  className={`transition-colors font-medium ${textColorClass}`}
                 >
                   Contact Us
-                </a>
-                {/* <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="justify-start p-0 h-auto font-medium text-muted-foreground hover:text-[#00a19a]"
-                >
-                  {theme === 'dark' ? (
-                    <>
-                      <Sun className="h-4 w-4 mr-2" />
-                      Light Mode
-                    </>
-                  ) : (
-                    <>
-                      <Moon className="h-4 w-4 mr-2" />
-                      Dark Mode
-                    </>
-                  )}
-                </Button> */}
-                {/* <Button className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] hover:from-[#008a85] hover:to-[#00a19a] text-white font-semibold mt-4 rounded-full">
-                  CONTACT
-                </Button> */}
+                </Link>
               </div>
             </motion.div>
           )}

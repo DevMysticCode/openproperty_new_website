@@ -137,7 +137,7 @@ export default function ContactPage() {
       {/* Creative Contact Form Section */}
       <section
         ref={formRef}
-        className="relative py-32 bg-gradient-to-b from-black via-[#00a19a] to-[#4DC4BD] overflow-hidden"
+        className="relative py-32 bg-gradient-to-b from-black via-[#00a19a] to-[#4DC4BD] overflow-hidden light-bg-section"
       >
         {/* Gradient Mesh Background */}
         <div className="absolute inset-0 opacity-20">
@@ -499,7 +499,7 @@ export default function ContactPage() {
       {/* Contact Information Section */}
       <section
         ref={contactInfoRef}
-        className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+        className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden light-bg-section"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <motion.div

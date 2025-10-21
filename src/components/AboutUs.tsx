@@ -760,7 +760,7 @@ export default function AboutUs() {
         {/* UMU Latest Section */}
         <section
           ref={latestRef}
-          className="relative py-24 bg-white overflow-hidden"
+          className="relative py-24 bg-white overflow-hidden light-bg-section"
         >
           {/* Animated Background Stars */}
           <div className="absolute inset-0 overflow-hidden">

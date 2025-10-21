@@ -466,7 +466,7 @@ export default function ProductPage() {
       {/* Features Section */}
       <section
         ref={featuresRef}
-        className="relative py-24 bg-gradient-to-br from-white to-white overflow-hidden"
+        className="relative py-24 bg-gradient-to-br from-white to-white overflow-hidden light-bg-section"
       >
         <div className="max-w-8xl mx-auto px-6 sm:px-8">
           <div className="max-w-7xl mx-auto">

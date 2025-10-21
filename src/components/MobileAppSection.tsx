@@ -68,7 +68,7 @@ export default function MobileAppSection() {
       <ScrollProgressBar />
       <section
         ref={sectionRef}
-        className="relative py-24 bg-gradient-to-b from-white via-[#ffffff] to-[#ffffff] overflow-hidden"
+        className="relative py-24 bg-gradient-to-b from-white via-[#ffffff] to-[#ffffff] overflow-hidden light-bg-section"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
