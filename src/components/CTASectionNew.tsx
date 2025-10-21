@@ -12,7 +12,7 @@ export default function CTASectionNew() {
   })
   return (
     <>
-      <ScrollProgressBar />
+      {/* <ScrollProgressBar /> */}
       <section
         ref={featuresRef}
         className="relative pt-4 bg-gradient-to-tl from-[#000000] via-[#00A19A] to-[#caf5f2] overflow-hidden"
