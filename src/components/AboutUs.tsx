@@ -162,7 +162,7 @@ export default function AboutUs() {
         {/* Hero Section with Animated Logo */}
         <section
           ref={heroRef}
-          className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden pt-20"
+          className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden pt-20 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
         >
           {/* Animated Logo */}
           <motion.div
@@ -232,7 +232,7 @@ export default function AboutUs() {
         <section
           ref={founderRef}
           data-theme="Light"
-          className="relative bg-neutral-100 pt-24 "
+          className="relative bg-neutral-100 pt-24 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 "
         >
           <img
             alt="Background glows"
@@ -395,7 +395,7 @@ export default function AboutUs() {
         {/* OUR Why section */}
         <section
           ref={whyRef}
-          className="relative py-24 bg-gradient-to-b from-[#28B0A9] via-[#28B0A9] to-[#28B0A9] overflow-hidden mx-auto px-6 sm:px-8"
+          className="relative py-32 bg-gradient-to-b from-[#28B0A9] via-[#28B0A9] to-[#28B0A9] overflow-hidden mx-auto px-6 sm:px-8 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
         >
           <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
             <div
@@ -760,7 +760,7 @@ export default function AboutUs() {
         {/* UMU Latest Section */}
         <section
           ref={latestRef}
-          className="relative py-24 bg-white overflow-hidden light-bg-section"
+          className="relative py-32 bg-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
         >
           {/* Animated Background Stars */}
           <div className="absolute inset-0 overflow-hidden">
