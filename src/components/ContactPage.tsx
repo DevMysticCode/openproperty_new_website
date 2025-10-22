@@ -514,7 +514,7 @@ export default function ContactPage() {
               {
                 icon: Mail,
                 title: 'Email',
-                content: 'info@openproperty.com',
+                content: 'hello@umovingu.io',
                 description: 'Send us an email anytime',
                 gradient: 'from-[#00a19a] to-[#00c9bf]',
                 type: 'standard',

@@ -17,15 +17,11 @@ import { FaTiktok } from 'react-icons/fa'
 const footerLinks = {
   product: [
     { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
     { name: 'Mobile App', href: '#mobile' },
-    { name: 'API', href: '#api' },
   ],
   company: [
     { name: 'About Us', href: '#about' },
-    { name: 'Careers', href: '#careers' },
     { name: 'Press', href: '#press' },
-    { name: 'Blog', href: '#blog' },
   ],
   resources: [
     { name: 'Documentation', href: '#docs' },
@@ -129,7 +125,7 @@ export default function Footer() {
             >
               <Mail className="h-6 w-6 text-white mr-4" />
               <div>
-                <div className="text-gray-400">hello@openproperty.io</div>
+                <div className="text-gray-400">hello@umovingu.io</div>
               </div>
             </motion.div>
 
@@ -162,7 +158,7 @@ export default function Footer() {
 
           {/* Links Sections */}
           {Object.entries(footerLinks)
-            .slice(0, 3)
+            .slice(0, 2)
             .map(([category, links], categoryIndex) => (
               <motion.div
                 key={category}
