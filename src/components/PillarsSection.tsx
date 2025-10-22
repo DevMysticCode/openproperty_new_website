@@ -36,7 +36,7 @@ const pillars = [
     title: 'Radical Transparency',
     subtitle: 'No hidden steps, no surprises.',
     type: 'video',
-    video: '/pillars/newVid.mp4',
+    video: '/pillars/RadicalTransparencyLicensed.mp4',
     videoPlaceholder: true,
     icon: Shield,
     gradient: 'from-blue-500 to-cyan-500',
@@ -58,7 +58,7 @@ const pillars = [
     subtitle:
       'Manage your move your way with tools that put you in the driver’s seat.',
     type: 'video',
-    video: '/pillars/TrueControlPreview.mp4',
+    video: '/pillars/newVid.mp4',
     videoPlaceholder: true,
     icon: TrendingUp,
     gradient: 'from-green-500 to-emerald-500',
