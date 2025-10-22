@@ -258,7 +258,7 @@ export default function ProductPage() {
       {/* UMU Platform Section */}
       <section
         ref={platformRef}
-        className="relative py-32 bg-gradient-to-b from-white to-gray-50 overflow-hidden pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
+        className="relative py-24 pt-48 bg-gradient-to-b from-white to-gray-50 overflow-hidden pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
       >
         <img
           alt="Background glows"
@@ -383,7 +383,7 @@ export default function ProductPage() {
       {/* What Makes Us Different Section */}
       <section
         ref={differentiatorRef}
-        className="relative py-32 bg-gradient-to-b from-[#28B0A9] to-white overflow-hidden pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
+        className="relative py-24 pt-48 bg-gradient-to-b from-[#28B0A9] to-white overflow-hidden pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div>
@@ -466,7 +466,7 @@ export default function ProductPage() {
       {/* Features Section */}
       <section
         ref={featuresRef}
-        className="relative py-32 bg-gradient-to-br from-white to-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
+        className="relative py-24 pt-48 bg-gradient-to-br from-white to-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
       >
         <div className="max-w-8xl mx-auto px-6 sm:px-8">
           <div className="max-w-7xl mx-auto">
