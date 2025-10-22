@@ -173,34 +173,17 @@ export default function ProductPage() {
         ref={heroRef}
         className="relative min-h-screen flex flex-col items-center justify-center bg-black overflow-hidden pt-32 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
       >
-        {/* Video Background */}
+        {/* Animated Logo */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={isHeroInView ? { opacity: 1 } : {}}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={isHeroInView ? { scale: 1, opacity: 1 } : {}}
           transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="absolute inset-0 w-full h-full"
+          className="relative flex items-center justify-center w-full"
         >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source
-              src="/products/AdobeStock_1464412879_Video_4K_Preview.mp4"
-              type="video/mp4"
-            />
-            {/* Add additional source formats for better browser compatibility */}
-            <source
-              src="/products/AdobeStock_1464412879_Video_4K_Preview.mp4"
-              type="video/webm"
-            />
-            Your browser does not support the video tag.
-          </video>
-
-          {/* Optional: Overlay to improve text readability */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <ChipsScene
+            src="https://my.spline.design/dynamiciphonemockup-tHoDoIWHR9JQg4piCpxs9nz3/"
+            height="100vh"
+          />
         </motion.div>
 
         {/* Main Title */}
