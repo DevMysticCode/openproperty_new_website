@@ -90,8 +90,9 @@ export default function ContactPage() {
           transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
           className="relative flex items-center justify-center w-full"
         >
+          {/* src="https://my.spline.design/glassbuttonsinspiredbyreijopalmiste-2HjSVliCbO304GWbkNHuRZKQ/" */}
           <ChipsScene
-            src="https://my.spline.design/glassbuttonsinspiredbyreijopalmiste-2HjSVliCbO304GWbkNHuRZKQ/"
+            src="https://my.spline.design/socialmediaiconsbyfarid-JXjdi7xj9suTcGUSyLbza5kD/"
             height="100vh"
           />
         </motion.div>
