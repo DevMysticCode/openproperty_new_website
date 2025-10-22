@@ -140,9 +140,9 @@ export default function MobileAppSection() {
                     onClick={() => setActiveScreen(index)}
                   >
                     {/* Phone Frame */}
-                    <div className="w-72 h-[580px] bg-gradient-to-b from-gray-900 via-gray-800 to-black rounded-[3rem] p-3 shadow-2xl shadow-[#00a19a]/40">
+                    <div className="w-72 h-[580px] rounded-[1rem] p-1 shadow-2xl shadow-[#00a19a]/40">
                       {/* Screen */}
-                      <div className="w-full h-full bg-gradient-to-b from-white to-gray-50 rounded-[2.5rem] overflow-hidden relative">
+                      <div className="w-full h-full rounded-[1rem] overflow-hidden relative">
                         {/* App Screenshot */}
                         <div className="w-full h-full">
                           <img
