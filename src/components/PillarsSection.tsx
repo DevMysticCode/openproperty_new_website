@@ -127,7 +127,7 @@ export default function PillarsSection() {
       <ScrollProgressBar />
       <motion.section
         ref={containerRef}
-        className="relative  pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden light-bg-section"
+        className="relative py-24 pt-48 bg-gradient-to-b from-[#28B0A9] via-gray-50 to-white overflow-hidden light-bg-section"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">

@@ -1,66 +1,69 @@
-
-import { motion, useInView } from 'framer-motion';
-import { useRef, useEffect } from 'react';
-import { Database, Clock, AlertTriangle, Target } from 'lucide-react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, useInView } from 'framer-motion'
+import { useRef, useEffect } from 'react'
+import { Database, Clock, AlertTriangle, Target } from 'lucide-react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger)
 }
 
 const problems = [
   {
     icon: Database,
-    title: "Fragmented Data Sources",
-    description: "Property information scattered across multiple platforms makes research time-consuming and incomplete.",
-    impact: "73% of professionals waste 5+ hours weekly"
+    title: 'Fragmented Data Sources',
+    description:
+      'Property information scattered across multiple platforms makes research time-consuming and incomplete.',
+    impact: '73% of professionals waste 5+ hours weekly',
   },
   {
     icon: Clock,
-    title: "Time-Consuming Research",
-    description: "Hours spent manually gathering data from different sources delays crucial investment decisions.",
-    impact: "Average 12 hours per property analysis"
+    title: 'Time-Consuming Research',
+    description:
+      'Hours spent manually gathering data from different sources delays crucial investment decisions.',
+    impact: 'Average 12 hours per property analysis',
   },
   {
     icon: AlertTriangle,
-    title: "Unverified Information",
-    description: "Lack of data accuracy and reliability leads to poor decision-making and increased risks.",
-    impact: "42% report data inconsistencies"
+    title: 'Unverified Information',
+    description:
+      'Lack of data accuracy and reliability leads to poor decision-making and increased risks.',
+    impact: '42% report data inconsistencies',
   },
   {
     icon: Target,
-    title: "Limited Market Insights",
-    description: "Without comprehensive analytics, it's difficult to identify optimal investment opportunities.",
-    impact: "Missing 60% of market opportunities"
-  }
-];
+    title: 'Limited Market Insights',
+    description:
+      "Without comprehensive analytics, it's difficult to identify optimal investment opportunities.",
+    impact: 'Missing 60% of market opportunities',
+  },
+]
 
 export default function ProblemSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-150px" });
-  const sectionRef = useRef<HTMLElement>(null);
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-150px' })
+  const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (typeof window !== 'undefined' && sectionRef.current) {
       // Parallax effect for background elements
       gsap.to(sectionRef.current.querySelector('.gradient-mesh-premium'), {
         yPercent: -50,
-        ease: "none",
+        ease: 'none',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true
-        }
-      });
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      })
     }
-  }, []);
+  }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="relative py-24 overflow-hidden dark-section-with-texture"
+      className="relative py-24 pt-48 overflow-hidden dark-section-with-texture"
     >
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 gradient-mesh-premium"></div>
@@ -82,7 +85,7 @@ export default function ProblemSection() {
               The Problem
             </span>
           </motion.div>
-          
+
           <div className="text-reveal">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight text-white">
               <span>Cut through the </span>
@@ -91,10 +94,11 @@ export default function ProblemSection() {
               </span>
             </h2>
           </div>
-          
+
           <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
-            Traditional property research is broken. Multiple data sources, unreliable information, 
-            and time-consuming processes hold back smart investors.
+            Traditional property research is broken. Multiple data sources,
+            unreliable information, and time-consuming processes hold back smart
+            investors.
           </p>
         </motion.div>
 
@@ -104,14 +108,14 @@ export default function ProblemSection() {
               key={problem.title}
               initial={{ opacity: 0, y: 100 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ 
-                duration: 1.2, 
+              transition={{
+                duration: 1.2,
                 delay: 0.5 + index * 0.2,
-                ease: [0.23, 1, 0.32, 1]
+                ease: [0.23, 1, 0.32, 1],
               }}
               className="group"
             >
-              <motion.div 
+              <motion.div
                 whileHover={{ y: -12, scale: 1.02 }}
                 className="premium-card p-8 rounded-2xl glassmorphism hover:bg-white/5 hover:border-red-400/30 transition-all duration-700 h-full will-change-transform relative overflow-hidden"
               >
@@ -129,11 +133,11 @@ export default function ProblemSection() {
                 <h3 className="text-xl font-bold mb-4 leading-tight group-hover:text-red-400 transition-colors duration-500 text-white">
                   {problem.title}
                 </h3>
-                
+
                 <p className="text-gray-300 text-base leading-relaxed mb-6 font-light">
                   {problem.description}
                 </p>
-                
+
                 {/* Impact Stat */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -141,7 +145,9 @@ export default function ProblemSection() {
                   transition={{ delay: 0.7 + index * 0.2, duration: 0.8 }}
                   className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 glassmorphism"
                 >
-                  <span className="text-red-400 font-semibold text-sm">{problem.impact}</span>
+                  <span className="text-red-400 font-semibold text-sm">
+                    {problem.impact}
+                  </span>
                 </motion.div>
 
                 {/* Hover Effect Lines */}
@@ -172,22 +178,24 @@ export default function ProblemSection() {
               >
                 <Target className="h-8 w-8 text-white" />
               </motion.div>
-              
+
               <h3 className="text-2xl font-bold mb-6 leading-tight text-white">
-                Our platform delivers verified, centralized data and powerful analytics{' '}
+                Our platform delivers verified, centralized data and powerful
+                analytics{' '}
                 <span className="bg-gradient-to-r from-[#00a19a] to-[#00c9bf] bg-clip-text text-transparent">
                   in one place
                 </span>
               </h3>
-              
+
               <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed font-light">
-                Stop wasting time on fragmented research. Make smarter property decisions with comprehensive, 
-                real-time intelligence at your fingertips.
+                Stop wasting time on fragmented research. Make smarter property
+                decisions with comprehensive, real-time intelligence at your
+                fingertips.
               </p>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

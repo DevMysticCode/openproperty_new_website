@@ -13,7 +13,7 @@ const appScreens = [
       'Democratisation of tools, knowledge and data, will make buying and selling homes: faster, fairer, and accessible for everyone.',
       'We’ve created a secure digital platform designed to tackle the biggest frustrations in property transactions, from slow sales and lack of transparency to limited buyer or seller knowledge and outdated processes. ',
     ],
-    image: '/mobileAppImages/screen1.png',
+    image: '/mobileAppImages/image1.jpg',
   },
   {
     id: 'details',
@@ -23,7 +23,7 @@ const appScreens = [
       'With the right education and guidance, you are empowered to take control of your own move and ensure property failure is a thing of the past',
       'We protect your data like it’s our own — every action is encrypted, every connection verified, so you can move forward with complete confidence.',
     ],
-    image: '/mobileAppImages/screen2_old.png',
+    image: '/mobileAppImages/image2.jpg',
   },
   {
     id: 'passport',
@@ -33,7 +33,7 @@ const appScreens = [
       'umovingu delivers a faster, smarter, more confident move all in the palm of your hand.',
       'Whether you want faster sales, fewer fall-throughs, or total clarity from start to finish, umovingu has you covered.',
     ],
-    image: '/mobileAppImages/screen3.png',
+    image: '/mobileAppImages/image3.jpg',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function MobileAppSection() {
       <ScrollProgressBar />
       <section
         ref={sectionRef}
-        className="relative py-24 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 bg-gradient-to-b from-white via-[#ffffff] to-[#ffffff] overflow-hidden light-bg-section"
+        className="relative py-24 pt-48 bg-gradient-to-b from-white via-[#ffffff] to-[#ffffff] overflow-hidden light-bg-section"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">

@@ -621,3 +621,7 @@ html * {
   --tw-bg-opacity: 1;
   background-color: #e0dee0;
 }
+
+.pt-48 {
+  padding-top: 192px;
+}
