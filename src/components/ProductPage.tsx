@@ -97,24 +97,19 @@ const differentiators = [
       'Built with cutting-edge technology designed to fix the failures of today’s property process, making the whole process faster, smarter and simpler.',
   },
   {
-    title: 'Seamless interoperability ',
+    title: 'Unified platform with seamless interoperability',
     description:
-      'Buyers, sellers, conveyancers, solicitors, stakeholders are united in our ecosystem.',
-  },
-  {
-    title: 'One-click data sharing',
-    description:
-      "We're developing solutions to the market's systemic problems rather than digitalizing them.",
+      'No more juggling different systems or paperwork, everything you need for your move, brought together in one sleek, easy-to-use app, uniting buyers, sellers, conveyancers, solicitors, stakeholders in one ecosystem.',
   },
   {
     title: 'Your data, saved once',
     description:
-      "We're developing solutions to the market's systemic problems rather than digitalizing them.",
+      'Complete your details once, and they’re securely stored for every future move.',
   },
   {
-    title: 'AI-powered intelligence',
+    title: 'AI powered intelligence',
     description:
-      'Smart tools that verify legal documents, flag risks, and answer queries in real time',
+      'Smart tools that verify legal documents, flag risks, and answer queries in real time.',
   },
   {
     title: 'Made personal',
@@ -122,14 +117,9 @@ const differentiators = [
       'Features tailored to your property journey, like progress updates, favourited properties, and reminders that keep you one step ahead.',
   },
   {
-    title: 'Unified platform',
-    description:
-      'No more juggling different systems or paperwork, everything you need for your move, brought together in one sleek, easy-to-use app.',
-  },
-  {
     title: 'Secure by design',
     description:
-      'Your data is protected with the highest standards, giving you confidence and peace of mind at every step.',
+      'Your data is protected with the highest standards, giving you confidence and peace of mind at every step.',
   },
 ]
 
