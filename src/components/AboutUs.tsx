@@ -232,7 +232,7 @@ export default function AboutUs() {
         <section
           ref={founderRef}
           data-theme="Light"
-          className="relative bg-neutral-100 pt-24 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 "
+          className="relative bg-neutral-100 pt-48 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52 "
         >
           <img
             alt="Background glows"
@@ -252,7 +252,7 @@ export default function AboutUs() {
           />
           <div className="relative overflow-hidden mx-auto px-6 sm:px-8 z-20">
             {/* Overlay Text */}
-            <div className="relative z-20 flex h-full items-end max-w-7xl justify-start mx-auto mt-10 lg:mt-36">
+            <div className="relative z-20 flex h-full items-end max-w-7xl justify-start mx-auto">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light mb-8 tracking-tight leading-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff to-[#ffffff] bg-clip-text text-transparent text-heading">
                 OUR FOUNDER
               </h1>
@@ -395,7 +395,7 @@ export default function AboutUs() {
         {/* OUR Why section */}
         <section
           ref={whyRef}
-          className="relative py-32 bg-gradient-to-b from-[#28B0A9] via-[#28B0A9] to-[#28B0A9] overflow-hidden mx-auto px-6 sm:px-8 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
+          className="relative py-24 pt-48 bg-gradient-to-b from-[#28B0A9] via-[#28B0A9] to-[#28B0A9] overflow-hidden mx-auto px-6 sm:px-8 pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
         >
           <motion.div className="absolute inset-0 opacity-10" style={{ y }}>
             <div
@@ -760,7 +760,7 @@ export default function AboutUs() {
         {/* UMU Latest Section */}
         <section
           ref={latestRef}
-          className="relative py-32 bg-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
+          className="relative py-24 pt-48 bg-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
         >
           {/* Animated Background Stars */}
           <div className="absolute inset-0 overflow-hidden">
