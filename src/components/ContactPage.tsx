@@ -92,7 +92,7 @@ export default function ContactPage() {
         >
           {/* src="https://my.spline.design/glassbuttonsinspiredbyreijopalmiste-2HjSVliCbO304GWbkNHuRZKQ/" */}
           <ChipsScene
-            src="https://my.spline.design/socialmediaiconsbyfarid-JXjdi7xj9suTcGUSyLbza5kD/"
+            src="https://my.spline.design/abstractnirvana-YCPN2swW4b7MIb9UQYscHdb6/"
             height="100vh"
           />
         </motion.div>
