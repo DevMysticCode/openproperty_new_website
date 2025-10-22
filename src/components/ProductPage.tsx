@@ -181,7 +181,7 @@ export default function ProductPage() {
           className="relative flex items-center justify-center w-full"
         >
           <ChipsScene
-            src="https://my.spline.design/dynamiciphonemockup-tHoDoIWHR9JQg4piCpxs9nz3/"
+            src="https://my.spline.design/iphonemockupwithparticles-DjopG52YhTHv0YbOluRXSbVk/"
             height="100vh"
           />
         </motion.div>
