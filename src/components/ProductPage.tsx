@@ -411,8 +411,8 @@ export default function ProductPage() {
                     }}
                     className="flex items-start space-x-4 group"
                   >
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-3 h-3 bg-[#00A19A] rounded-full"></div>
+                    <div className="w-[12px] h-[12px] bg-[#00a19a] min-w-[12px] min-h-[12px] rounded-full mt-2">
+                      {/* <div className="w-3 h-3 bg-[#00A19A] rounded-full"></div> */}
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-black mb-2 group-hover:text-black/90 transition-colors duration-300">
