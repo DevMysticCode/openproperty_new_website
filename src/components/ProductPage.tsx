@@ -438,6 +438,7 @@ export default function ProductPage() {
       <ScrollProgressBar />
       {/* Features Section */}
       <section
+        id="features"
         ref={featuresRef}
         className="relative py-24 pt-48 bg-gradient-to-br from-white to-white overflow-hidden light-bg-section pb-32 last:mb-32 last:pb-0 md:pb-52 last:md:mb-52"
       >

@@ -13,15 +13,16 @@ import {
   Music,
 } from 'lucide-react'
 import { FaTiktok } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const footerLinks = {
   product: [
-    { name: 'Features', href: '#features' },
-    { name: 'Mobile App', href: '#mobile' },
+    { name: 'Features', href: '/products#features' },
+    { name: 'Mobile App', href: '/#mobileapp' },
   ],
   company: [
-    { name: 'About Us', href: '#about' },
-    { name: 'Press', href: '#press' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Press', href: '/contact' },
   ],
   resources: [
     { name: 'Documentation', href: '#docs' },
@@ -89,8 +90,8 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
-          {/* Brand Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+          {/* Brand Section - Takes 2/4 (50%) */}
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -156,7 +157,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Links Sections */}
+          {/* Links Sections - Each takes 1/4 (25%) */}
           {Object.entries(footerLinks)
             .slice(0, 2)
             .map(([category, links], categoryIndex) => (
@@ -176,14 +177,14 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <motion.a
-                        href={link.href}
-                        target="_blank"
-                        whileHover={{ x: 8, color: '#00c9bf' }}
-                        className="text-gray-300 hover:text-[#00c9bf] transition-all duration-500 text-base block font-light"
-                      >
-                        {link.name}
-                      </motion.a>
+                      <Link to={link.href}>
+                        <motion.span
+                          whileHover={{ x: 8, color: '#00c9bf' }}
+                          className="text-gray-300 hover:text-[#00c9bf] transition-all duration-500 text-base block font-light cursor-pointer"
+                        >
+                          {link.name}
+                        </motion.span>
+                      </Link>
                     </li>
                   ))}
                 </ul>

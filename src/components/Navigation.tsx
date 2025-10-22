@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from './theme-provider'
 import { Button } from './ui/button'
 import { Sun, Moon, Menu, X } from 'lucide-react'
@@ -13,6 +13,7 @@ export default function Navigation() {
   const [textColor, setTextColor] = useState('white')
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     setMounted(true)
@@ -36,12 +37,30 @@ export default function Navigation() {
       setTextColor(isOnLightBg ? 'black' : 'white')
     }
 
-    window.addEventListener('scroll', handleScroll)
-    // Initial check
-    handleScroll()
+    // Add a small delay before setting up scroll listener to avoid conflicts
+    const timer = setTimeout(() => {
+      window.addEventListener('scroll', handleScroll)
+      handleScroll() // Initial check
+    }, 100)
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [location.pathname])
+
+  // Handle hash scrolling when component mounts or location changes
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1))
+      if (element) {
+        // Small delay to ensure the page is fully rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 300)
+      }
+    }
+  }, [location])
 
   if (!mounted) return null
 
