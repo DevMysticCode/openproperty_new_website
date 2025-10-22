@@ -9,11 +9,9 @@ export default function ScrollProgressBar() {
   })
 
   return (
-    <div className="w-full h-[2px] bg-gray z-[90]">
-      <motion.div
-        className="h-[2px] bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] origin-left z-[100]"
-        style={{ scaleX, zIndex: 100 }}
-      />
-    </div>
+    <motion.div
+      className="h-1 bg-gradient-to-r from-[#00A19A] via-[#00c9bf] to-[#00e6d6] origin-left z-[100]"
+      style={{ scaleX, zIndex: 100 }}
+    />
   )
 }
