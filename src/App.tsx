@@ -9,6 +9,7 @@ import MobileAppSection from './components/MobileAppSection'
 // import FeaturesSection from './components/FeaturesSection'
 // import TestimonialsSection from './components/TestimonialsSection'
 // import CTASection from './components/CTASection'
+import PartnersSection from './components/PartnersSection'
 import CTASectionNew from './components/CTASectionNew'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import PoweredByFooter from './components/PoweredByFooter'
@@ -25,6 +26,7 @@ function App() {
           <StatsSectionNew delay={2} />
           <PillarsSection />
           <MobileAppSection />
+          <PartnersSection />
           {/* <ProblemSection /> */}
           {/* <StatsSection /> */}
 
