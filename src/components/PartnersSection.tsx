@@ -13,12 +13,25 @@ export default function PartnersSection() {
       logo: '/public/partners/ministeryOfHousing.png',
     },
     { name: 'CFIT', logo: '/public/partners/cfit.png' },
+    {
+      name: 'Open Property Data',
+      logo: '/public/partners/open-properties-logo.png',
+    },
+    { name: 'Coventry University', logo: '/public/partners/coventry.svg' },
+    {
+      name: 'Warwick Business School',
+      logo: '/public/partners/warwikBusinessSchool.svg',
+    },
+    {
+      name: 'University of Warwick',
+      logo: '/public/partners/warwikUniversity.svg',
+    },
   ]
 
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden  light-bg-section"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,161,154,0.03),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(0,201,191,0.03),transparent_50%)]"></div>
@@ -106,7 +119,7 @@ export default function PartnersSection() {
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-full h-auto max-w-[180px] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-70 group-hover:opacity-100"
+                      className="w-full h-auto max-w-[180px] object-contain group-hover:grayscale-0 transition-all duration-500 opacity-90 group-hover:opacity-100"
                     />
                   </motion.div>
                 </div>
