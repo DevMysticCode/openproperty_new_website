@@ -7,24 +7,24 @@ export default function PartnersSection() {
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' })
 
   const partners = [
-    { name: 'RICS', logo: '/public/partners/rics.png' },
+    { name: 'RICS', logo: '/partners/rics.png' },
     {
       name: 'Ministry of Housing',
-      logo: '/public/partners/ministeryOfHousing.png',
+      logo: '/partners/ministeryOfHousing.png',
     },
-    { name: 'CFIT', logo: '/public/partners/cfit.png' },
+    { name: 'CFIT', logo: '/partners/cfit.png' },
     {
       name: 'Open Property Data',
-      logo: '/public/partners/open-properties-logo.png',
+      logo: '/partners/open-properties-logo.png',
     },
-    { name: 'Coventry University', logo: '/public/partners/coventry.svg' },
+    { name: 'Coventry University', logo: '/partners/coventry.svg' },
     {
       name: 'Warwick Business School',
-      logo: '/public/partners/warwikBusinessSchool.svg',
+      logo: '/partners/warwikBusinessSchool.svg',
     },
     {
       name: 'University of Warwick',
-      logo: '/public/partners/warwikUniversity.svg',
+      logo: '/partners/warwikUniversity.svg',
     },
   ]
 
