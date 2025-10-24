@@ -119,9 +119,9 @@ export default function Hero() {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-              className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2"
+              className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2 w-full lg:w-auto"
             >
-              <div className="w-full">
+              <div className="w-full h-[400px] lg:h-[600px]">
                 <ChipsScene />
               </div>
             </motion.div>
@@ -144,7 +144,7 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
       </section>
 
-      <section className="w-full">
+      <section className="w-full px-4 md:px-0">
         <ScrollProgressBar />
         {/* Mission Section - Below the main content */}
         <motion.div

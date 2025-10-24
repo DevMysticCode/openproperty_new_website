@@ -10,7 +10,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
   return (
     <>
       <ScrollProgressBar />
-      <section className="relative">
+      <section className="relative  px-4 md:px-0">
         {/* Background glows */}
         <img
           alt="Background glows"

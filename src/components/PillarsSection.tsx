@@ -86,16 +86,39 @@ const pillars = [
   },
 ]
 
+// Add this custom hook
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth < 768) // 768px is typically 'md' breakpoint
+    }
+
+    checkDevice()
+    window.addEventListener('resize', checkDevice)
+
+    return () => {
+      window.removeEventListener('resize', checkDevice)
+    }
+  }, [])
+
+  return isMobile
+}
+
 export default function PillarsSection() {
   const containerRef = useRef<HTMLElement>(null)
   const isInView = useInView(containerRef, { once: true, margin: '-100px' })
 
   const [currentPosition, setCurrentPosition] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-
+  const isMobile = useIsMobile()
   // Calculate how many pages we have (3 cards per page)
-  const cardsPerPage = 3
-  const totalPages = Math.ceil(pillars.length / cardsPerPage)
+  const mobileCardsPerPage = 1
+  const desktopCardsPerPage = 3
+  const totalPages = Math.ceil(
+    pillars.length / (isMobile ? mobileCardsPerPage : desktopCardsPerPage)
+  )
 
   const handleCardClick = (direction: 'left' | 'right') => {
     if (isDragging) return
@@ -119,8 +142,12 @@ export default function PillarsSection() {
   const prevCard = () => handleCardClick('left')
 
   // Get current page cards
-  const startIndex = currentPosition * cardsPerPage
-  const currentPageCards = pillars.slice(startIndex, startIndex + cardsPerPage)
+  const startIndex =
+    currentPosition * (isMobile ? mobileCardsPerPage : desktopCardsPerPage)
+  const currentPageCards = pillars.slice(
+    startIndex,
+    startIndex + (isMobile ? mobileCardsPerPage : desktopCardsPerPage)
+  )
 
   return (
     <>
@@ -163,29 +190,19 @@ export default function PillarsSection() {
             </div>
           </motion.div>
 
-          {/* Cards Container */}
-          <div className="relative h-[600px]">
+          <div className="relative h-[600px] md:h-[600px]">
             {/* Current Page Cards */}
-            <div className="grid grid-cols-3 gap-8 justify-items-center">
+            <div className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory px-4 md:px-0">
               {currentPageCards.map((pillar, index) => {
-                const positions = [
-                  { top: '5%', rotation: -0, zIndex: 10 },
-                  { top: '5%', rotation: 0, zIndex: 20 },
-                  { top: '5%', rotation: -0, zIndex: 15 },
-                ]
-
-                const position = positions[index]
-
                 return (
                   <motion.div
                     key={pillar.id}
-                    initial={{ opacity: 0, y: 100, rotate: position.rotation }}
+                    initial={{ opacity: 0, y: 100 }}
                     animate={
                       isInView
                         ? {
                             opacity: 1,
                             y: 0,
-                            rotate: position.rotation,
                           }
                         : {}
                     }
@@ -194,11 +211,7 @@ export default function PillarsSection() {
                       delay: 0.3 + index * 0.15,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="relative group cursor-pointer"
-                    style={{
-                      top: position.top,
-                      zIndex: position.zIndex,
-                    }}
+                    className="relative group cursor-pointer flex-shrink-0 w-full md:w-80 snap-center md:snap-none"
                     onClick={(e) => {
                       e.stopPropagation()
                       handleCardClick('right')
@@ -208,11 +221,10 @@ export default function PillarsSection() {
                       whileHover={{
                         y: -16,
                         scale: 1.05,
-                        rotate: 0,
                         zIndex: 50,
                       }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-80 h-[30rem] premium-card rounded-3xl card-container bg-[#e0dee0] hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl"
+                      className="w-full md:w-80 h-[30rem] premium-card rounded-3xl card-container bg-[#e0dee0] hover:border-[#00a19a]/40 overflow-hidden will-change-transform relative shadow-2xl mx-2 md:mx-0"
                     >
                       {/* Media Container */}
                       <div className="absolute inset-0 z-0">
@@ -229,7 +241,6 @@ export default function PillarsSection() {
                           </div>
                         ) : (
                           <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
-                            {/* Video Placeholder */}
                             <motion.div className="relative w-full h-full flex items-center justify-center">
                               <video
                                 autoPlay
@@ -271,56 +282,29 @@ export default function PillarsSection() {
                             ))}
                           </div>
                         )}
-
-                        {/* Overlay Gradient */}
-                        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div> */}
                       </div>
 
                       {/* Content */}
                       <div className="relative z-10 h-full flex flex-col justify-start p-6">
-                        {/* Icon */}
-                        {/* <motion.div
-                        whileHover={{ scale: 1.1, rotate: 8 }}
-                        className={`inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-r ${pillar.gradient} shadow-lg group-hover:shadow-xl transition-all duration-500`}
-                      >
-                        <pillar.icon className="h-5 w-5 text-white" />
-                      </motion.div> */}
-
-                        {/* Title */}
                         <h3
                           className={`text-2xl font-bold ${
                             pillar.type === 'video'
                               ? 'text-white'
                               : 'text-black'
-                          }  transition-colors duration-300 mt-2`}
+                          } transition-colors duration-300 mt-2`}
                         >
                           {pillar.title}
                         </h3>
 
-                        {/* Subtitle */}
                         <p
                           className={`text-lg ${
                             pillar.type === 'video'
                               ? 'text-white'
                               : 'text-black'
-                          }  font-medium leading-relaxed mt-2`}
+                          } font-medium leading-relaxed mt-2`}
                         >
                           {pillar.subtitle}
                         </p>
-
-                        {/* Click Hint */}
-                        {/* <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/20">
-                        <span className="text-xs text-white/60">
-                          Click to navigate
-                        </span>
-                        <motion.div
-                          animate={{ x: [0, 5, 0] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="text-white/60"
-                        >
-                          →
-                        </motion.div>
-                      </div> */}
                       </div>
                     </motion.div>
                   </motion.div>

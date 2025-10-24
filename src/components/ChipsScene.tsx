@@ -7,18 +7,19 @@ interface ChipsSceneProps {
 
 const ChipsScene: React.FC<ChipsSceneProps> = ({
   src = 'https://my.spline.design/chipscopy-wfrQIIIR58pmz9mG9WukgxPE/',
-  height = '600px',
+  height = '100%', // Change default to 100%
 }) => {
   return (
-    <div className="spline-container w-full" style={{ height }}>
+    <div className="spline-container w-full h-full">
+      {' '}
+      {/* Add h-full */}
       <iframe
         src={src}
         frameBorder="0"
         width="100%"
-        height={height}
+        height="100%" // Use 100% instead of the prop
         title="3D Chips Scene"
-        style={{ height }}
-      ></iframe>
+      />
     </div>
   )
 }
