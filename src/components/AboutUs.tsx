@@ -169,7 +169,7 @@ export default function AboutUs() {
             initial={{ scale: 0, opacity: 0 }}
             animate={isHeroInView ? { scale: 1, opacity: 1 } : {}}
             transition={{ duration: 2, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="relative flex items-center justify-center w-full"
+            className="relative flex items-center justify-center w-full height-[100vh]"
           >
             <ChipsScene
               src="https://my.spline.design/claritystream-NFVRq6xtPoGJygaEzpBvdd1x/"

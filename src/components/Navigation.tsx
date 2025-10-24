@@ -83,24 +83,26 @@ export default function Navigation() {
       <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2"
-          >
-            <div className="h-10 rounded-xl">
-              <img
-                src={textColor === 'black' ? '/logo.svg' : '/logo.svg'}
-                alt="Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <span
-              className={`text-3xl font-bold tracking-tight ${textColorClass}`}
+          <Link to="/">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-2"
             >
-              umovingu
-            </span>
-          </motion.div>
+              <div className="h-10 rounded-xl">
+                <img
+                  src={textColor === 'black' ? '/logo.svg' : '/logo.svg'}
+                  alt="Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span
+                className={`text-3xl font-bold tracking-tight ${textColorClass}`}
+              >
+                umovingu
+              </span>
+            </motion.div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-12 text-18">
