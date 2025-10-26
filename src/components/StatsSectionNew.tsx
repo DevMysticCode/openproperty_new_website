@@ -66,7 +66,7 @@ export default function StatsSectionNew({ delay = 0 }: StatsSectionProps) {
             <p className="-mt-[15%] mb-2 font-sharp text-fluid-88-200 font-normal leading-none -tracking-8 text-white">
               million
             </p>
-            <p className="text-fluid-20-56 -tracking-4 text-black">
+            <p className="text-fluid-20-56 -tracking-4 text-black text-center">
               is what the economy loses per year for failed transactions
             </p>
           </div>
