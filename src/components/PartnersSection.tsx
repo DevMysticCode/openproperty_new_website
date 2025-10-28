@@ -26,6 +26,14 @@ export default function PartnersSection() {
       name: 'University of Warwick',
       logo: '/partners/warwikUniversity.svg',
     },
+    {
+      name: 'Land Registry',
+      logo: '/partners/HMLR_logo.png',
+    },
+    {
+      name: 'Department of Science and Digital',
+      logo: '/partners/dept_of_science_andDigital.webp',
+    },
   ]
 
   return (
@@ -114,7 +122,7 @@ export default function PartnersSection() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
-                    className="relative p-6 rounded-xl bg-white hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md w-[200px]"
+                    className="relative p-6 rounded-xl bg-none hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md w-[200px]"
                   >
                     <img
                       src={partner.logo}
