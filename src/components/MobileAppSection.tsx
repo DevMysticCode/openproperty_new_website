@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from './ui/button'
 import ScrollProgressBar from './ScrollProgressBar'
@@ -43,6 +43,24 @@ export default function MobileAppSection() {
   const isInView = useInView(ref, { once: true, margin: '-150px' })
   const [activeScreen, setActiveScreen] = useState(0)
 
+  // Inside your component
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Initial check
+    checkScreenSize()
+
+    // Add event listener
+    window.addEventListener('resize', checkScreenSize)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
+
   const nextScreen = () => {
     setActiveScreen((prev) => (prev + 1) % appScreens.length)
   }
@@ -54,13 +72,21 @@ export default function MobileAppSection() {
   }
 
   const getScreenPosition = (index: number) => {
+    if (isMobile) {
+      // Mobile: only show active screen
+      return index === activeScreen
+        ? { scale: 1, x: 0, z: 20, opacity: 1 }
+        : { scale: 0, x: 0, z: 0, opacity: 0 }
+    }
+
+    // Desktop: original carousel logic
     const diff = index - activeScreen
-    if (diff === 0) return { scale: 1, x: 0, z: 20, opacity: 1 } // Active (center)
+    if (diff === 0) return { scale: 1, x: 0, z: 20, opacity: 1 }
     if (diff === 1 || diff === -(appScreens.length - 1))
-      return { scale: 0.8, x: 200, z: 10, opacity: 0.7 } // Right
+      return { scale: 0.8, x: 200, z: 10, opacity: 0.7 }
     if (diff === -1 || diff === appScreens.length - 1)
-      return { scale: 0.8, x: -200, z: 10, opacity: 0.7 } // Left
-    return { scale: 0.6, x: diff > 0 ? 400 : -400, z: 0, opacity: 0 } // Hidden
+      return { scale: 0.8, x: -200, z: 10, opacity: 0.7 }
+    return { scale: 0.6, x: diff > 0 ? 400 : -400, z: 0, opacity: 0 }
   }
 
   return (
@@ -163,7 +189,7 @@ export default function MobileAppSection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1, delay: 1, ease: [0.23, 1, 0.32, 1] }}
-                className="absolute -bottom-16 left-1/3 transform -translate-x-1/2 flex items-center space-x-6"
+                className="absolute -bottom-16 left-1/5 md:left-1/3 transform -translate-x-1/2 flex items-center space-x-6"
               >
                 {/* Previous Button */}
                 <motion.button
